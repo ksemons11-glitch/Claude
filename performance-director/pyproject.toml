@@ -1,0 +1,60 @@
+[project]
+name = "performance-director"
+version = "0.1.0"
+description = "AI E-commerce Performance Director: observe-only analytics, diagnostics and decision journal for Meta + Baselinker + Nailuks shops"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+dependencies = [
+  "fastapi>=0.116,<0.117",
+  "uvicorn[standard]>=0.35,<1",
+  "pydantic>=2.11,<3",
+  "pydantic-settings>=2.10,<3",
+  "sqlalchemy>=2.0.41,<2.1",
+  "alembic>=1.16,<2",
+  "psycopg[binary]>=3.2,<4",
+  "httpx>=0.28,<0.29",
+  "jinja2>=3.1,<4",
+  "typer>=0.16,<1",
+  "pyyaml>=6.0,<7",
+  "itsdangerous>=2.2,<3",
+  "python-multipart>=0.0.20",
+  "mcp>=1.12,<3",
+  "markdown-it-py>=3.0,<4",
+  "anthropic>=0.60",
+]
+
+[project.scripts]
+director = "director.cli:app"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3,<9",
+  "pytest-timeout>=2.3",
+  "ruff>=0.12",
+  "respx>=0.22",
+]
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/director"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+timeout = 120
+addopts = "-q"
+markers = [
+  "db: requires a PostgreSQL test database (TEST_DATABASE_URL)",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "E501"]

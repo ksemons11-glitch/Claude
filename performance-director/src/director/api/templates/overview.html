@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block content %}
+<h2>Overview</h2>
+{% if alerts %}<div class="card"><strong>Aktywne alerty</strong><ul>{% for a in alerts %}<li><span class="badge {{ 'crit' if a.severity=='CRITICAL' else 'warn' }}">{{ a.severity }}</span> {{ a.rule_id }} · {{ a.scope }} · {{ a.message }}</li>{% endfor %}</ul></div>{% endif %}
+{% if dq_critical %}<div class="card"><span class="badge crit">DATA_ISSUE</span> {{ dq_critical }} krytycznych problemów danych - zobacz <a href="/data-health">Data health</a></div>{% endif %}
+{% if report %}<div class="card"><div class="muted">Ostatni raport dzienny: {{ report.period_start }} · rewizja {{ report.revision }} · {{ report.completeness }} · <a href="/reports/{{ report.id }}">pełny raport</a></div>
+<h3>{{ body.status }} — oczekiwany wynik po kosztach i reklamie: {{ body.headline.expected_result_after_ads or 'n/a' }} PLN <span class="muted">(estymacja kohorty{% if body.headline.excluded.expected_result_after_ads %}; bez {{ body.headline.excluded.expected_result_after_ads|join(', ') }}{% endif %})</span></h3>
+<p>Obrót zamówiony {{ body.headline.revenue_ordered or 'n/a' }} PLN · spend Meta {{ body.headline.spend or 'n/a' }} PLN · zamówienia {{ body.headline.orders or 'n/a' }}</p>
+<table><tr><th>Sklep</th><th>Zam.</th><th>Obrót</th><th>Spend</th><th>Oczekiwany wynik</th><th>MER</th><th>ROAS Meta</th><th>CPA przyp.</th><th>Pokrycie ad</th><th>Pewność</th><th>Status</th></tr>
+{% for s in body.shops %}<tr><td>{{ s.name }}</td><td>{{ s.orders or 'n/a' }}</td><td>{{ s.revenue_ordered or 'n/a' }}</td><td>{{ s.spend or 'n/a' }}</td><td>{{ s.expected_result_after_ads or 'n/a' }}</td><td>{{ s.mer_ordered or 'n/a' }} <span class="muted">{{ s.mer_label }}</span></td><td>{{ s.roas_meta or 'n/a' }}</td><td>{{ s.cpa_attributed or 'n/a' }}</td><td>{{ s.coverage_ad_orders or 'n/a' }}</td><td>{{ s.uncertainty }}</td><td>{{ s.status }}</td></tr>{% endfor %}</table>
+<h4>Działania na dziś (max 5)</h4><ol>{% for a in body.actions %}<li><strong>{{ a.action_type }}</strong> — {{ a.entity_ref }}: {{ a.fact }} <span class="muted">pewność {{ a.confidence }} · wykonanie automatyczne: {{ 'tak' if a.execution_allowed else 'nie' }}{% if a.blocking_gates %} · blokady: {{ a.blocking_gates|join(', ') }}{% endif %}</span></li>{% else %}<li>Brak rekomendacji zmian — prawidłowy wynik.</li>{% endfor %}</ol>
+<h4>Czego nie ruszać</h4><ul>{% for x in body.do_not_touch %}<li>{{ x }}</li>{% else %}<li>—</li>{% endfor %}</ul>
+<h4>Braki danych</h4><ul>{% for m in body.missing %}<li>{{ m }}</li>{% else %}<li>brak</li>{% endfor %}</ul></div>
+{% else %}<div class="card">Brak raportu. Uruchom <code>director run daily</code>.</div>{% endif %}{% endblock %}

@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block content %}<div class="card report">{{ report.rendered_html | safe }}</div>
+<details class="card"><summary>Evidence bundle (JSON)</summary><pre style="white-space:pre-wrap;font-size:.75rem">{{ report.evidence_bundle | tojson(indent=1) }}</pre></details>{% endblock %}

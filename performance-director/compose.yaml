@@ -1,0 +1,42 @@
+# Local/demo deployment. Production runs on an always-on VPS chosen by the owner; a laptop that is off runs nothing.
+name: performance-director
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: director
+      POSTGRES_PASSWORD: director
+      POSTGRES_DB: director
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    ports: ["5432:5432"]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U director"], interval: 5s, timeout: 3s, retries: 20 }
+  migrate:
+    build: .
+    env_file: .env
+    environment: { DATABASE_URL: "postgresql+psycopg://director:director@postgres:5432/director" }
+    command: ["director", "db", "migrate"]
+    depends_on: { postgres: { condition: service_healthy } }
+  api:
+    build: .
+    env_file: .env
+    environment: { DATABASE_URL: "postgresql+psycopg://director:director@postgres:5432/director" }
+    command: ["director", "api", "--host", "0.0.0.0", "--port", "8000"]
+    ports: ["8000:8000"]
+    depends_on: { migrate: { condition: service_completed_successfully } }
+    volumes: ["./var:/app/var"]
+  scheduler:
+    build: .
+    env_file: .env
+    environment: { DATABASE_URL: "postgresql+psycopg://director:director@postgres:5432/director" }
+    command: ["director", "scheduler"]
+    depends_on: { migrate: { condition: service_completed_successfully } }
+  worker:
+    build: .
+    env_file: .env
+    environment: { DATABASE_URL: "postgresql+psycopg://director:director@postgres:5432/director" }
+    command: ["director", "worker"]
+    depends_on: { migrate: { condition: service_completed_successfully } }
+    volumes: ["./var:/app/var"]
+    deploy: { replicas: 1 }
+volumes:
+  pgdata: {}

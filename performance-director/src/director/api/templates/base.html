@@ -1,0 +1,17 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>{% block title %}Performance Director{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f7f9;color:#1c1e21}header{background:#1f2937;color:#fff;padding:.6rem 1rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+header a{color:#cbd5e1;text-decoration:none;font-size:.9rem}header a:hover{color:#fff}.badge{padding:.15rem .5rem;border-radius:.4rem;font-size:.75rem;font-weight:600}
+.observe{background:#10b981;color:#062}.warn{background:#f59e0b}.crit{background:#ef4444;color:#fff}main{padding:1rem 1.5rem;max-width:1400px}table{border-collapse:collapse;width:100%;background:#fff;font-size:.85rem}
+th,td{border-bottom:1px solid #e5e7eb;padding:.35rem .5rem;text-align:left;vertical-align:top}th{background:#f1f5f9}.card{background:#fff;border:1px solid #e5e7eb;border-radius:.5rem;padding:1rem;margin-bottom:1rem}
+.muted{color:#6b7280;font-size:.8rem}.report h1{font-size:1.3rem}.report table{margin:.5rem 0}code{background:#eef2ff;padding:0 .2rem;border-radius:.2rem}details summary{cursor:pointer}
+</style></head><body>
+<header><strong>Performance Director</strong>
+<span class="badge {{ 'observe' if mode == 'OBSERVE' else 'warn' }}">MODE {{ mode }}</span>{% if kill_switch %}<span class="badge crit">KILL SWITCH</span>{% endif %}
+<span class="badge" style="background:#374151;color:#fff">adaptery: {{ adapters_mode }}</span>
+<span class="muted" style="color:#cbd5e1">ostatni sync: {{ last_sync.strftime('%Y-%m-%d %H:%M UTC') if last_sync else 'brak' }}</span>
+<nav style="margin-left:auto;display:flex;gap:.8rem;flex-wrap:wrap">
+<a href="/">Overview</a><a href="/stores">Stores</a><a href="/structure">Account structure</a><a href="/creatives">Creatives</a><a href="/decisions">Experiments/Decisions</a><a href="/market">Market</a><a href="/promotions">Promotions</a><a href="/data-health">Data health</a><a href="/settings">Settings</a><a href="/notifications">Powiadomienia ({{ unread }})</a><a href="/reports">Raporty</a>
+{% if user %}<form method="post" action="/logout" style="display:inline"><button style="background:none;border:0;color:#cbd5e1;cursor:pointer">Wyloguj</button></form>{% endif %}</nav></header>
+<main>{% block content %}{% endblock %}</main></body></html>

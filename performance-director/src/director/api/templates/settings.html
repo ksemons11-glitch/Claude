@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}<h2>Settings</h2>
+<div class="card"><h3>Tryb</h3><p>MODE=<strong>{{ mode }}</strong> · execution_enabled={{ execution_enabled }} · kill_switch={{ kill_switch }}</p><p class="muted">Zmiana trybu wymaga zmiany środowiska i restartu; panel nie włącza wykonania.</p></div>
+<div class="card"><h3>Polityki (hash {{ hashes.policies[:12] }})</h3><pre style="white-space:pre-wrap;font-size:.8rem">{{ policies | tojson(indent=1) }}</pre></div>
+<div class="card"><h3>Snapshoty konfiguracji</h3><table><tr><th>Nazwa</th><th>Hash</th><th>Zapisano</th></tr>{% for s in snapshots %}<tr><td>{{ s.name }}</td><td class="muted">{{ s.config_hash[:16] }}</td><td>{{ s.created_at.strftime('%Y-%m-%d %H:%M') }}</td></tr>{% endfor %}</table></div>
+<div class="card"><h3>Środowisko (sekrety ukryte)</h3><pre style="font-size:.8rem">{% for k, v in env.items() | sort %}{{ k }}={{ v }}
+{% endfor %}</pre></div>{% endblock %}

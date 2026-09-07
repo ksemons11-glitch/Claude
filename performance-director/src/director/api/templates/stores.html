@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}<h2>Stores <span class="muted">dzień {{ day }}</span></h2>
+{% for r in rows %}<div class="card"><h3>{{ r.shop.name }} <span class="muted">{{ r.shop.shop_key }} · {{ r.shop.timezone }} · {{ r.shop.currency }} · data zamówienia: {{ r.shop.order_date_basis }}</span></h3>
+<table><tr><th>Metryka</th><th>Wartość</th><th>Powód braku</th><th>Evidence ID</th></tr>
+{% for k, m in r.metrics.items() | sort %}<tr><td>{{ k }}</td><td>{{ m.value if m.value is not none else 'n/a' }}</td><td>{{ m.reason or '' }}</td><td class="muted">{{ m.evidence_id }}</td></tr>{% endfor %}</table></div>{% endfor %}{% endblock %}

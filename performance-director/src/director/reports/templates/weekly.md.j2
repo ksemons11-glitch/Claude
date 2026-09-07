@@ -1,0 +1,31 @@
+# Raport tygodniowy — {{ b.period_start }} … {{ b.period_end }} ({{ b.completeness }})
+
+*Dane na: {{ b.as_of.strftime('%Y-%m-%d %H:%M UTC') }} · {{ b.maturity_note }}*
+
+## Zmiana wyniku wg sklepów
+| Sklep | Zam. | Obrót | Spend | Oczekiwany wynik | vs poprzedni tydzień | Pewność |
+|---|---|---|---|---|---|---|
+{% for s in b.shops %}| {{ s.name }} | {{ s.orders }} | {{ s.revenue }} | {{ s.spend }} | {{ s.expected_result or 'n/a' }} | {{ s.delta_pct or 'n/a' }} | {{ s.uncertainty }} |
+{% endfor %}
+## Koncepty: zwycięskie / ryzykowne
+- Koncentracja: {{ b.concepts.concentration }}
+{% for c in b.concepts.lines %}- {{ c }}
+{% endfor %}
+## Decyzje i eksperymenty
+{% for d in b.decisions %}- {{ d.status }} · {{ d.entity_ref }} · {{ d.action_type }} · {{ d.reason }}{% if d.outcome %} → {{ d.outcome }}{% endif %}
+{% else %}- brak decyzji w okresie
+{% endfor %}
+{% for e in b.experiments %}- eksperyment {{ e.kind }} ({{ e.status }}): {{ e.hypothesis }}
+{% endfor %}
+## Ograniczenia zasobów
+{% for c in b.constraints %}- {{ c }}
+{% else %}- brak zgłoszonych
+{% endfor %}
+## Plan 7 dni
+{% for p in b.plan_7d %}- {{ p.title }} — {{ p.detail }}
+{% else %}- brak planu (za mało danych lub brak konceptów w backlogu)
+{% endfor %}
+## Braki danych
+{% for m in b.missing %}- {{ m }}
+{% else %}- brak
+{% endfor %}

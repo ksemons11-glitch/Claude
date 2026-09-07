@@ -1,0 +1,13 @@
+# Three baskets: direct competitors, adjacent categories, DTC benchmarks. Placeholders - fill in.
+version: "1"
+scan_days: [mon, wed, fri]
+baskets:
+  - basket: direct
+    brands: []
+    countries: [PL]
+  - basket: adjacent
+    brands: []
+    countries: [PL]
+  - basket: dtc
+    brands: []
+    countries: [PL, DE]

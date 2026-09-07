@@ -1,0 +1,37 @@
+# Pilot starting values - project settings, not Meta laws or proven statistics.
+version: "1"
+thresholds:
+  attribution_coverage_min: "0.80"
+  min_full_days_since_change: 3
+  min_purchases_for_cpa_compare: 10
+  concentration_alert_share: "0.70"
+  change_cooldown_hours: 72
+  max_actions_per_report: 5
+  robust_z_watch: "2.0"
+  robust_z_critical: "3.5"
+  min_baseline_days: 7
+  low_sample_orders: 30
+  source_freshness_minutes: 180
+  spend_multiple_of_target_cpa_alert: "2.0"
+intraday:
+  consecutive_reads_required: 2
+  cooldown_hours: 4
+  min_history_days: 14
+  min_daily_orders_for_business_signal: 8
+  max_source_lag_minutes: 45
+execution:
+  max_budget_change_pct_per_operation: "0.15"
+  max_daily_change_pct_per_account: "0.25"
+  max_rolling_24h_total_change_pln: "0"
+  portfolio_daily_cap_pln: null
+  approval_ttl_minutes: 120
+  cooldown_hours_after_change: 72
+  allowed_accounts: []
+cash_reserve_pln: null
+cod_settlement_lag_days: null
+# test_loss_cap must be explicit per product; null means "no automatic stop recommendation".
+products:
+  - { shop_key: veluskin, product_key: veluskin, test_loss_cap_pln: "300", target_cpa_pln: "60" }
+  - { shop_key: eloria,   product_key: eloria,   test_loss_cap_pln: "200", target_cpa_pln: "55" }
+  - { shop_key: czesio,   product_key: czesio,   test_loss_cap_pln: "250", target_cpa_pln: "45" }
+  - { shop_key: talio,    product_key: talio,    test_loss_cap_pln: null,  target_cpa_pln: "70" }

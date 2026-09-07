@@ -1,0 +1,30 @@
+# Variable cost versions per shop/product. product_key must match the SKU-derived product key (or an alias).
+# basis: per_unit | per_order | pct_of_revenue. payment_kind: COD | PREPAID | null (any).
+# recovery_rate: share of COGS value kept when returned goods come back (1.0 = fully resellable).
+# Talio intentionally has NO COGS row: demonstrates "profit/BE unavailable -> no scaling" (scenario 18).
+version: "1"
+costs:
+  - { shop_key: veluskin, product_key: veluskin-serum, cost_type: COGS, amount: "23.50", basis: per_unit, valid_from: 2026-01-01, recovery_rate: "0.9" }
+  - { shop_key: veluskin, product_key: veluskin-set,   cost_type: COGS, amount: "41.00", basis: per_unit, valid_from: 2026-01-01, recovery_rate: "0.9" }
+  - { shop_key: veluskin, cost_type: SHIPPING,        amount: "13.90", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: veluskin, cost_type: RETURN_SHIPPING, amount: "12.00", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: veluskin, cost_type: FULFILLMENT,     amount: "4.50",  basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: veluskin, cost_type: COD_FEE,         amount: "0.02",  basis: pct_of_revenue, payment_kind: COD, valid_from: 2026-01-01 }
+  - { shop_key: veluskin, cost_type: PAYMENT_FEE,     amount: "0.015", basis: pct_of_revenue, payment_kind: PREPAID, valid_from: 2026-01-01 }
+  - { shop_key: eloria, product_key: eloria-cream, cost_type: COGS, amount: "19.00", basis: per_unit, valid_from: 2026-01-01, recovery_rate: "0.8" }
+  - { shop_key: eloria, cost_type: SHIPPING,        amount: "13.90", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: eloria, cost_type: RETURN_SHIPPING, amount: "12.00", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: eloria, cost_type: FULFILLMENT,     amount: "4.50",  basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: eloria, cost_type: COD_FEE,         amount: "0.02",  basis: pct_of_revenue, payment_kind: COD, valid_from: 2026-01-01 }
+  - { shop_key: eloria, cost_type: PAYMENT_FEE,     amount: "0.015", basis: pct_of_revenue, payment_kind: PREPAID, valid_from: 2026-01-01 }
+  - { shop_key: czesio, product_key: czesio-brush,  cost_type: COGS, amount: "14.20", basis: per_unit, valid_from: 2026-01-01, recovery_rate: "0.95" }
+  - { shop_key: czesio, product_key: czesio-bundle, cost_type: COGS, amount: "26.00", basis: per_unit, valid_from: 2026-01-01, recovery_rate: "0.95" }
+  - { shop_key: czesio, cost_type: SHIPPING,        amount: "12.90", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: czesio, cost_type: RETURN_SHIPPING, amount: "11.00", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: czesio, cost_type: FULFILLMENT,     amount: "4.00",  basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: czesio, cost_type: COD_FEE,         amount: "0.02",  basis: pct_of_revenue, payment_kind: COD, valid_from: 2026-01-01 }
+  - { shop_key: czesio, cost_type: PAYMENT_FEE,     amount: "0.015", basis: pct_of_revenue, payment_kind: PREPAID, valid_from: 2026-01-01 }
+  - { shop_key: talio, cost_type: SHIPPING,        amount: "13.90", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: talio, cost_type: RETURN_SHIPPING, amount: "12.00", basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: talio, cost_type: FULFILLMENT,     amount: "4.50",  basis: per_order, valid_from: 2026-01-01 }
+  - { shop_key: talio, cost_type: COD_FEE,         amount: "0.02",  basis: pct_of_revenue, payment_kind: COD, valid_from: 2026-01-01 }

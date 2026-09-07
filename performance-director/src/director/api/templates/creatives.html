@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block content %}<h2>Creatives</h2><p class="muted">creative_key to tożsamość materiału (asset hash → Post ID → ad id). ad_id to placement.</p>
+<table><tr><th>Sklep</th><th>Kreacja</th><th>creative_key</th><th>Status</th><th>Post ID</th><th>Koncept</th><th>Klasyfikacja</th></tr>
+{% for c, shop_key in rows %}<tr><td>{{ shop_key }}</td><td>{{ c.name }}</td><td class="muted">{{ c.creative_key }}</td><td>{{ c.status }}</td><td class="muted">{{ c.post_id }}</td><td>{{ c.concept_id or 'niesklasyfikowany' }}</td><td class="muted">{{ c.classification_confidence or '-' }}{% if c.manual_override %} (ręcznie){% endif %}</td></tr>{% endfor %}</table>{% endblock %}

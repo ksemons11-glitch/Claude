@@ -1,0 +1,38 @@
+# Raport dzienny — {{ b.business_date }} ({{ b.completeness }}) · status: {{ b.status }}
+
+*Dane na: {{ b.as_of.strftime('%Y-%m-%d %H:%M UTC') }} · definicje v{{ b.definitions_version }} · rewizja {{ b.revision }}{% if b.revision_reason %} ({{ b.revision_reason }}){% endif %}*
+
+## Wynik
+- **Oczekiwany wynik kohorty po kosztach zmiennych i reklamie (estymacja):** {{ b.headline.expected_result_after_ads or 'n/a' }} PLN{% if b.headline.expected_low %} (przedział {{ b.headline.expected_low }} … {{ b.headline.expected_high }}){% endif %}{% if b.headline.excluded.expected_result_after_ads %} — bez: {{ b.headline.excluded.expected_result_after_ads | join(', ') }} (brak kosztów){% endif %}
+- **Obrót zamówiony:** {{ b.headline.revenue_ordered or 'n/a' }} PLN · **Spend Meta:** {{ b.headline.spend or 'n/a' }} PLN · **Zamówienia:** {{ b.headline.orders or 'n/a' }}
+- **Cashflow (wg daty rozliczenia, osobno od kohorty):** wpływy {{ b.cashflow.settlement_inflow }} PLN, zwroty {{ b.cashflow.refund_outflow }} PLN
+
+## Fakty
+{% for f in b.facts %}- {{ f }}
+{% endfor %}
+## Sklepy
+| Sklep | Zam. | Obrót | Spend | Oczekiwany wynik | MER | ROAS Meta | CPA przyp. | Pokrycie ad | Pewność | Status |
+|---|---|---|---|---|---|---|---|---|---|---|
+{% for s in b.shops %}| {{ s.name }} | {{ s.orders or 'n/a' }} | {{ s.revenue_ordered or 'n/a' }} | {{ s.spend or 'n/a' }} | {{ s.expected_result_after_ads or 'n/a' }} | {{ s.mer_ordered or 'n/a' }} ({{ s.mer_label }}) | {{ s.roas_meta or 'n/a' }} | {{ s.cpa_attributed or 'n/a' }} | {{ s.coverage_ad_orders or 'n/a' }} | {{ s.uncertainty }} | {{ s.status }} |
+{% endfor %}
+## Diagnoza (fakt → hipoteza → pewność → działanie)
+{% for d in b.diagnosis %}- **{{ d.entity_ref }}** · {{ d.fact }} → *{{ d.hypothesis }}* → pewność {{ d.confidence }} (dowody: {{ d.evidence_score }}/100, heurystyczna jakość dowodów) → {{ d.candidate_action }}{% if d.blocking_gates %} · bramki: {{ d.blocking_gates | join(', ') }}{% endif %}
+{% else %}- Brak sygnałów wymagających diagnozy.
+{% endfor %}
+## Działania na dziś (max {{ max_actions }})
+{% for a in b.actions %}{{ a.rank }}. **{{ a.action_type }}** — {{ a.entity_ref }}: {{ a.fact }} · pewność {{ a.confidence }} · wpływ {{ a.impact }} / pilność {{ a.urgency }} / wysiłek {{ a.effort }} · alternatywa: {{ a.alternative }} · ponowna ocena za {{ a.next_check_after_hours }} h · wykonanie automatyczne: {{ 'tak' if a.execution_allowed else 'nie' }}
+   dowody: {{ a.evidence_refs | join(', ') }}{% if a.blocking_gates %} · blokady: {{ a.blocking_gates | join(', ') }}{% endif %}
+{% else %}Brak rekomendacji zmian — prawidłowy wynik.
+{% endfor %}
+## Czego nie ruszać
+{% for x in b.do_not_touch %}- {{ x }}
+{% else %}- —
+{% endfor %}
+## Termin oceny
+{{ b.next_review }}
+
+## Braki danych
+{% for m in b.missing %}- {{ m }}
+{% else %}- brak
+{% endfor %}
+{% if b.llm.used %}*Interpretacja: model {{ b.llm.model }} (prompt v{{ b.llm.prompt_version }}); liczby renderowane bezpośrednio z bazy.*{% else %}*Raport deterministyczny (bez modelu){% if b.llm.error %}: {{ b.llm.error }}{% endif %}.*{% endif %}

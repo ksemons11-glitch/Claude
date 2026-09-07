@@ -1,0 +1,46 @@
+# Historical mapping from the 30.08-07.09 notes. VERIFY LIVE BEFORE THE FIRST PRODUCTION REPORT.
+# Map by ID, never by UI name (a disabled "Pooa / Małpi Gaj" is not the active Meta account named "Pooa").
+version: "1"
+shops:
+  - shop_key: veluskin
+    name: Lekiro.pl / VeluSkin
+    domain: lekiro.pl
+    timezone: Europe/Warsaw
+    currency: PLN
+    order_date_basis: confirmed
+    tax_basis: gross
+    meta_account_id: act_1022565782878410
+    meta_account_ui_name: Pooa
+    baselinker_shop_id: "5018371"
+    nailuks_shop_ref: veluskin
+    aliases: [VeluSkin, Lekiro]
+    health_urls: []
+    valid_order_statuses: []      # status IDs from getOrderStatusList; empty -> name heuristics
+    cancelled_statuses: []
+    returned_statuses: []
+    delivered_statuses: []
+  - shop_key: eloria
+    name: glowkiss.pl / Eloria
+    domain: glowkiss.pl
+    meta_account_id: act_709788145411398
+    meta_account_ui_name: Lumina
+    baselinker_shop_id: "5018378"
+    nailuks_shop_ref: eloria
+    aliases: [Eloria, Glowkiss]
+  - shop_key: czesio
+    name: bebzan.pl / Czesio
+    domain: bebzan.pl
+    meta_account_id: act_1030601799759290
+    meta_account_ui_name: Dzieciaki
+    baselinker_shop_id: "5019058"
+    nailuks_shop_ref: czesio
+    # Czesio / Grzebyk / Tulino are historically ambiguous: keep aliases, never merge products by name alone.
+    aliases: [Czesio, Grzebyk, Tulino]
+  - shop_key: talio
+    name: Talio
+    domain: talio.pl
+    meta_account_id: act_1055331276764292
+    meta_account_ui_name: Lenro
+    baselinker_shop_id: "5021998"
+    nailuks_shop_ref: talio
+    aliases: [Talio, Lenro]

@@ -1,0 +1,19 @@
+# All times Europe/Warsaw. These are jobs of the service, not chat reminders.
+version: "1"
+timezone: Europe/Warsaw
+entries:
+  - { job: sync_orders,          every_minutes: 15, scope: shop, timeout_seconds: 600 }
+  - { job: sync_meta_intraday,   every_minutes: 60, scope: source_account, timeout_seconds: 900 }
+  - { job: sync_structure,       every_minutes: 60, scope: source_account, timeout_seconds: 600 }
+  - { job: check_store_health,   every_minutes: 5,  scope: shop, timeout_seconds: 60, max_attempts: 1 }
+  - { job: detect_intraday,      every_minutes: 30, scope: global, timeout_seconds: 300, max_attempts: 1 }
+  - { job: reconcile_daily,      at: ["06:30"], scope: global, timeout_seconds: 1800 }
+  - { job: report_daily,         at: ["07:30"], scope: global, timeout_seconds: 1800 }
+  - { job: retry_daily,          at: ["08:30"], scope: global, timeout_seconds: 1800 }
+  - { job: review_decisions,     at: ["09:00"], scope: global, timeout_seconds: 900 }
+  - { job: market_scan,          at: ["10:00"], days: [mon, wed, fri], scope: global, timeout_seconds: 1800 }
+  - { job: weekly_report,        at: ["08:00"], days: [mon], scope: global, timeout_seconds: 1800 }
+  - { job: weekly_creative_plan, at: ["10:30"], days: [mon], scope: global, timeout_seconds: 1800 }
+  - { job: backfill_recent,      at: ["02:30"], scope: global, timeout_seconds: 3600 }
+  - { job: audit_old_orders,     at: ["03:30"], days: [sun], scope: global, timeout_seconds: 3600 }
+  - { job: backup,               at: ["04:00"], scope: global, timeout_seconds: 3600, max_attempts: 2 }
