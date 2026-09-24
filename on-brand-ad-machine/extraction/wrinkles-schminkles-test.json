@@ -1,0 +1,63 @@
+{
+ "brand": "Wrinkles Schminkles",
+ "brand_id": 18066,
+ "pulled": "2026-09-24",
+ "credits_used": 0.04,
+ "rows_billed": 10,
+ "unique_after_collapse": 4,
+ "sort": "created_at desc (10 newest)",
+ "ads": [
+  {
+   "id": 182701187,
+   "brand": "Wrinkles Schminkles",
+   "brand_id": 18066,
+   "format": "dco/carousel video 13s",
+   "tier": "Testing(1)",
+   "days_active": 2,
+   "variant_count": 6,
+   "headline": "Wrinkles, Meet Your Match",
+   "body": "Wrinkles, meet your match. Medical-grade silicone patches with visible results, and 30% off your first order with AUS30. We're obsessed with wrinkles: how they form, what makes them show, and what actually smooths them. So we made a patch for every one. ✓ 97.8% experienced smoother skin in an independent clinical study* ✓ Worn overnight, reusable again and again ✓ No needles, no clinic, no downtime. New customers get 30% off with AUS30, plus free shipping over $85. *Independent clinical study, 92 women, 4 weeks.",
+   "visual_hook": "UGC: rudowłosa kobieta w szlafroku w zielonej łazience, trzyma plaster, napis „I can't wait for you”",
+   "transcript": null
+  },
+  {
+   "id": 182701184,
+   "brand": "Wrinkles Schminkles",
+   "brand_id": 18066,
+   "format": "video 29s",
+   "tier": "Testing(1)",
+   "days_active": 1,
+   "variant_count": 2,
+   "headline": "Patches By Night, Glow By Day",
+   "body": "Patches by night, glow by day. Meet the rest of the range. You've seen what the silicone patches do overnight. Now add the Morning After Glow Serum with Kakadu Plum to your AM routine, or try the Self-Dissolving Microneedle Patches that deliver hyaluronic acid, collagen and peptides where creams can't quite reach. Free shipping over $85 and an extra 10% off orders over $200.",
+   "visual_hook": "UGC: kobieta po prysznicu w ręczniku, marmurowa łazienka, dłonie na czole, napis „Oh my god”",
+   "transcript": null
+  },
+  {
+   "id": 182701131,
+   "brand": "Wrinkles Schminkles",
+   "brand_id": 18066,
+   "format": "video 36s",
+   "tier": "Testing(12)",
+   "days_active": 2,
+   "variant_count": 1,
+   "headline": "Reusable Overnight Wrinkle Patches",
+   "body": "How a bit of silicone outsmarts a wrinkle. Compression: skin is held comfortably taut, so it can't crease while you sleep. Circulation: gentle support for blood flow to revitalise the skin. Hydration: an occlusive layer locks moisture in overnight. Wake up, peel off, rinse and reuse. Hypoallergenic and suitable for all skin types. New customers get 30% off with AUS30.",
+   "visual_hook": "Makro: dłonie odklejają plaster od folii, napis „You don't need botox for results btw”",
+   "transcript": null
+  },
+  {
+   "id": 182701127,
+   "brand": "Wrinkles Schminkles",
+   "brand_id": 18066,
+   "format": "video 23s",
+   "tier": "Testing(12)",
+   "days_active": 2,
+   "variant_count": 1,
+   "headline": "Effective Wrinkle Patches",
+   "body": "Patches on. Game on. Silicone patches and self-dissolving microneedle patches, now at Boots. Two ways to take on wrinkles. Reusable 100% medical-grade silicone patches that smooth by holding skin taut. And Self-Dissolving Microneedle Patches with 1,800 microneedles that release hyaluronic acid, collagen, caffeine and peptides into the skin. For fast, visible, long-lasting results. → Shop the range at Boots",
+   "visual_hook": "UGC: ta sama kobieta w ręczniku, „Oh my god”",
+   "transcript": null
+  }
+ ]
+}
