@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "gate"))
 from gate.brain import Brain            # noqa: E402
 from gate.judge import ManualJudge      # noqa: E402
-from gate.rank import BORROWED_IP_DROP, WEIGHTS, rank_ads  # noqa: E402
+from gate.rank import BORROWED_IP_DROP, PROVEN_MIN_DAYS, PROVEN_MIN_PERF, WEIGHTS, is_proven, rank_ads  # noqa: E402
+import re  # noqa: E402
 
 EXTRACTION = ROOT / "extraction"
 SKIP = {"wrinkles-schminkles-test.json", "all-ads.json", "judge-answers.json", "shortlist.json"}
@@ -42,31 +43,43 @@ def main() -> int:
     judge = ManualJudge(Brain(), io)
     by_id = {str(a["id"]): a for a in ads}
     scored = {str(a["id"]): judge.score_ad(a) for a in ads}
-    ranked = rank_ads(scored, top_n=10)
+
+    def perf(a):
+        m = re.search(r"\((\d+)\)", str(a.get("tier") or ""))
+        return int(m.group(1)) if m else None
+    evidence = {str(a["id"]): (perf(a), a.get("days_active")) for a in ads}
+    ranked = rank_ads(scored, top_n=10, evidence=evidence)
     kept = [r for r in ranked if not r.dropped]
-    dropped = [r for r in ranked if r.dropped]
+    dropped = [r for r in ranked if r.dropped and r.reason == "borrowed_ip"]
+    # fresh = good idea by the judge, but Testing-tier and days old: a hypothesis to re-check, not an inspiration
+    fresh = [r for r in rank_ads(scored, top_n=len(scored)) if not r.dropped
+             and not is_proven(*evidence[r.id]) and r.score >= 0.7]
 
     # full table (every ad, sorted like rank_ads would) for the write-up
-    all_ranked = rank_ads(scored, top_n=len(scored))
+    all_ranked = rank_ads(scored, top_n=len(scored), evidence=evidence)
     rows = []
     for r in all_ranked:
         a, s = by_id[r.id], scored[r.id]
         rows.append({"id": r.id, "brand": a["brand"], "set": a.get("set"), "format": a.get("format"), "tier": a.get("tier"),
-                     "days_active": a.get("days_active"), "score": r.score, "dropped": r.dropped,
+                     "performance_score": evidence[r.id][0], "proven": is_proven(*evidence[r.id]),
+                     "days_active": a.get("days_active"), "score": r.score, "dropped": r.dropped, "drop_reason": r.reason,
                      "headline": a.get("headline"), "transcript_state": a.get("transcript_state"),
                      "levels": {"angle": s.angle_strength.level, "fit": s.positioning_fit.level,
                                 "repro": s.reproducibility.level, "borrowed_ip": s.borrowed_ip.value},
                      "reasons": {"angle": s.angle_strength.reason, "fit": s.positioning_fit.reason,
                                  "repro": s.reproducibility.reason, "borrowed_ip": s.borrowed_ip.reason},
                      "claims": a.get("claims", [])})
-    out = {"weights": WEIGHTS, "borrowed_ip_drop": BORROWED_IP_DROP, "judged": len(scored),
-           "top10": [r.id for r in kept], "dropped_borrowed_ip": [r.id for r in dropped], "ads": rows}
+    out = {"weights": WEIGHTS, "borrowed_ip_drop": BORROWED_IP_DROP,
+           "proven_rule": f"performance_score >= {PROVEN_MIN_PERF} or days_active >= {PROVEN_MIN_DAYS}",
+           "judged": len(scored), "top10": [r.id for r in kept], "dropped_borrowed_ip": [r.id for r in dropped],
+           "fresh_hypotheses": [r.id for r in fresh], "ads": rows}
     (EXTRACTION / "shortlist.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 
     for r in kept:
         a = by_id[r.id]
-        print(f"{r.id:12} {r.score:.3f}  {a['brand'][:20]:20} {str(a.get('headline'))[:60]}")
-    print(f"\n{len(scored)} judged, top {len(kept)}, {len(dropped)} dropped for borrowed IP")
+        print(f"{r.id:12} {r.score:.3f}  {str(a.get('tier')):15} {a.get('days_active'):3}d  {a['brand'][:14]:14} {str(a.get('headline'))[:50]}")
+    print(f"\n{len(scored)} judged, top {len(kept)} proven, {len(dropped)} dropped for borrowed IP, "
+          f"{len(fresh)} fresh hypotheses (unproven, judge >= 0.7): {[r.id for r in fresh]}")
     return 0
 
 

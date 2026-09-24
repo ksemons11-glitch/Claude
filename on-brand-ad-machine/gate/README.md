@@ -31,6 +31,6 @@ Thresholds (`gate/rank.py`) are the plan's starting guesses — label ~30 prompt
 ## Krok 4 — jak powstała shortlista
 
 `extraction/judge-answers.json` = odpowiedzi sędziego (manual) dla 90 reklam, w kształcie `AdScore`.
-`python3 extraction/shortlist.py` kopiuje je do `gate/judge-io/`, uruchamia `ManualJudge` + `rank_ads`
+`python3 extraction/shortlist.py` kopiuje je do `gate/judge-io/`, uruchamia `ManualJudge` + `rank_ads` (z bramką „sprawdzone”: performance ≥ 61 lub ≥ 30 dni; reszta = hipotezy)
 i zapisuje `extraction/shortlist.json` (pełna tabela) oraz `extraction/shortlist.md` (write-up).
 Zmiana wag → `gate/gate/rank.py`, ponowne uruchomienie skryptu; remisy rozstrzyga średnia pewność sędziego.

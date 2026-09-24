@@ -5,18 +5,19 @@
   "reproducibility": 0.15
  },
  "borrowed_ip_drop": 0.6,
+ "proven_rule": "performance_score >= 61 or days_active >= 30",
  "judged": 90,
  "top10": [
-  "180682320",
-  "181080083",
-  "181482577",
-  "174013810",
-  "181080114",
-  "177231372",
-  "177231360",
   "149861556",
+  "119368742",
+  "143124227",
+  "173665393",
   "157292606",
-  "181332804"
+  "128944655",
+  "149861557",
+  "119368763",
+  "133043224",
+  "124333814"
  ],
  "dropped_borrowed_ip": [
   "163736780",
@@ -40,236 +41,30 @@
   "138938737",
   "138938465"
  ],
+ "fresh_hypotheses": [
+  "180682320",
+  "181080083",
+  "181482577",
+  "174013810",
+  "181080114",
+  "177231372",
+  "177231360",
+  "181332804",
+  "177231362"
+ ],
  "ads": [
-  {
-   "id": "180682320",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dpa/carousel 6 images",
-   "tier": "Testing (28)",
-   "days_active": 6,
-   "score": 1.0,
-   "dropped": false,
-   "headline": "Chest Hydroseal™ Patch",
-   "transcript_state": null,
-   "levels": {
-    "angle": 2,
-    "fit": 2,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Niektóre rzeczy działają jako rytuał, nie jako naprawa. Jeden plaster, co noc. Mało i konsekwentnie.” — odwrotność „efekt od 1. nocy”; rzadkie w kategorii",
-    "fit": "Dokładnie nasz ton (dorosły, spokojny), K4 (2–3×/tyg.), zero claimów, zero botoksu — wprost wzmacnia „nocne wsparcie tam, gdzie widzisz linie”",
-    "repro": "Katalog/statyk z packshotem — mamy packshoty; jedno zdanie copy",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Some things work best as a ritual, not a fix",
-    "One patch, worn while you sleep, every night",
-    "Small and consistent",
-    "Hydroseal range: Chest, FaceLift, Lip, Eye, Eye & Smile, Forehead"
-   ]
-  },
-  {
-   "id": "181080083",
-   "brand": "SoSmooth Skincare",
-   "set": "newest",
-   "format": "video 28s",
-   "tier": "Testing (1)",
-   "days_active": 4,
-   "score": 1.0,
-   "dropped": false,
-   "headline": "$1.05 a night",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 2,
-    "fit": 2,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„$30 brzmi drogo, dopóki nie policzysz” → $1,05 za noc + „tańsze niż taśma, którą wszyscy polecają, i naprawdę trzyma się skóry” — matematyka + obiekcja przyczepności",
-    "fit": "K8 (≈0,19 zł/użycie), K3 (do 20 użyć), przyczepność (#5), ton rzeczowy; bez botoksu; tylko „medical grade” do wycięcia",
-    "repro": "POV dłoń z plastrem nad umywalką + napis — najprostsze ujęcie w zestawie",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Thirty dollars for one patch sounds steep until you do the maths",
-    "Medical grade silicone",
-    "Rinse in cold water and use again, up to 20 times",
-    "5-pack: $21 a patch",
-    "$1.05 a night",
-    "Cheaper per night than the tape people keep recommending",
-    "It actually stays on",
-    "Any 5 patches, $21 each"
-   ]
-  },
-  {
-   "id": "181482577",
-   "brand": "Scarlette",
-   "set": "newest",
-   "format": "video 7s",
-   "tier": "Testing (14)",
-   "days_active": 3,
-   "score": 1.0,
-   "dropped": false,
-   "headline": null,
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 2,
-    "fit": 2,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Obiekcja jako hook: „Taśma na twarzy? Serio?” + „już przerobiłaś pół szafki kosmetyków na te linie” — 7 s, konkretny pomysł",
-    "fit": "Wprost nasze przekonanie „nie kolejny krem” + sceptyczna A1 + strefa; ton dorosły, bez claimów, bez botoksu",
-    "repro": "Postać UGC z ręcznikiem w łazience wskazująca strefę — 1:1 z naszym ugc_character",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Tape on my face? Really? (objection hook)",
-    "You've already tried a bathroom cabinet's worth of skincare for forehead lines",
-    "Watch this before you rule it out",
-    "\"face taping will do nothing against your wrinkles!\" (on-screen objection)"
-   ]
-  },
-  {
-   "id": "174013810",
-   "brand": "SoSmooth Skincare",
-   "set": "newest",
-   "format": "video 39s",
-   "tier": "Scaling (41)",
-   "days_active": 17,
-   "score": 1.0,
-   "dropped": false,
-   "headline": "8 nights, one patch",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 2,
-    "fit": 2,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Trigger makijażu („podkład wsiąka w dwie linie między brwiami”) + „8 nocy, jeden plaster” + raport klientek zamiast obietnicy",
-    "fit": "Dokładnie inspirations #2 (makijaż podkreśla linie) i #3 („11”); „klientki mówią nam” = źródłowany dowód jak K19; bez botoksu; „medical grade” do wycięcia",
-    "repro": "Blondynka w łazience przyciska plaster na czoło + napis = nasz ugc_character 1:1",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Foundation settling into the two lines between your brows",
-    "One Forehead Patch, medical grade silicone, worn overnight",
-    "Eight nights in, finer frown lines look softer (customers tell us)",
-    "Makeup sits flatter",
-    "Rinse and reuse up to 20 times",
-    "Any 5 patches, $21 each",
-    "Free shipping",
-    "Forehead Patch from $21"
-   ]
-  },
-  {
-   "id": "181080114",
-   "brand": "SoSmooth Skincare",
-   "set": "newest",
-   "format": "image",
-   "tier": "Testing (1)",
-   "days_active": 4,
-   "score": 1.0,
-   "dropped": false,
-   "headline": "I thought they were a gimmick",
-   "transcript_state": null,
-   "levels": {
-    "angle": 2,
-    "fit": 2,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Dialog sceptyczek („myślałam, że to bajer” / „też, sądziłam, że to taśma”) + edytorski wyjaśniacz „To nie taśma. Oto, co silikon naprawdę robi” + zwrot „jeśli się mylę”",
-    "fit": "Sceptyczna A1, mechanizm prostym językiem („zatrzymuje wilgoć, delikatnie podpiera skórę” = C20), zwrot jako trust (#8); „medical-grade” i 40% off do wycięcia",
-    "repro": "Edytorski statyk z rysunkiem liniowym + packshot — wykonalny w Canva",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "I thought they were a gimmick / glorified sticky tape",
-    "Wore them overnight and forehead looked visibly smoother by morning",
-    "Face Plumping Duo now 40% off at $36",
-    "30-day returns",
-    "It is not tape",
-    "Soft silicone patch holds in moisture and gently supports the skin",
-    "Forehead and smile lines look smoother by morning",
-    "100% medical-grade silicone",
-    "Reusable up to 20 times",
-    "Wear while you sleep"
-   ]
-  },
-  {
-   "id": "177231372",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dpa/carousel 6 images",
-   "tier": "Scaling (48)",
-   "days_active": 12,
-   "score": 0.8,
-   "dropped": false,
-   "headline": "FaceLift Hydroseal™ Patches",
-   "transcript_state": null,
-   "levels": {
-    "angle": 2,
-    "fit": 1,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Daję wszystko wszystkim cały dzień. To jedyna rzecz, którą daję sobie.” — emocja opiekunki, bez claimu",
-    "fit": "Ton i A1 (40–55) pasują; brak strefy/mechanizmu — użyteczne jako linia w remarketingu, nie jako samodzielny kąt cold",
-    "repro": "Katalog + jedno zdanie — packshoty są",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "I give everything to everyone all day long; this is the one thing I give to myself",
-    "Hydroseal range: FaceLift, Forehead, Eye, Eye & Smile, Lip, Chest"
-   ]
-  },
-  {
-   "id": "177231360",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dco/carousel 2 images + video 12s",
-   "tier": "Testing (38)",
-   "days_active": 11,
-   "score": 0.775,
-   "dropped": false,
-   "headline": "Hold The Skin Flat, While You Sleep",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 2,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Trzyma skórę płasko, gdy śpisz. Jeden krok więcej wieczorem.” — mechanizm w jednym zdaniu",
-    "fit": "C20 (mechanizm prostym językiem), C1 (jedna propozycja), rytuał wieczorny, bez claimów o efekcie",
-    "repro": "Statyk/krótki klip z plastrem NA strefie — mamy zasoby",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "One more step at night",
-    "SiO holds your chest skin flat while you sleep"
-   ]
-  },
   {
    "id": "149861556",
    "brand": "SoSmooth Skincare",
    "set": "best",
    "format": "image",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 37,
    "score": 0.775,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Try Wrinkle Patches, ~$1.50 a Use",
    "transcript_state": null,
    "levels": {
@@ -295,82 +90,17 @@
    ]
   },
   {
-   "id": "157292606",
-   "brand": "Scarlette",
-   "set": "best",
-   "format": "image",
-   "tier": "Growing (61)",
-   "days_active": 31,
-   "score": 0.725,
-   "dropped": false,
-   "headline": "100,000+ Women Can't Be Wrong",
-   "transcript_state": null,
-   "levels": {
-    "angle": 2,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Historia „moje 11 sprawiały, że wyglądałam na złą — w pracy pytali, czy wszystko OK” — konkretna emocja strefy; odwołana konsultacja",
-    "fit": "Rdzeń (11 + „wyglądam na złą”) = nasza hipoteza #3; ale 3× botoks, „medical-grade”, „40x wilgoci”, „po jednej nocy” — do wycięcia (C3/C4/C5/C8)",
-    "repro": "Statyk z packshotem tak; taca medyczna = banned_visuals → zamienić na łazienkę",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "My 11s made me look angry when I was happy",
-    "Looked into Botox, booked the consultation, cancelled it three times",
-    "Needles in the forehead and losing natural expression didn't sit right",
-    "Medical-grade silicone that plastic surgeons have quietly used for over 40 years",
-    "Not a cream, not a serum",
-    "Physically retrains your facial muscles while you sleep",
-    "Locks in 40x more moisture than any moisturizer",
-    "Lines between my brows visibly smoother after one night",
-    "Skin looked hydrated, rested",
-    "100,000+ women can't be wrong",
-    "Try it for 99 days risk free",
-    "Medical-grade, overnight (on-image)"
-   ]
-  },
-  {
-   "id": "181332804",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dco/carousel 2 images + video 32s",
-   "tier": "Testing (16)",
-   "days_active": 4,
-   "score": 0.725,
-   "dropped": false,
-   "headline": "Skin's secret sleep struggle",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 2,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Insight przyczyny: „śpisz na boku? to tłumaczy coś, czego nigdy nie połączyłaś” — edukacja przyczyną, nie produktem",
-    "fit": "Struktura „ukryta przyczyna → mechanizm” pasuje (brief: edukować w 1–2 zdaniach); przyczyna u nas inna (mimika, makijaż, sucha skóra) — bez straszenia (C14)",
-    "repro": "Talking-head AI-UGC wykonalny; trzeba własnego, uczciwego „dlaczego” bez claimów",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Do you sleep on your side? This might explain something you've never connected",
-    "Nobody tells you that how you sleep folds the same skin nightly",
-    "The side-sleeping secret nobody explains",
-    "Why did no one tell me? (on-screen)"
-   ]
-  },
-  {
    "id": "119368742",
    "brand": "SiO Beauty",
    "set": "best",
    "format": "dco/carousel 6 videos 11s",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 77,
    "score": 0.725,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Sleep on your side? This is for you",
    "transcript_state": "done",
    "levels": {
@@ -398,9 +128,12 @@
    "set": "best",
    "format": "image",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 45,
    "score": 0.725,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Eight Sleep: Your whole bed on autopilot",
    "transcript_state": null,
    "levels": {
@@ -426,42 +159,17 @@
    ]
   },
   {
-   "id": "177231362",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dco/carousel 2 videos 27s",
-   "tier": "Testing (38)",
-   "days_active": 11,
-   "score": 0.725,
-   "dropped": false,
-   "headline": "The Top, Reclaimed",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 2,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Dwa lata nie nosiłam tej bluzki. Dziś ją noszę.” — wynik behawioralny zamiast claimu o skórze",
-    "fit": "„Pokaż, nie obiecuj” w wersji życiowej; dla ust/„11” ekwiwalent (np. zdjęcie bez retuszu, makijaż) wymaga własnego dowodu, którego brak (P1/P2)",
-    "repro": "Wymaga historii i strefy dopasowanej do VeluSkin",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Two summers of not wearing that top; wearing it today",
-    "The top, reclaimed"
-   ]
-  },
-  {
    "id": "173665393",
    "brand": "Hers",
    "set": "best",
    "format": "video 35s",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 22,
    "score": 0.725,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Get Started Today",
    "transcript_state": null,
    "levels": {
@@ -495,99 +203,44 @@
    ]
   },
   {
-   "id": "133043224",
-   "brand": "SiO Beauty",
+   "id": "157292606",
+   "brand": "Scarlette",
    "set": "best",
-   "format": "video 13s",
-   "tier": "Optimized (86)",
-   "days_active": 52,
-   "score": 0.575,
-   "dropped": false,
-   "headline": "This Chest Patch Shocked Me Awake",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ta sama kreacja co 182246289 (poranny reveal)",
-    "fit": "Jak 182246289 — „one night” do przepisania",
-    "repro": "Jak 182246289",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Woke up shocked how smooth my chest looked",
-    "One night with the SiO patch",
-    "My overnight routine to smooth chest wrinkles (on-screen)"
-   ]
-  },
-  {
-   "id": "182246289",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "video 13s",
-   "tier": "Scaling (42)",
-   "days_active": 3,
-   "score": 0.575,
-   "dropped": false,
-   "headline": "This Chest Patch Shocked Me Awake",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Obudziłam się w szoku, jaki gładki” — poranny reveal UGC, znany format",
-    "fit": "Rytuał wieczór→rano = nasz szkielet; ale „one night, that's it” = K12 — przepisać na „rano sprawdzasz tę samą strefę”",
-    "repro": "Postać UGC w łazience wyjmuje plaster z opakowania — mamy pack i postać",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Woke up shocked how smooth my chest looked",
-    "One night with the SiO patch",
-    "My overnight routine to smooth chest wrinkles (on-screen)"
-   ]
-  },
-  {
-   "id": "181080127",
-   "brand": "SoSmooth Skincare",
-   "set": "newest",
    "format": "image",
-   "tier": "Testing (1)",
-   "days_active": 4,
-   "score": 0.575,
+   "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
+   "days_active": 31,
+   "score": 0.725,
    "dropped": false,
-   "headline": "Buy 2, get 1 free. Save 33%.",
+   "drop_reason": "",
+   "headline": "100,000+ Women Can't Be Wrong",
    "transcript_state": null,
    "levels": {
-    "angle": 1,
+    "angle": 2,
     "fit": 1,
-    "repro": 2,
+    "repro": 1,
     "borrowed_ip": false
    },
    "reasons": {
-    "angle": "„Wygładzanie zwykle znaczy igły, klinika, wizyta co kilka miesięcy — SoSmooth jest wersją bez tego” + koszt/użycie + 2+1",
-    "fit": "Reuse i „około dolara za użycie” = K3/K8 (+); „medical-grade”, 87% vs zastrzyki (C3/C4/C5) do wycięcia",
-    "repro": "Statyk z packshotami i badge’em zestawu — mamy",
+    "angle": "Historia „moje 11 sprawiały, że wyglądałam na złą — w pracy pytali, czy wszystko OK” — konkretna emocja strefy; odwołana konsultacja",
+    "fit": "Rdzeń (11 + „wyglądam na złą”) = nasza hipoteza #3; ale 3× botoks, „medical-grade”, „40x wilgoci”, „po jednej nocy” — do wycięcia (C3/C4/C5/C8)",
+    "repro": "Statyk z packshotem tak; taca medyczna = banned_visuals → zamienić na łazienkę",
     "borrowed_ip": "Brak IP"
    },
    "claims": [
-    "Smoothing fine lines usually means needles, a clinic and an appointment every few months",
-    "SoSmooth is the version without any of that",
-    "One Forehead patch and four Eyes & Smile patches",
-    "100% medical-grade silicone",
-    "Worn overnight on clean dry skin",
-    "Reusable up to 20 times",
-    "About a dollar a use",
-    "87% of women surveyed preferred these to injectables",
-    "90% said their skin felt smoother",
-    "Buy 2, get 1 free, save 33%",
-    "Fast-acting; safe for all skin types",
-    "Hydrate, cool, improve skin elasticity, support natural blood flow and collagen"
+    "My 11s made me look angry when I was happy",
+    "Looked into Botox, booked the consultation, cancelled it three times",
+    "Needles in the forehead and losing natural expression didn't sit right",
+    "Medical-grade silicone that plastic surgeons have quietly used for over 40 years",
+    "Not a cream, not a serum",
+    "Physically retrains your facial muscles while you sleep",
+    "Locks in 40x more moisture than any moisturizer",
+    "Lines between my brows visibly smoother after one night",
+    "Skin looked hydrated, rested",
+    "100,000+ women can't be wrong",
+    "Try it for 99 days risk free",
+    "Medical-grade, overnight (on-image)"
    ]
   },
   {
@@ -596,9 +249,12 @@
    "set": "best",
    "format": "dco/carousel 6 videos 13s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 65,
    "score": 0.575,
    "dropped": false,
+   "drop_reason": "",
    "headline": "I Woke Up Shocked How Smooth My Chest Looked",
    "transcript_state": "done",
    "levels": {
@@ -627,9 +283,12 @@
    "set": "best",
    "format": "video 24s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 37,
    "score": 0.575,
    "dropped": false,
+   "drop_reason": "",
    "headline": "A patch for every line",
    "transcript_state": "done",
    "levels": {
@@ -660,9 +319,12 @@
    "set": "best",
    "format": "video 21s (2 media)",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 77,
    "score": 0.575,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Overnight Chest Smoothing",
    "transcript_state": "done",
    "levels": {
@@ -686,14 +348,49 @@
    ]
   },
   {
+   "id": "133043224",
+   "brand": "SiO Beauty",
+   "set": "best",
+   "format": "video 13s",
+   "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
+   "days_active": 52,
+   "score": 0.575,
+   "dropped": false,
+   "drop_reason": "",
+   "headline": "This Chest Patch Shocked Me Awake",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ta sama kreacja co 182246289 (poranny reveal)",
+    "fit": "Jak 182246289 — „one night” do przepisania",
+    "repro": "Jak 182246289",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Woke up shocked how smooth my chest looked",
+    "One night with the SiO patch",
+    "My overnight routine to smooth chest wrinkles (on-screen)"
+   ]
+  },
+  {
    "id": "124333814",
    "brand": "SiO Beauty",
    "set": "best",
    "format": "video 11s (2 media)",
    "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
    "days_active": 73,
    "score": 0.575,
    "dropped": false,
+   "drop_reason": "",
    "headline": "The overnight fix for side sleepers",
    "transcript_state": "done",
    "levels": {
@@ -716,169 +413,17 @@
    ]
   },
   {
-   "id": "177231367",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dco/carousel 2 videos 12s + 2 images",
-   "tier": "Testing (1)",
-   "days_active": 11,
-   "score": 0.575,
-   "dropped": false,
-   "headline": "No Needles, No Downtime",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Bez igieł, bez przestoju” + „czekanie = doganianie igłami i laserami” + reuse ~15 nocy",
-    "fit": "„Bez igieł” dozwolone jako cecha formatu (K7), reuse + on/off wzmacnia #5; ale „igły/lasery” jako straszak zbliża się do C4/C14",
-    "repro": "Karuzela z packshotem + prosta sekwencja",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Waiting until lines show up means playing catch up with needles, lasers and downtime",
-    "Skip that timeline",
-    "One SiO patch reusable for roughly 15 nights",
-    "On before bed, off in the morning",
-    "No needles, no downtime"
-   ]
-  },
-  {
-   "id": "182701131",
-   "brand": "Wrinkles Schminkles",
-   "set": "newest",
-   "format": "video 36s",
-   "tier": "Testing (12)",
-   "days_active": 2,
-   "score": 0.575,
-   "dropped": false,
-   "headline": "Reusable Overnight Wrinkle Patches",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Wyjaśniacz „jak kawałek silikonu przechytrza zmarszczkę”: kompresja / krążenie / nawilżenie + makro odklejania",
-    "fit": "Część „okluzja zatrzymuje wilgoć; rano zdejmij, opłucz, użyj ponownie” = #4 i #5 (+); „krążenie”, „nie może się zmarszczyć” = K25, „nie potrzebujesz botoksu” na ekranie = C4",
-    "repro": "Makro dłoni odklejających plaster z folii — proste",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "A bit of silicone outsmarts a wrinkle",
-    "Compression: skin held comfortably taut so it can't crease while you sleep",
-    "Circulation: gentle support for blood flow to revitalise the skin",
-    "Hydration: occlusive layer locks moisture in overnight",
-    "Wake up, peel off, rinse and reuse",
-    "Hypoallergenic and suitable for all skin types",
-    "New customers get 30% off with AUS30",
-    "You don't need botox for results (on-screen)"
-   ]
-  },
-  {
-   "id": "180667103",
-   "brand": "Glossier",
-   "set": "newest",
-   "format": "video 11s",
-   "tier": "Testing (28)",
-   "days_active": 6,
-   "score": 0.5,
-   "dropped": false,
-   "headline": "Glossier Boy Brow™",
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Makro-demo jednego ruchu + komentarz klientki jako overlay",
-    "fit": "Demonstracja + realna opinia (K17) pasuje do „pokaż, nie obiecuj”; „cult-favorite” do pominięcia",
-    "repro": "Makro aplikacji plastra z AI-UGC + cytat ze zweryfikowanej opinii",
-    "borrowed_ip": "Brak IP (komentarz anonimowej klientki)"
-   },
-   "claims": [
-    "Cult-favorite Boy Brow",
-    "One swipe for fuller, groomed brows",
-    "In your perfect shade",
-    "So easy anyone can do it",
-    "\"The easiest eyebrow product I have ever used\" (customer comment on-screen)"
-   ]
-  },
-  {
-   "id": "181332800",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dco/carousel 2 videos 25s + image",
-   "tier": "Testing (16)",
-   "days_active": 4,
-   "score": 0.5,
-   "dropped": false,
-   "headline": "Skin's secret sleep struggle",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ta sama teza „sen składa tę samą skórę co noc” — drugie wykonanie",
-    "fit": "Jak 181332804",
-    "repro": "Aplikacja plastra w piżamie w łazience — wykonalne",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "How you sleep folds the same skin nightly",
-    "The nightly skin folding truth",
-    "Side sleeper loves this patch (on-screen)"
-   ]
-  },
-  {
-   "id": "181971268",
-   "brand": "Glossier",
-   "set": "newest",
-   "format": "video 12s",
-   "tier": "Testing (28)",
-   "days_active": 2,
-   "score": 0.5,
-   "dropped": false,
-   "headline": "Build your dream fragrance set",
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Zbuduj własny zestaw” — znany format bundle-builder",
-    "fit": "Neutralny; u nas zestawy 1/2/3 już są (C10)",
-    "repro": "Flat-lay packshotów w świetle — wykonalny; brak wariantów zapachu",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Build your own set with the pieces you love most",
-    "Fragrance and makeup, made your way",
-    "Choose your own scents",
-    "NEW: build your own Glossier You duo (on-screen)"
-   ]
-  },
-  {
    "id": "150266455",
    "brand": "Glossier",
    "set": "best",
    "format": "video 57s",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 42,
    "score": 0.5,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Build your dream fragrance set",
    "transcript_state": "done",
    "levels": {
@@ -902,75 +447,17 @@
    ]
   },
   {
-   "id": "181415136",
-   "brand": "111SKIN",
-   "set": "newest",
-   "format": "video 12s",
-   "tier": "Testing (24)",
-   "days_active": 4,
-   "score": 0.5,
-   "dropped": false,
-   "headline": "Brighter Eyes In 20 Minutes",
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Efekt w konkretnym czasie (20 min) + składniki — znany format",
-    "fit": "Neutralny: obietnica czasowa (jak K12) do usunięcia; sama strefa oczu pasuje",
-    "repro": "Trzy klipy z postacią UGC — wykonalne z AI-UGC",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Gold to soothe and brighten",
-    "Pomegranate seed to reduce the look of dark circles",
-    "Damask rose to calm and hydrate",
-    "Visibly brighter under eyes",
-    "Brighter eyes in 20 minutes",
-    "Loved by real customers"
-   ]
-  },
-  {
-   "id": "181332791",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "video 25s",
-   "tier": "Testing (1)",
-   "days_active": 4,
-   "score": 0.5,
-   "dropped": false,
-   "headline": "The nightly skin toll you didn't know",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Mówili Ci, że to po prostu starzenie. Oto, czego nikt nie tłumaczy” — hook „nikt nie mówi”",
-    "fit": "Neutralny; uważać na straszenie starzeniem (C14)",
-    "repro": "Talking-head 25 s",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Your chest lines are not just 'aging'",
-    "Here's what nobody explains",
-    "The nightly skin toll you didn't know"
-   ]
-  },
-  {
    "id": "125821396",
    "brand": "Eight (Eight Sleep)",
    "set": "best",
    "format": "video 50s (2 media)",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 69,
    "score": 0.5,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Add Cool Sleep To Your Mattress With Pod 5: Dynamic temperature adjustments to keep you cool all night",
    "transcript_state": "pending",
    "levels": {
@@ -999,9 +486,12 @@
    "set": "best",
    "format": "video 80s",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 25,
    "score": 0.5,
    "dropped": false,
+   "drop_reason": "",
    "headline": null,
    "transcript_state": "done",
    "levels": {
@@ -1033,9 +523,12 @@
    "set": "best",
    "format": "video 21s (2 media)",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 93,
    "score": 0.35,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Overnight Chest Smoothing",
    "transcript_state": "done",
    "levels": {
@@ -1060,9 +553,12 @@
    "set": "best",
    "format": "dco/carousel 2 images",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 45,
    "score": 0.35,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Glossier You Duo",
    "transcript_state": null,
    "levels": {
@@ -1085,44 +581,17 @@
    ]
   },
   {
-   "id": "181697096",
-   "brand": "Glossier",
-   "set": "newest",
-   "format": "image",
-   "tier": "Scaling (46)",
-   "days_active": 3,
-   "score": 0.35,
-   "dropped": false,
-   "headline": "Glossier",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 2,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Duo z przekreśloną wartością $114 → $97",
-    "fit": "Oszczędność na 2-paku jest prawdziwa (K9), ale przekreślona „wartość” to wzorzec kotwicy (K21) — użyć tylko jako „2 zestawy: oszczędzasz 19,90 zł”",
-    "repro": "Biały statyk z dwoma packshotami — mamy packshoty",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Smells different on everyone and that's the point",
-    "Iconic scent",
-    "Full + travel size",
-    "Value $114, yours for $97 (on-image)"
-   ]
-  },
-  {
    "id": "157292014",
    "brand": "Scarlette",
    "set": "best",
    "format": "image",
    "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
    "days_active": 32,
    "score": 0.3,
    "dropped": false,
+   "drop_reason": "",
    "headline": "OUR BIGGEST SALE EVER - NEW YEAR (60% OFF)",
    "transcript_state": null,
    "levels": {
@@ -1157,47 +626,17 @@
    ]
   },
   {
-   "id": "174013807",
-   "brand": "SoSmooth Skincare",
-   "set": "newest",
-   "format": "video 50s",
-   "tier": "Growing (61)",
-   "days_active": 17,
-   "score": 0.3,
-   "dropped": false,
-   "headline": "She Swore I'd Had Botox",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 0,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Koleżanka przysięgała, że miałam botoks” — testimonial",
-    "fit": "Botoks jako punkt odniesienia (C4); 200 000+ bez źródła",
-    "repro": "AI-UGC wykonalne",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "My friend swore I'd had Botox",
-    "I haven't touched a needle",
-    "Medical-grade silicone patches on forehead and around eyes overnight",
-    "Skin looks smoother now than when getting injectables",
-    "Free shipping over $45",
-    "Loved by 200,000+ Aussies",
-    "Try it risk-free for 30 days"
-   ]
-  },
-  {
    "id": "160554518",
    "brand": "Scarlette",
    "set": "best",
    "format": "video 8s",
    "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
    "days_active": 30,
    "score": 0.3,
    "dropped": false,
+   "drop_reason": "",
    "headline": "🚨 Summer Sale: 60% OFF + Free Shipping",
    "transcript_state": "no_speech",
    "levels": {
@@ -1226,16 +665,19 @@
    ]
   },
   {
-   "id": "181482595",
-   "brand": "Scarlette",
-   "set": "newest",
-   "format": "video 34s",
-   "tier": "Testing (1)",
-   "days_active": 3,
+   "id": "160463563",
+   "brand": "111SKIN",
+   "set": "best",
+   "format": "video 10s",
+   "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
+   "days_active": 30,
    "score": 0.3,
    "dropped": false,
-   "headline": "🌸 Celebrate Mom:  60% OFF Scarlette Collagen Tape (Limited Time)!",
-   "transcript_state": "done",
+   "drop_reason": "",
+   "headline": "Experience the Lift",
+   "transcript_state": "no_speech",
    "levels": {
     "angle": 1,
     "fit": 0,
@@ -1243,24 +685,16 @@
     "borrowed_ip": false
    },
    "reasons": {
-    "angle": "Advertorial „tani trik sprawił, że 58-latka wygląda na 35” + before/after — znany format",
-    "fit": "Botoks, 60% off, kolagen, „wygląda na 35” — łamie C4, C6, C8, C14",
-    "repro": "AI-UGC 58+ wykonalne, ale bez before/after (P1/P2 brak)",
-    "borrowed_ip": "Brak IP"
+    "angle": "„Injectables, but in a bottle” + notatka w iPhone — znany format lifestyle",
+    "fit": "Porównanie z zastrzykami jako oś (C4/K13)",
+    "repro": "Packshot + overlay notatki wykonalne, ale pomysł opiera się na porównaniu",
+    "borrowed_ip": "Brak zewnętrznego IP"
    },
    "claims": [
-    "Tired of expensive creams and painful Botox that don't deliver",
-    "Wrinkles and acne scars are solved by addressing the real cause: collagen loss",
-    "Easy, affordable, 100% natural solution",
-    "Smoother, clearer, younger-looking skin",
-    "Smooth fine lines & wrinkles",
-    "Fade acne scars & dark spots",
-    "Boost collagen production overnight",
-    "Safe, pain-free, and reusable",
-    "Thousands have tried and loved Scarlette",
-    "60% OFF, limited time",
-    "Trusted by 100,000+ women",
-    "Cheap wrinkle hack made my 58yr old skin look 35 (on-screen)"
+    "Like 'injectables, but in a bottle'",
+    "Black Diamond Contour Gel",
+    "Surgically-Precise Skincare",
+    "Experience the Lift"
    ]
   },
   {
@@ -1269,9 +703,12 @@
    "set": "best",
    "format": "dpa/carousel 6 images",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 39,
    "score": 0.3,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Scarlette™ Silicone Scar Sheet",
    "transcript_state": null,
    "levels": {
@@ -1297,9 +734,12 @@
    "set": "best",
    "format": "dpa/carousel 6 images",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 40,
    "score": 0.3,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Scarlette™ Silicone Collagen Sheet",
    "transcript_state": null,
    "levels": {
@@ -1326,14 +766,53 @@
    ]
   },
   {
+   "id": "174013807",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "video 50s",
+   "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
+   "days_active": 17,
+   "score": 0.3,
+   "dropped": false,
+   "drop_reason": "",
+   "headline": "She Swore I'd Had Botox",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 0,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Koleżanka przysięgała, że miałam botoks” — testimonial",
+    "fit": "Botoks jako punkt odniesienia (C4); 200 000+ bez źródła",
+    "repro": "AI-UGC wykonalne",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "My friend swore I'd had Botox",
+    "I haven't touched a needle",
+    "Medical-grade silicone patches on forehead and around eyes overnight",
+    "Skin looks smoother now than when getting injectables",
+    "Free shipping over $45",
+    "Loved by 200,000+ Aussies",
+    "Try it risk-free for 30 days"
+   ]
+  },
+  {
    "id": "153277295",
    "brand": "Scarlette",
    "set": "best",
    "format": "dco/carousel 2 videos 33s",
    "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
    "days_active": 32,
    "score": 0.3,
    "dropped": false,
+   "drop_reason": "",
    "headline": "🌸 Summer Sale:  60% OFF Scarlette Collagen Tape (Limited Time)!",
    "transcript_state": "done",
    "levels": {
@@ -1359,408 +838,17 @@
    ]
   },
   {
-   "id": "182701187",
-   "brand": "Wrinkles Schminkles",
-   "set": "newest",
-   "format": "dco/carousel video 13s",
-   "tier": "Testing (1)",
-   "days_active": 2,
-   "score": 0.3,
-   "dropped": false,
-   "headline": "Wrinkles, Meet Your Match",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 0,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Wrinkles, meet your match” + 97,8% z badania + kod rabatowy — UGC w szlafroku",
-    "fit": "Procent z badania klinicznego (C5/K14/K16), medical-grade, rabat na pierwsze zamówienie",
-    "repro": "UGC wykonalne, dowód nie",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Medical-grade silicone patches with visible results",
-    "30% off your first order with AUS30",
-    "We made a patch for every wrinkle",
-    "97.8% experienced smoother skin in an independent clinical study",
-    "Independent clinical study, 92 women, 4 weeks",
-    "Worn overnight, reusable again and again",
-    "No needles, no clinic, no downtime",
-    "Free shipping over $85"
-   ]
-  },
-  {
-   "id": "160463563",
-   "brand": "111SKIN",
-   "set": "best",
-   "format": "video 10s",
-   "tier": "Optimized (90)",
-   "days_active": 30,
-   "score": 0.3,
-   "dropped": false,
-   "headline": "Experience the Lift",
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 1,
-    "fit": 0,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Injectables, but in a bottle” + notatka w iPhone — znany format lifestyle",
-    "fit": "Porównanie z zastrzykami jako oś (C4/K13)",
-    "repro": "Packshot + overlay notatki wykonalne, ale pomysł opiera się na porównaniu",
-    "borrowed_ip": "Brak zewnętrznego IP"
-   },
-   "claims": [
-    "Like 'injectables, but in a bottle'",
-    "Black Diamond Contour Gel",
-    "Surgically-Precise Skincare",
-    "Experience the Lift"
-   ]
-  },
-  {
-   "id": "181976871",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (22)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181976874",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (22)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181976882",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (22)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181976945",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (1)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181976960",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (1)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181976966",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (22)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181976989",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (22)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181977003",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (1)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181977022",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 5 videos 13s",
-   "tier": "Testing (1)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Ten sam launch DCO (wariant wideo)",
-    "fit": "Neutralny",
-    "repro": "Jak wyżej",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "181977030",
-   "brand": "Eight (Eight Sleep)",
-   "set": "newest",
-   "format": "dco/carousel 6 images",
-   "tier": "Testing (1)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Launch DCO: „najmniejszy i najmocniejszy Pod” — sam tytuł",
-    "fit": "Neutralny — inna kategoria; „30 nocy bez ryzyka” to wzorzec trust do rozważenia",
-    "repro": "DCO z packshotami wykonalne, ale nie ma nowego pomysłu",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Scopri il Pod 6 (Discover the Pod 6)",
-    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
-    "Try it at home risk-free for 30 nights",
-    "No body copy (DCO, title only)"
-   ]
-  },
-  {
-   "id": "182705181",
-   "brand": "SiO Beauty",
-   "set": "newest",
-   "format": "dpa/carousel 6 images",
-   "tier": "Testing (12)",
-   "days_active": 2,
-   "score": 0.275,
-   "dropped": false,
-   "headline": "E-Gift Card",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Karta podarunkowa DPA; „A little extra care, nightly”",
-    "fit": "Neutralny; linia „trochę więcej troski, co noc” w naszym tonie",
-    "repro": "Brak kart podarunkowych w sklepie",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "A little extra care, nightly",
-    "E-Gift Card",
-    "Eye & Smile SuperLift",
-    "Super EyeLift: reusable under eye patches for wrinkles"
-   ]
-  },
-  {
    "id": "138101554",
    "brand": "Eight (Eight Sleep)",
    "set": "best",
    "format": "dco/carousel 5 images (15 cards)",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 63,
    "score": 0.275,
    "dropped": false,
+   "drop_reason": "",
    "headline": "The Pod adapts to your body in real-time as you sleep",
    "transcript_state": null,
    "levels": {
@@ -1781,14 +869,48 @@
    ]
   },
   {
+   "id": "148278471",
+   "brand": "Scarlette",
+   "set": "best",
+   "format": "video 9s",
+   "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
+   "days_active": 38,
+   "score": 0.275,
+   "dropped": false,
+   "drop_reason": "",
+   "headline": null,
+   "transcript_state": "no_speech",
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„I LOVE YOU FOREVER” — hook emocjonalny bez produktu i strefy",
+    "fit": "Neutralny, ale to wzorzec „klik bez intencji” (reguła z ogłoszenia parafialnego)",
+    "repro": "Nieznana treść wideo",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "I love you forever (emotional hook, no product claims in copy)",
+    "1-min quiz landing page"
+   ]
+  },
+  {
    "id": "138103466",
    "brand": "Eight (Eight Sleep)",
    "set": "best",
    "format": "dco/carousel 14 images (21 cards)",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 51,
    "score": 0.275,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Eight Sleep: Your whole bed on autopilot",
    "transcript_state": null,
    "levels": {
@@ -1814,9 +936,12 @@
    "set": "best",
    "format": "dco/carousel 5 videos 26s (40 cards)",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 45,
    "score": 0.275,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Designed for deep sleep. Personalized to you.",
    "transcript_state": "done",
    "levels": {
@@ -1838,69 +963,17 @@
    ]
   },
   {
-   "id": "181825055",
-   "brand": "Hers",
-   "set": "newest",
-   "format": "carousel 4 images",
-   "tier": "Scaling (42)",
-   "days_active": 3,
-   "score": 0.275,
-   "dropped": false,
-   "headline": " ",
-   "transcript_state": null,
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Pusta karuzela bez copy",
-    "fit": "Brak treści — neutralny",
-    "repro": "Nic do odtworzenia",
-    "borrowed_ip": "Brak IP w copy"
-   },
-   "claims": [
-    "No copy in ad (empty title/body); carousel to Wegovy weight-loss landing page"
-   ]
-  },
-  {
-   "id": "148278471",
-   "brand": "Scarlette",
-   "set": "best",
-   "format": "video 9s",
-   "tier": "Optimized (90)",
-   "days_active": 38,
-   "score": 0.275,
-   "dropped": false,
-   "headline": null,
-   "transcript_state": "no_speech",
-   "levels": {
-    "angle": 0,
-    "fit": 1,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„I LOVE YOU FOREVER” — hook emocjonalny bez produktu i strefy",
-    "fit": "Neutralny, ale to wzorzec „klik bez intencji” (reguła z ogłoszenia parafialnego)",
-    "repro": "Nieznana treść wideo",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "I love you forever (emotional hook, no product claims in copy)",
-    "1-min quiz landing page"
-   ]
-  },
-  {
    "id": "149861541",
    "brand": "SoSmooth Skincare",
    "set": "best",
    "format": "video 52s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 37,
    "score": 0.225,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Real women. No needles.",
    "transcript_state": "done",
    "levels": {
@@ -1923,48 +996,17 @@
    ]
   },
   {
-   "id": "174013802",
-   "brand": "SoSmooth Skincare",
-   "set": "newest",
-   "format": "video 59s",
-   "tier": "Scaling (41)",
-   "days_active": 17,
-   "score": 0.225,
-   "dropped": false,
-   "headline": "Real women. No needles.",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 0,
-    "repro": 0,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Jak 174013809 + 40% off",
-    "fit": "Botoks + rabat",
-    "repro": "Realne klientki na wideo",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "40% off the Ultimate Wrinkle Smoothing Set",
-    "\"I haven't had Botox in over two years\" (customer quote)",
-    "\"The Face Plumping Duo has been a game changer\" (customer quote)",
-    "Real women. Real results.",
-    "Free shipping over $45",
-    "Loved by 200,000+ Aussies",
-    "Risk-free for 30 days",
-    "Medical grade anti-wrinkle silicone"
-   ]
-  },
-  {
    "id": "174013809",
    "brand": "SoSmooth Skincare",
    "set": "newest",
    "format": "video 52s",
    "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
    "days_active": 17,
    "score": 0.225,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Real women. No needles.",
    "transcript_state": "done",
    "levels": {
@@ -1987,119 +1029,17 @@
    ]
   },
   {
-   "id": "182701184",
-   "brand": "Wrinkles Schminkles",
-   "set": "newest",
-   "format": "video 29s",
-   "tier": "Testing (1)",
-   "days_active": 1,
-   "score": 0.225,
-   "dropped": false,
-   "headline": "Patches By Night, Glow By Day",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 1,
-    "fit": 0,
-    "repro": 0,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Plastry nocą, blask za dnia” — cross-sell serum + mikroigły",
-    "fit": "Sprzedaje produkty, których nie mamy (serum, mikroigły); „gdzie kremy nie sięgają” = claim wnikania",
-    "repro": "Brak drugiej linii produktów",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "Patches by night, glow by day",
-    "Silicone patches work overnight",
-    "Morning After Glow Serum with Kakadu Plum for AM routine",
-    "Self-Dissolving Microneedle Patches deliver hyaluronic acid, collagen and peptides where creams can't reach",
-    "Free shipping over $85",
-    "Extra 10% off orders over $200"
-   ]
-  },
-  {
-   "id": "182687802",
-   "brand": "Hers",
-   "set": "newest",
-   "format": "image",
-   "tier": "Testing (13)",
-   "days_active": 2,
-   "score": 0.225,
-   "dropped": false,
-   "headline": "Find My Personalized Treatment⚕️",
-   "transcript_state": null,
-   "levels": {
-    "angle": 1,
-    "fit": 0,
-    "repro": 0,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Thicker hair, chewed daily” — forma podania jako hook",
-    "fit": "Claim z badań, minoxidil — medyczne; nie do adaptacji",
-    "repro": "Brak produktu/badań",
-    "borrowed_ip": "Brak nazwanego IP"
-   },
-   "claims": [
-    "Stop hair loss in its tracks",
-    "Thicker, fuller hair in 3-6 months with minoxidil",
-    "Range of treatment options tailored to your hair needs",
-    "Minoxidil shown to regrow hair in 3-6 months (based on studies of oral minoxidil up to 2.5 mg/day)",
-    "Personalized plans starting at $35/month with a 5-month plan paid upfront",
-    "Hair Blends are compounded and not FDA approved/evaluated",
-    "Prescription requires online consultation",
-    "Rx treatment options 100% online",
-    "Thicker hair, chewed daily (on-image)",
-    "Biotin to support healthy hair from root to tip (on-image)",
-    "Lemon-flavored once-daily chew (on-image)"
-   ]
-  },
-  {
-   "id": "149861582",
-   "brand": "SoSmooth Skincare",
-   "set": "best",
-   "format": "video 48s",
-   "tier": "Optimized (86)",
-   "days_active": 37,
-   "score": 0.075,
-   "dropped": false,
-   "headline": "See Why Over 200,000 Aussies Love SoSmooth Patches...",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 0,
-    "fit": 0,
-    "repro": 1,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "„Ostatni silikon, jakiego potrzebujesz” + lista → + 200 000",
-    "fit": "„Backed by science”, medical-grade, wykrzykniki, liczby bez źródła",
-    "repro": "Kobieta z plastrami na sofie — wykonalne",
-    "borrowed_ip": "Brak IP"
-   },
-   "claims": [
-    "The last silicone you'll ever need",
-    "Most-advanced wrinkle smoothing patches yet",
-    "Smooth away all your wrinkle worries",
-    "Non-invasive & backed by science",
-    "Made with medical-grade silicone",
-    "Smooth, plump, lifted skin in just a few uses",
-    "Wear overnight or on the go",
-    "Each patch reusable up to 20 times",
-    "Visibly smoother, glowing skin from the very first use",
-    "Over 200,000 Aussies love SoSmooth patches"
-   ]
-  },
-  {
    "id": "149861540",
    "brand": "SoSmooth Skincare",
    "set": "best",
    "format": "image",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 37,
    "score": 0.075,
    "dropped": false,
+   "drop_reason": "",
    "headline": "♻️ Reusable 20+ times",
    "transcript_state": null,
    "levels": {
@@ -2129,9 +1069,12 @@
    "set": "best",
    "format": "video 49s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 37,
    "score": 0.075,
    "dropped": false,
+   "drop_reason": "",
    "headline": "Amazed by These Silicone Patches | Now 50% OFF!",
    "transcript_state": "done",
    "levels": {
@@ -2157,16 +1100,19 @@
    ]
   },
   {
-   "id": "174013796",
+   "id": "149861582",
    "brand": "SoSmooth Skincare",
-   "set": "newest",
-   "format": "image",
-   "tier": "Scaling (41)",
-   "days_active": 16,
+   "set": "best",
+   "format": "video 48s",
+   "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
+   "days_active": 37,
    "score": 0.075,
    "dropped": false,
-   "headline": "♻️ Reusable 20+ times",
-   "transcript_state": null,
+   "drop_reason": "",
+   "headline": "See Why Over 200,000 Aussies Love SoSmooth Patches...",
+   "transcript_state": "done",
    "levels": {
     "angle": 0,
     "fit": 0,
@@ -2174,18 +1120,22 @@
     "borrowed_ip": false
    },
    "reasons": {
-    "angle": "„Po 60. zmarszczki pogłębiają się… czekanie utrudnia” + prezent",
-    "fit": "Straszenie wiekiem i presja czasu (C14, C6)",
-    "repro": "Statyk wykonalny, treść zakazana",
+    "angle": "„Ostatni silikon, jakiego potrzebujesz” + lista → + 200 000",
+    "fit": "„Backed by science”, medical-grade, wykrzykniki, liczby bez źródła",
+    "repro": "Kobieta z plastrami na sofie — wykonalne",
     "borrowed_ip": "Brak IP"
    },
    "claims": [
-    "In your 60s and noticing wrinkles getting deeper?",
-    "You're not out of options, but waiting makes them harder to improve",
-    "Start now while it still makes a difference",
-    "Free gift on orders over $80",
-    "Reusable 20+ times",
-    "Medical grade anti-wrinkle silicone"
+    "The last silicone you'll ever need",
+    "Most-advanced wrinkle smoothing patches yet",
+    "Smooth away all your wrinkle worries",
+    "Non-invasive & backed by science",
+    "Made with medical-grade silicone",
+    "Smooth, plump, lifted skin in just a few uses",
+    "Wear overnight or on the go",
+    "Each patch reusable up to 20 times",
+    "Visibly smoother, glowing skin from the very first use",
+    "Over 200,000 Aussies love SoSmooth patches"
    ]
   },
   {
@@ -2194,9 +1144,12 @@
    "set": "best",
    "format": "video 6s",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 42,
    "score": 0.075,
    "dropped": false,
+   "drop_reason": "",
    "headline": "🚨 Summer Sale  60% OFF + Free Shipping",
    "transcript_state": "no_speech",
    "levels": {
@@ -2220,49 +1173,17 @@
    ]
   },
   {
-   "id": "182687845",
-   "brand": "Hers",
-   "set": "newest",
-   "format": "video 33s",
-   "tier": "Testing (12)",
-   "days_active": 2,
-   "score": 0.0,
-   "dropped": false,
-   "headline": "See if treatment is right for you",
-   "transcript_state": "done",
-   "levels": {
-    "angle": 0,
-    "fit": 0,
-    "repro": 0,
-    "borrowed_ip": false
-   },
-   "reasons": {
-    "angle": "Lista ✅ „dlaczego Hers” + aktorka — generyczny format telemedycyny",
-    "fit": "Leki na receptę, zastrzeżenia medyczne — poza marką; wykrzykniki/checklisty",
-    "repro": "Wymaga usługi medycznej",
-    "borrowed_ip": "Brak IP (aktorka anonimowa)"
-   },
-   "claims": [
-    "No office visits or pharmacy trips required",
-    "Vetted, licensed healthcare providers",
-    "Free shipping from licensed US pharmacies, if prescribed",
-    "Unlimited ongoing check-ins",
-    "Affordable prescription medication for anxiety and depression",
-    "Asynchronous visits not available in all states",
-    "Controlled substances such as Xanax and Adderall not available",
-    "We're here to help when you're ready",
-    "Actor portrayal (on-screen)"
-   ]
-  },
-  {
    "id": "163736780",
    "brand": "111SKIN",
    "set": "best",
    "format": "video 50s",
    "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
    "days_active": 29,
    "score": 0.225,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "A Surgeon's Answer To Wrinkles",
    "transcript_state": "done",
    "levels": {
@@ -2294,9 +1215,12 @@
    "set": "best",
    "format": "dco/carousel 2 images",
    "tier": "Growing (61)",
+   "performance_score": 61,
+   "proven": true,
    "days_active": 30,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "$55 savings on weekdays",
    "transcript_state": null,
    "levels": {
@@ -2325,9 +1249,12 @@
    "set": "best",
    "format": "dco/carousel 2 images",
    "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
    "days_active": 30,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "20% savings",
    "transcript_state": null,
    "levels": {
@@ -2357,9 +1284,12 @@
    "set": "best",
    "format": "dco/carousel 2 images",
    "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
    "days_active": 30,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "$55 savings on weekdays",
    "transcript_state": null,
    "levels": {
@@ -2387,9 +1317,12 @@
    "set": "newest",
    "format": "dco/carousel 4 images",
    "tier": "Testing (40)",
+   "performance_score": 40,
+   "proven": false,
    "days_active": 2,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Shop 111Skin’s New At-Home Peel",
    "transcript_state": null,
    "levels": {
@@ -2412,14 +1345,52 @@
    ]
   },
   {
+   "id": "181415136",
+   "brand": "111SKIN",
+   "set": "newest",
+   "format": "video 12s",
+   "tier": "Testing (24)",
+   "performance_score": 24,
+   "proven": false,
+   "days_active": 4,
+   "score": 0.5,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Brighter Eyes In 20 Minutes",
+   "transcript_state": "no_speech",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Efekt w konkretnym czasie (20 min) + składniki — znany format",
+    "fit": "Neutralny: obietnica czasowa (jak K12) do usunięcia; sama strefa oczu pasuje",
+    "repro": "Trzy klipy z postacią UGC — wykonalne z AI-UGC",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Gold to soothe and brighten",
+    "Pomegranate seed to reduce the look of dark circles",
+    "Damask rose to calm and hydrate",
+    "Visibly brighter under eyes",
+    "Brighter eyes in 20 minutes",
+    "Loved by real customers"
+   ]
+  },
+  {
    "id": "181415082",
    "brand": "111SKIN",
    "set": "newest",
    "format": "video (length not reported)",
    "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
    "days_active": 3,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": null,
    "transcript_state": "no_speech",
    "levels": {
@@ -2450,9 +1421,12 @@
    "set": "newest",
    "format": "video (length not reported)",
    "tier": "Testing (33)",
+   "performance_score": 33,
+   "proven": false,
    "days_active": 3,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": null,
    "transcript_state": "done",
    "levels": {
@@ -2478,9 +1452,12 @@
    "set": "newest",
    "format": "video 36s",
    "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
    "days_active": 4,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": null,
    "transcript_state": "no_speech",
    "levels": {
@@ -2507,9 +1484,12 @@
    "set": "newest",
    "format": "video 67s",
    "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
    "days_active": 3,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": null,
    "transcript_state": "done",
    "levels": {
@@ -2532,14 +1512,347 @@
    ]
   },
   {
+   "id": "181977030",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Launch DCO: „najmniejszy i najmocniejszy Pod” — sam tytuł",
+    "fit": "Neutralny — inna kategoria; „30 nocy bez ryzyka” to wzorzec trust do rozważenia",
+    "repro": "DCO z packshotami wykonalne, ale nie ma nowego pomysłu",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181977022",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 5 videos 13s",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": "no_speech",
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO (wariant wideo)",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181977003",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976989",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (22)",
+   "performance_score": 22,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976966",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (22)",
+   "performance_score": 22,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976960",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976945",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976882",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (22)",
+   "performance_score": 22,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976874",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (22)",
+   "performance_score": 22,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
+   "id": "181976871",
+   "brand": "Eight (Eight Sleep)",
+   "set": "newest",
+   "format": "dco/carousel 6 images",
+   "tier": "Testing (22)",
+   "performance_score": 22,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Scopri il Pod 6: il Pod più piccolo e potente di sempre",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ten sam launch DCO",
+    "fit": "Neutralny",
+    "repro": "Jak wyżej",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Scopri il Pod 6 (Discover the Pod 6)",
+    "Il Pod più piccolo e potente di sempre (the smallest and most powerful Pod ever)",
+    "Try it at home risk-free for 30 nights",
+    "No body copy (DCO, title only)"
+   ]
+  },
+  {
    "id": "143270893",
    "brand": "Well Well Wellness (affiliate, links to eightsleep.com)",
    "set": "best",
    "format": "image",
    "tier": "Optimized (86)",
+   "performance_score": 86,
+   "proven": true,
    "days_active": 47,
    "score": 0.225,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "The Sleep Setup Athletes Keep Mentioning",
    "transcript_state": null,
    "levels": {
@@ -2564,14 +1877,155 @@
    ]
   },
   {
+   "id": "181971268",
+   "brand": "Glossier",
+   "set": "newest",
+   "format": "video 12s",
+   "tier": "Testing (28)",
+   "performance_score": 28,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.5,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Build your dream fragrance set",
+   "transcript_state": "no_speech",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Zbuduj własny zestaw” — znany format bundle-builder",
+    "fit": "Neutralny; u nas zestawy 1/2/3 już są (C10)",
+    "repro": "Flat-lay packshotów w świetle — wykonalny; brak wariantów zapachu",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Build your own set with the pieces you love most",
+    "Fragrance and makeup, made your way",
+    "Choose your own scents",
+    "NEW: build your own Glossier You duo (on-screen)"
+   ]
+  },
+  {
+   "id": "181697096",
+   "brand": "Glossier",
+   "set": "newest",
+   "format": "image",
+   "tier": "Scaling (46)",
+   "performance_score": 46,
+   "proven": false,
+   "days_active": 3,
+   "score": 0.35,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Glossier",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Duo z przekreśloną wartością $114 → $97",
+    "fit": "Oszczędność na 2-paku jest prawdziwa (K9), ale przekreślona „wartość” to wzorzec kotwicy (K21) — użyć tylko jako „2 zestawy: oszczędzasz 19,90 zł”",
+    "repro": "Biały statyk z dwoma packshotami — mamy packshoty",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Smells different on everyone and that's the point",
+    "Iconic scent",
+    "Full + travel size",
+    "Value $114, yours for $97 (on-image)"
+   ]
+  },
+  {
+   "id": "180667103",
+   "brand": "Glossier",
+   "set": "newest",
+   "format": "video 11s",
+   "tier": "Testing (28)",
+   "performance_score": 28,
+   "proven": false,
+   "days_active": 6,
+   "score": 0.5,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Glossier Boy Brow™",
+   "transcript_state": "no_speech",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Makro-demo jednego ruchu + komentarz klientki jako overlay",
+    "fit": "Demonstracja + realna opinia (K17) pasuje do „pokaż, nie obiecuj”; „cult-favorite” do pominięcia",
+    "repro": "Makro aplikacji plastra z AI-UGC + cytat ze zweryfikowanej opinii",
+    "borrowed_ip": "Brak IP (komentarz anonimowej klientki)"
+   },
+   "claims": [
+    "Cult-favorite Boy Brow",
+    "One swipe for fuller, groomed brows",
+    "In your perfect shade",
+    "So easy anyone can do it",
+    "\"The easiest eyebrow product I have ever used\" (customer comment on-screen)"
+   ]
+  },
+  {
+   "id": "182687845",
+   "brand": "Hers",
+   "set": "newest",
+   "format": "video 33s",
+   "tier": "Testing (12)",
+   "performance_score": 12,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.0,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "See if treatment is right for you",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 0,
+    "fit": 0,
+    "repro": 0,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Lista ✅ „dlaczego Hers” + aktorka — generyczny format telemedycyny",
+    "fit": "Leki na receptę, zastrzeżenia medyczne — poza marką; wykrzykniki/checklisty",
+    "repro": "Wymaga usługi medycznej",
+    "borrowed_ip": "Brak IP (aktorka anonimowa)"
+   },
+   "claims": [
+    "No office visits or pharmacy trips required",
+    "Vetted, licensed healthcare providers",
+    "Free shipping from licensed US pharmacies, if prescribed",
+    "Unlimited ongoing check-ins",
+    "Affordable prescription medication for anxiety and depression",
+    "Asynchronous visits not available in all states",
+    "Controlled substances such as Xanax and Adderall not available",
+    "We're here to help when you're ready",
+    "Actor portrayal (on-screen)"
+   ]
+  },
+  {
    "id": "182687820",
    "brand": "Hers",
    "set": "newest",
    "format": "image",
    "tier": "Testing (12)",
+   "performance_score": 12,
+   "proven": false,
    "days_active": 2,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Get Started Today",
    "transcript_state": null,
    "levels": {
@@ -2604,14 +2058,57 @@
    ]
   },
   {
+   "id": "182687802",
+   "brand": "Hers",
+   "set": "newest",
+   "format": "image",
+   "tier": "Testing (13)",
+   "performance_score": 13,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.225,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Find My Personalized Treatment⚕️",
+   "transcript_state": null,
+   "levels": {
+    "angle": 1,
+    "fit": 0,
+    "repro": 0,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Thicker hair, chewed daily” — forma podania jako hook",
+    "fit": "Claim z badań, minoxidil — medyczne; nie do adaptacji",
+    "repro": "Brak produktu/badań",
+    "borrowed_ip": "Brak nazwanego IP"
+   },
+   "claims": [
+    "Stop hair loss in its tracks",
+    "Thicker, fuller hair in 3-6 months with minoxidil",
+    "Range of treatment options tailored to your hair needs",
+    "Minoxidil shown to regrow hair in 3-6 months (based on studies of oral minoxidil up to 2.5 mg/day)",
+    "Personalized plans starting at $35/month with a 5-month plan paid upfront",
+    "Hair Blends are compounded and not FDA approved/evaluated",
+    "Prescription requires online consultation",
+    "Rx treatment options 100% online",
+    "Thicker hair, chewed daily (on-image)",
+    "Biotin to support healthy hair from root to tip (on-image)",
+    "Lemon-flavored once-daily chew (on-image)"
+   ]
+  },
+  {
    "id": "181825056",
    "brand": "Hers",
    "set": "newest",
    "format": "image",
    "tier": "Scaling (42)",
+   "performance_score": 42,
+   "proven": false,
    "days_active": 3,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Hers",
    "transcript_state": null,
    "levels": {
@@ -2640,14 +2137,47 @@
    ]
   },
   {
+   "id": "181825055",
+   "brand": "Hers",
+   "set": "newest",
+   "format": "carousel 4 images",
+   "tier": "Scaling (42)",
+   "performance_score": 42,
+   "proven": false,
+   "days_active": 3,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": " ",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Pusta karuzela bez copy",
+    "fit": "Brak treści — neutralny",
+    "repro": "Nic do odtworzenia",
+    "borrowed_ip": "Brak IP w copy"
+   },
+   "claims": [
+    "No copy in ad (empty title/body); carousel to Wegovy weight-loss landing page"
+   ]
+  },
+  {
    "id": "170899889",
    "brand": "Hers",
    "set": "best",
    "format": "image",
    "tier": "Optimized (81)",
+   "performance_score": 81,
+   "proven": true,
    "days_active": 24,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Get Started Today",
    "transcript_state": null,
    "levels": {
@@ -2679,14 +2209,748 @@
    ]
   },
   {
+   "id": "181482595",
+   "brand": "Scarlette",
+   "set": "newest",
+   "format": "video 34s",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 3,
+   "score": 0.3,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "🌸 Celebrate Mom:  60% OFF Scarlette Collagen Tape (Limited Time)!",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 0,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Advertorial „tani trik sprawił, że 58-latka wygląda na 35” + before/after — znany format",
+    "fit": "Botoks, 60% off, kolagen, „wygląda na 35” — łamie C4, C6, C8, C14",
+    "repro": "AI-UGC 58+ wykonalne, ale bez before/after (P1/P2 brak)",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Tired of expensive creams and painful Botox that don't deliver",
+    "Wrinkles and acne scars are solved by addressing the real cause: collagen loss",
+    "Easy, affordable, 100% natural solution",
+    "Smoother, clearer, younger-looking skin",
+    "Smooth fine lines & wrinkles",
+    "Fade acne scars & dark spots",
+    "Boost collagen production overnight",
+    "Safe, pain-free, and reusable",
+    "Thousands have tried and loved Scarlette",
+    "60% OFF, limited time",
+    "Trusted by 100,000+ women",
+    "Cheap wrinkle hack made my 58yr old skin look 35 (on-screen)"
+   ]
+  },
+  {
+   "id": "181482577",
+   "brand": "Scarlette",
+   "set": "newest",
+   "format": "video 7s",
+   "tier": "Testing (14)",
+   "performance_score": 14,
+   "proven": false,
+   "days_active": 3,
+   "score": 1.0,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": null,
+   "transcript_state": "no_speech",
+   "levels": {
+    "angle": 2,
+    "fit": 2,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Obiekcja jako hook: „Taśma na twarzy? Serio?” + „już przerobiłaś pół szafki kosmetyków na te linie” — 7 s, konkretny pomysł",
+    "fit": "Wprost nasze przekonanie „nie kolejny krem” + sceptyczna A1 + strefa; ton dorosły, bez claimów, bez botoksu",
+    "repro": "Postać UGC z ręcznikiem w łazience wskazująca strefę — 1:1 z naszym ugc_character",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Tape on my face? Really? (objection hook)",
+    "You've already tried a bathroom cabinet's worth of skincare for forehead lines",
+    "Watch this before you rule it out",
+    "\"face taping will do nothing against your wrinkles!\" (on-screen objection)"
+   ]
+  },
+  {
+   "id": "182705181",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dpa/carousel 6 images",
+   "tier": "Testing (12)",
+   "performance_score": 12,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.275,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "E-Gift Card",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Karta podarunkowa DPA; „A little extra care, nightly”",
+    "fit": "Neutralny; linia „trochę więcej troski, co noc” w naszym tonie",
+    "repro": "Brak kart podarunkowych w sklepie",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "A little extra care, nightly",
+    "E-Gift Card",
+    "Eye & Smile SuperLift",
+    "Super EyeLift: reusable under eye patches for wrinkles"
+   ]
+  },
+  {
+   "id": "182246289",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "video 13s",
+   "tier": "Scaling (42)",
+   "performance_score": 42,
+   "proven": false,
+   "days_active": 3,
+   "score": 0.575,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "This Chest Patch Shocked Me Awake",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Obudziłam się w szoku, jaki gładki” — poranny reveal UGC, znany format",
+    "fit": "Rytuał wieczór→rano = nasz szkielet; ale „one night, that's it” = K12 — przepisać na „rano sprawdzasz tę samą strefę”",
+    "repro": "Postać UGC w łazience wyjmuje plaster z opakowania — mamy pack i postać",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Woke up shocked how smooth my chest looked",
+    "One night with the SiO patch",
+    "My overnight routine to smooth chest wrinkles (on-screen)"
+   ]
+  },
+  {
+   "id": "181332804",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dco/carousel 2 images + video 32s",
+   "tier": "Testing (16)",
+   "performance_score": 16,
+   "proven": false,
+   "days_active": 4,
+   "score": 0.725,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Skin's secret sleep struggle",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 2,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Insight przyczyny: „śpisz na boku? to tłumaczy coś, czego nigdy nie połączyłaś” — edukacja przyczyną, nie produktem",
+    "fit": "Struktura „ukryta przyczyna → mechanizm” pasuje (brief: edukować w 1–2 zdaniach); przyczyna u nas inna (mimika, makijaż, sucha skóra) — bez straszenia (C14)",
+    "repro": "Talking-head AI-UGC wykonalny; trzeba własnego, uczciwego „dlaczego” bez claimów",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Do you sleep on your side? This might explain something you've never connected",
+    "Nobody tells you that how you sleep folds the same skin nightly",
+    "The side-sleeping secret nobody explains",
+    "Why did no one tell me? (on-screen)"
+   ]
+  },
+  {
+   "id": "181332800",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dco/carousel 2 videos 25s + image",
+   "tier": "Testing (16)",
+   "performance_score": 16,
+   "proven": false,
+   "days_active": 4,
+   "score": 0.5,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Skin's secret sleep struggle",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Ta sama teza „sen składa tę samą skórę co noc” — drugie wykonanie",
+    "fit": "Jak 181332804",
+    "repro": "Aplikacja plastra w piżamie w łazience — wykonalne",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "How you sleep folds the same skin nightly",
+    "The nightly skin folding truth",
+    "Side sleeper loves this patch (on-screen)"
+   ]
+  },
+  {
+   "id": "181332791",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "video 25s",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 4,
+   "score": 0.5,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "The nightly skin toll you didn't know",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Mówili Ci, że to po prostu starzenie. Oto, czego nikt nie tłumaczy” — hook „nikt nie mówi”",
+    "fit": "Neutralny; uważać na straszenie starzeniem (C14)",
+    "repro": "Talking-head 25 s",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Your chest lines are not just 'aging'",
+    "Here's what nobody explains",
+    "The nightly skin toll you didn't know"
+   ]
+  },
+  {
+   "id": "180682320",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dpa/carousel 6 images",
+   "tier": "Testing (28)",
+   "performance_score": 28,
+   "proven": false,
+   "days_active": 6,
+   "score": 1.0,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Chest Hydroseal™ Patch",
+   "transcript_state": null,
+   "levels": {
+    "angle": 2,
+    "fit": 2,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Niektóre rzeczy działają jako rytuał, nie jako naprawa. Jeden plaster, co noc. Mało i konsekwentnie.” — odwrotność „efekt od 1. nocy”; rzadkie w kategorii",
+    "fit": "Dokładnie nasz ton (dorosły, spokojny), K4 (2–3×/tyg.), zero claimów, zero botoksu — wprost wzmacnia „nocne wsparcie tam, gdzie widzisz linie”",
+    "repro": "Katalog/statyk z packshotem — mamy packshoty; jedno zdanie copy",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Some things work best as a ritual, not a fix",
+    "One patch, worn while you sleep, every night",
+    "Small and consistent",
+    "Hydroseal range: Chest, FaceLift, Lip, Eye, Eye & Smile, Forehead"
+   ]
+  },
+  {
+   "id": "177231372",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dpa/carousel 6 images",
+   "tier": "Scaling (48)",
+   "performance_score": 48,
+   "proven": false,
+   "days_active": 12,
+   "score": 0.8,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "FaceLift Hydroseal™ Patches",
+   "transcript_state": null,
+   "levels": {
+    "angle": 2,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Daję wszystko wszystkim cały dzień. To jedyna rzecz, którą daję sobie.” — emocja opiekunki, bez claimu",
+    "fit": "Ton i A1 (40–55) pasują; brak strefy/mechanizmu — użyteczne jako linia w remarketingu, nie jako samodzielny kąt cold",
+    "repro": "Katalog + jedno zdanie — packshoty są",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "I give everything to everyone all day long; this is the one thing I give to myself",
+    "Hydroseal range: FaceLift, Forehead, Eye, Eye & Smile, Lip, Chest"
+   ]
+  },
+  {
+   "id": "177231367",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dco/carousel 2 videos 12s + 2 images",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 11,
+   "score": 0.575,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "No Needles, No Downtime",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Bez igieł, bez przestoju” + „czekanie = doganianie igłami i laserami” + reuse ~15 nocy",
+    "fit": "„Bez igieł” dozwolone jako cecha formatu (K7), reuse + on/off wzmacnia #5; ale „igły/lasery” jako straszak zbliża się do C4/C14",
+    "repro": "Karuzela z packshotem + prosta sekwencja",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Waiting until lines show up means playing catch up with needles, lasers and downtime",
+    "Skip that timeline",
+    "One SiO patch reusable for roughly 15 nights",
+    "On before bed, off in the morning",
+    "No needles, no downtime"
+   ]
+  },
+  {
+   "id": "177231362",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dco/carousel 2 videos 27s",
+   "tier": "Testing (38)",
+   "performance_score": 38,
+   "proven": false,
+   "days_active": 11,
+   "score": 0.725,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "The Top, Reclaimed",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 2,
+    "fit": 1,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Dwa lata nie nosiłam tej bluzki. Dziś ją noszę.” — wynik behawioralny zamiast claimu o skórze",
+    "fit": "„Pokaż, nie obiecuj” w wersji życiowej; dla ust/„11” ekwiwalent (np. zdjęcie bez retuszu, makijaż) wymaga własnego dowodu, którego brak (P1/P2)",
+    "repro": "Wymaga historii i strefy dopasowanej do VeluSkin",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Two summers of not wearing that top; wearing it today",
+    "The top, reclaimed"
+   ]
+  },
+  {
+   "id": "177231360",
+   "brand": "SiO Beauty",
+   "set": "newest",
+   "format": "dco/carousel 2 images + video 12s",
+   "tier": "Testing (38)",
+   "performance_score": 38,
+   "proven": false,
+   "days_active": 11,
+   "score": 0.775,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Hold The Skin Flat, While You Sleep",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 2,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Trzyma skórę płasko, gdy śpisz. Jeden krok więcej wieczorem.” — mechanizm w jednym zdaniu",
+    "fit": "C20 (mechanizm prostym językiem), C1 (jedna propozycja), rytuał wieczorny, bez claimów o efekcie",
+    "repro": "Statyk/krótki klip z plastrem NA strefie — mamy zasoby",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "One more step at night",
+    "SiO holds your chest skin flat while you sleep"
+   ]
+  },
+  {
+   "id": "181080127",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "image",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 4,
+   "score": 0.575,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Buy 2, get 1 free. Save 33%.",
+   "transcript_state": null,
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Wygładzanie zwykle znaczy igły, klinika, wizyta co kilka miesięcy — SoSmooth jest wersją bez tego” + koszt/użycie + 2+1",
+    "fit": "Reuse i „około dolara za użycie” = K3/K8 (+); „medical-grade”, 87% vs zastrzyki (C3/C4/C5) do wycięcia",
+    "repro": "Statyk z packshotami i badge’em zestawu — mamy",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Smoothing fine lines usually means needles, a clinic and an appointment every few months",
+    "SoSmooth is the version without any of that",
+    "One Forehead patch and four Eyes & Smile patches",
+    "100% medical-grade silicone",
+    "Worn overnight on clean dry skin",
+    "Reusable up to 20 times",
+    "About a dollar a use",
+    "87% of women surveyed preferred these to injectables",
+    "90% said their skin felt smoother",
+    "Buy 2, get 1 free, save 33%",
+    "Fast-acting; safe for all skin types",
+    "Hydrate, cool, improve skin elasticity, support natural blood flow and collagen"
+   ]
+  },
+  {
+   "id": "181080114",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "image",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 4,
+   "score": 1.0,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "I thought they were a gimmick",
+   "transcript_state": null,
+   "levels": {
+    "angle": 2,
+    "fit": 2,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Dialog sceptyczek („myślałam, że to bajer” / „też, sądziłam, że to taśma”) + edytorski wyjaśniacz „To nie taśma. Oto, co silikon naprawdę robi” + zwrot „jeśli się mylę”",
+    "fit": "Sceptyczna A1, mechanizm prostym językiem („zatrzymuje wilgoć, delikatnie podpiera skórę” = C20), zwrot jako trust (#8); „medical-grade” i 40% off do wycięcia",
+    "repro": "Edytorski statyk z rysunkiem liniowym + packshot — wykonalny w Canva",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "I thought they were a gimmick / glorified sticky tape",
+    "Wore them overnight and forehead looked visibly smoother by morning",
+    "Face Plumping Duo now 40% off at $36",
+    "30-day returns",
+    "It is not tape",
+    "Soft silicone patch holds in moisture and gently supports the skin",
+    "Forehead and smile lines look smoother by morning",
+    "100% medical-grade silicone",
+    "Reusable up to 20 times",
+    "Wear while you sleep"
+   ]
+  },
+  {
+   "id": "181080083",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "video 28s",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 4,
+   "score": 1.0,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "$1.05 a night",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 2,
+    "fit": 2,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„$30 brzmi drogo, dopóki nie policzysz” → $1,05 za noc + „tańsze niż taśma, którą wszyscy polecają, i naprawdę trzyma się skóry” — matematyka + obiekcja przyczepności",
+    "fit": "K8 (≈0,19 zł/użycie), K3 (do 20 użyć), przyczepność (#5), ton rzeczowy; bez botoksu; tylko „medical grade” do wycięcia",
+    "repro": "POV dłoń z plastrem nad umywalką + napis — najprostsze ujęcie w zestawie",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Thirty dollars for one patch sounds steep until you do the maths",
+    "Medical grade silicone",
+    "Rinse in cold water and use again, up to 20 times",
+    "5-pack: $21 a patch",
+    "$1.05 a night",
+    "Cheaper per night than the tape people keep recommending",
+    "It actually stays on",
+    "Any 5 patches, $21 each"
+   ]
+  },
+  {
+   "id": "174013810",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "video 39s",
+   "tier": "Scaling (41)",
+   "performance_score": 41,
+   "proven": false,
+   "days_active": 17,
+   "score": 1.0,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "8 nights, one patch",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 2,
+    "fit": 2,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Trigger makijażu („podkład wsiąka w dwie linie między brwiami”) + „8 nocy, jeden plaster” + raport klientek zamiast obietnicy",
+    "fit": "Dokładnie inspirations #2 (makijaż podkreśla linie) i #3 („11”); „klientki mówią nam” = źródłowany dowód jak K19; bez botoksu; „medical grade” do wycięcia",
+    "repro": "Blondynka w łazience przyciska plaster na czoło + napis = nasz ugc_character 1:1",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Foundation settling into the two lines between your brows",
+    "One Forehead Patch, medical grade silicone, worn overnight",
+    "Eight nights in, finer frown lines look softer (customers tell us)",
+    "Makeup sits flatter",
+    "Rinse and reuse up to 20 times",
+    "Any 5 patches, $21 each",
+    "Free shipping",
+    "Forehead Patch from $21"
+   ]
+  },
+  {
+   "id": "174013802",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "video 59s",
+   "tier": "Scaling (41)",
+   "performance_score": 41,
+   "proven": false,
+   "days_active": 17,
+   "score": 0.225,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Real women. No needles.",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 0,
+    "repro": 0,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Jak 174013809 + 40% off",
+    "fit": "Botoks + rabat",
+    "repro": "Realne klientki na wideo",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "40% off the Ultimate Wrinkle Smoothing Set",
+    "\"I haven't had Botox in over two years\" (customer quote)",
+    "\"The Face Plumping Duo has been a game changer\" (customer quote)",
+    "Real women. Real results.",
+    "Free shipping over $45",
+    "Loved by 200,000+ Aussies",
+    "Risk-free for 30 days",
+    "Medical grade anti-wrinkle silicone"
+   ]
+  },
+  {
+   "id": "174013796",
+   "brand": "SoSmooth Skincare",
+   "set": "newest",
+   "format": "image",
+   "tier": "Scaling (41)",
+   "performance_score": 41,
+   "proven": false,
+   "days_active": 16,
+   "score": 0.075,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "♻️ Reusable 20+ times",
+   "transcript_state": null,
+   "levels": {
+    "angle": 0,
+    "fit": 0,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Po 60. zmarszczki pogłębiają się… czekanie utrudnia” + prezent",
+    "fit": "Straszenie wiekiem i presja czasu (C14, C6)",
+    "repro": "Statyk wykonalny, treść zakazana",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "In your 60s and noticing wrinkles getting deeper?",
+    "You're not out of options, but waiting makes them harder to improve",
+    "Start now while it still makes a difference",
+    "Free gift on orders over $80",
+    "Reusable 20+ times",
+    "Medical grade anti-wrinkle silicone"
+   ]
+  },
+  {
+   "id": "182701187",
+   "brand": "Wrinkles Schminkles",
+   "set": "newest",
+   "format": "dco/carousel video 13s",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.3,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Wrinkles, Meet Your Match",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 0,
+    "repro": 1,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Wrinkles, meet your match” + 97,8% z badania + kod rabatowy — UGC w szlafroku",
+    "fit": "Procent z badania klinicznego (C5/K14/K16), medical-grade, rabat na pierwsze zamówienie",
+    "repro": "UGC wykonalne, dowód nie",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Medical-grade silicone patches with visible results",
+    "30% off your first order with AUS30",
+    "We made a patch for every wrinkle",
+    "97.8% experienced smoother skin in an independent clinical study",
+    "Independent clinical study, 92 women, 4 weeks",
+    "Worn overnight, reusable again and again",
+    "No needles, no clinic, no downtime",
+    "Free shipping over $85"
+   ]
+  },
+  {
+   "id": "182701184",
+   "brand": "Wrinkles Schminkles",
+   "set": "newest",
+   "format": "video 29s",
+   "tier": "Testing (1)",
+   "performance_score": 1,
+   "proven": false,
+   "days_active": 1,
+   "score": 0.225,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Patches By Night, Glow By Day",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 0,
+    "repro": 0,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "„Plastry nocą, blask za dnia” — cross-sell serum + mikroigły",
+    "fit": "Sprzedaje produkty, których nie mamy (serum, mikroigły); „gdzie kremy nie sięgają” = claim wnikania",
+    "repro": "Brak drugiej linii produktów",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "Patches by night, glow by day",
+    "Silicone patches work overnight",
+    "Morning After Glow Serum with Kakadu Plum for AM routine",
+    "Self-Dissolving Microneedle Patches deliver hyaluronic acid, collagen and peptides where creams can't reach",
+    "Free shipping over $85",
+    "Extra 10% off orders over $200"
+   ]
+  },
+  {
+   "id": "182701131",
+   "brand": "Wrinkles Schminkles",
+   "set": "newest",
+   "format": "video 36s",
+   "tier": "Testing (12)",
+   "performance_score": 12,
+   "proven": false,
+   "days_active": 2,
+   "score": 0.575,
+   "dropped": true,
+   "drop_reason": "unproven",
+   "headline": "Reusable Overnight Wrinkle Patches",
+   "transcript_state": "done",
+   "levels": {
+    "angle": 1,
+    "fit": 1,
+    "repro": 2,
+    "borrowed_ip": false
+   },
+   "reasons": {
+    "angle": "Wyjaśniacz „jak kawałek silikonu przechytrza zmarszczkę”: kompresja / krążenie / nawilżenie + makro odklejania",
+    "fit": "Część „okluzja zatrzymuje wilgoć; rano zdejmij, opłucz, użyj ponownie” = #4 i #5 (+); „krążenie”, „nie może się zmarszczyć” = K25, „nie potrzebujesz botoksu” na ekranie = C4",
+    "repro": "Makro dłoni odklejających plaster z folii — proste",
+    "borrowed_ip": "Brak IP"
+   },
+   "claims": [
+    "A bit of silicone outsmarts a wrinkle",
+    "Compression: skin held comfortably taut so it can't crease while you sleep",
+    "Circulation: gentle support for blood flow to revitalise the skin",
+    "Hydration: occlusive layer locks moisture in overnight",
+    "Wake up, peel off, rinse and reuse",
+    "Hypoallergenic and suitable for all skin types",
+    "New customers get 30% off with AUS30",
+    "You don't need botox for results (on-screen)"
+   ]
+  },
+  {
    "id": "182701127",
    "brand": "Wrinkles Schminkles",
    "set": "newest",
    "format": "video 23s",
    "tier": "Testing (12)",
+   "performance_score": 12,
+   "proven": false,
    "days_active": 2,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Effective Wrinkle Patches",
    "transcript_state": "done",
    "levels": {
@@ -2716,9 +2980,12 @@
    "set": "best",
    "format": "video 10s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 32,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Now Available At Ulta 🇺🇸",
    "transcript_state": "no_speech",
    "levels": {
@@ -2750,9 +3017,12 @@
    "set": "best",
    "format": "video 42s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 41,
    "score": 0.225,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Now Stocked At Ulta ✨",
    "transcript_state": "done",
    "levels": {
@@ -2789,9 +3059,12 @@
    "set": "best",
    "format": "video 28s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 41,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Now Stocked At Ulta ✨",
    "transcript_state": "no_speech",
    "levels": {
@@ -2823,9 +3096,12 @@
    "set": "best",
    "format": "video 45s",
    "tier": "Winning (100)",
+   "performance_score": 100,
+   "proven": true,
    "days_active": 49,
    "score": 0.225,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Now Stocked At Ulta ✨",
    "transcript_state": "done",
    "levels": {
@@ -2860,9 +3136,12 @@
    "set": "best",
    "format": "dco/carousel 4 videos 44s",
    "tier": "Winning (91)",
+   "performance_score": 91,
+   "proven": true,
    "days_active": 50,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "Thousands Swear By These, Now At Ulta",
    "transcript_state": "done",
    "levels": {
@@ -2896,9 +3175,12 @@
    "set": "best",
    "format": "dco/carousel 6 videos 41s",
    "tier": "Optimized (90)",
+   "performance_score": 90,
+   "proven": true,
    "days_active": 50,
    "score": 0.0,
    "dropped": true,
+   "drop_reason": "borrowed_ip",
    "headline": "As Seen On Shark Tank, Now At Ulta ✨",
    "transcript_state": "done",
    "levels": {

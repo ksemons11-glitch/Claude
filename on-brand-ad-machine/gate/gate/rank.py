@@ -8,6 +8,8 @@ from .schemas import AdScore, OutputQA, PromptGate
 WEIGHTS = {"angle_strength": 0.45, "positioning_fit": 0.40, "reproducibility": 0.15}
 BORROWED_IP_DROP = 0.6          # drop when P(borrowed_ip) > this
 REVIEW_BAND = (0.5, 0.85)       # confidence band that routes to a human
+PROVEN_MIN_PERF = 61            # GetHookd performance score: Growing (61) / Optimized (81+) / Winning (91+)
+PROVEN_MIN_DAYS = 30            # or: live for at least this many days
 
 
 def _norm(level: int) -> float:
@@ -26,22 +28,40 @@ class Ranked:
     reason: str
 
 
+def is_proven(perf: int | None, days: int | None) -> bool:
+    """An ad counts as proven when the platform already rates it Growing+ or it has survived 30+ days.
+    Testing-tier ads a few days old are hypotheses, not inspirations."""
+    return (perf or 0) >= PROVEN_MIN_PERF or (days or 0) >= PROVEN_MIN_DAYS
+
+
 def _mean_confidence(s: AdScore) -> float:
     return (s.angle_strength.confidence + s.positioning_fit.confidence
             + s.reproducibility.confidence + s.borrowed_ip.confidence) / 4
 
 
-def rank_ads(scored: dict[str, AdScore], top_n: int = 10) -> list[Ranked]:
-    """Weighted score first; ties broken by the judge's mean confidence, then by id (deterministic)."""
+def rank_ads(scored: dict[str, AdScore], top_n: int = 10,
+             evidence: dict[str, tuple[int | None, int | None]] | None = None) -> list[Ranked]:
+    """Weighted judge score; ties broken by platform performance score, then judge confidence, then id.
+
+    `evidence` maps ad id -> (performance_score, days_active). When given, ads that are not `is_proven`
+    are dropped with reason "unproven" — the judge only sees the idea, the platform sees whether it sold.
+    """
     out: list[Ranked] = []
     conf: dict[str, float] = {}
+    perf: dict[str, int] = {}
     for ad_id, s in scored.items():
         p_ip = _p_true(s.borrowed_ip)
         score = sum(WEIGHTS[k] * _norm(getattr(s, k).level) for k in WEIGHTS)
-        dropped = p_ip > BORROWED_IP_DROP
         conf[ad_id] = _mean_confidence(s)
-        out.append(Ranked(ad_id, round(score, 4), dropped, "borrowed_ip" if dropped else ""))
-    kept = sorted([r for r in out if not r.dropped], key=lambda r: (-r.score, -conf[r.id], r.id))
+        pf, days = (evidence or {}).get(ad_id, (None, None))
+        perf[ad_id] = pf or 0
+        if p_ip > BORROWED_IP_DROP:
+            out.append(Ranked(ad_id, round(score, 4), True, "borrowed_ip"))
+        elif evidence is not None and not is_proven(pf, days):
+            out.append(Ranked(ad_id, round(score, 4), True, "unproven"))
+        else:
+            out.append(Ranked(ad_id, round(score, 4), False, ""))
+    kept = sorted([r for r in out if not r.dropped], key=lambda r: (-r.score, -perf[r.id], -conf[r.id], r.id))
     return kept[:top_n] + [r for r in out if r.dropped]
 
 

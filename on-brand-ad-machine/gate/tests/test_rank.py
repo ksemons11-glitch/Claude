@@ -51,3 +51,12 @@ def test_rank_tiebreak_by_confidence():
     ranked = rank_ads({"low": mk(0.5), "high": mk(0.9)}, top_n=2)
     assert [r.id for r in ranked] == ["high", "low"]
     assert ranked[0].score == ranked[1].score
+
+
+def test_rank_drops_unproven_when_evidence_given():
+    good = AdScore(angle_strength=S(2), positioning_fit=S(2), reproducibility=S(2), borrowed_ip=B(False))
+    ranked = rank_ads({"fresh": good, "old": good, "winning": good},
+                      evidence={"fresh": (1, 4), "old": (10, 45), "winning": (100, 12)}, top_n=10)
+    kept = [r.id for r in ranked if not r.dropped]
+    assert kept == ["winning", "old"]            # same judge score -> higher platform score first
+    assert [r.id for r in ranked if r.dropped] == ["fresh"] and ranked[-1].reason == "unproven"

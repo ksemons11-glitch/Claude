@@ -51,6 +51,13 @@ def cmd_rules_library(a):
     return 0
 
 
+def _perf(tier) -> int | None:
+    """'Optimized (86)' -> 86 (GetHookd performance tier label)."""
+    import re
+    m = re.search(r"\((\d+)\)", str(tier or ""))
+    return int(m.group(1)) if m else None
+
+
 def cmd_score_ads(a):
     brain = Brain(); judge = make_judge(a.judge, brain, Path(a.io))
     scored = {}
@@ -60,7 +67,8 @@ def cmd_score_ads(a):
             scored[ad_id] = judge.score_ad(ad)
         except FileNotFoundError as e:
             print(f"[manual] {e}", file=sys.stderr)
-    ranked = rank_ads(scored, top_n=a.top)
+    evidence = {str(ad.get("id")): (_perf(ad.get("tier")), ad.get("days_active")) for ad in _load(a.path)}
+    ranked = rank_ads(scored, top_n=a.top, evidence=evidence)
     for r in ranked:
         s = scored[r.id]
         print(f"{r.id:22} score={r.score:.3f} {'DROPPED ' + r.reason if r.dropped else ''} "
