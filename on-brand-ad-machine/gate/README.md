@@ -24,4 +24,6 @@ python -m gate rules-library
 
 Input shapes: `ads.json` = `[{"id", "brand", "headline", "body", "transcript"}]`; `prompts.json` = `[{"id", "angle", "zone", "headline", "subcopy", "visual", "offer_lockup", "cta", "prompt"}]`; `items.json` = `[{"id", "image_path", "description"}]`.
 
+**Policy (owner decision, 2026-09-24):** competitor ads are extracted with *every* claim captured and none filtered; the rules only *annotate* the shortlist. Hard-fail applies to our own prompts (step 5) and outputs (step 7), and even there the owner has the final word on which claims to use.
+
 Thresholds (`gate/rank.py`) are the plan's starting guesses — label ~30 prompts, compare, move them.
