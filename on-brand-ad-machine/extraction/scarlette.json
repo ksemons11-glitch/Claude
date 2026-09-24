@@ -47,8 +47,12 @@
     "Trusted by 100,000+ women",
     "Cheap wrinkle hack made my 58yr old skin look 35 (on-screen)"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "Okay, it takes balls to make this video and apparently I have a set. I'm not afraid to come on and make a TikTok about something that I believe in. Well look what I did last night. I put it right here where the fine lines are starting to develop as a 58 year old mom. I put it right here for my 11s and here by my crow's feet. So here we go. I'm gonna peel them off after 12 hours and what it does according to dermatologists is that it brings moisture to the forefront of your dermis. What do you know? Not bad.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181482577,
@@ -73,7 +77,11 @@
     "\"face taping will do nothing against your wrinkles!\" (on-screen objection)"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 160554518,
@@ -104,7 +112,11 @@
     "Smile lines are gone and I'm not broke (on-screen)"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 157292606,
@@ -201,8 +213,12 @@
     "Over 100,000+ customers loving the results",
     "60% OFF, limited time"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "I Bet none of y'all can actually guess my real age I've been using silicone scar tape to help prevent the creasing in my face as I sleep get any worse I've been getting so many compliments about how youthful my skin looks this stuff has been a lifesaver though as a side sleeper Face and skin are constantly getting squished and it's making all these lines even worse So this stuff has helped hold my skin in place So it's not creasing and the lines are not getting more defined. If you're a side sleeper, you need to get this I'll link it down below",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 148278471,
@@ -225,7 +241,11 @@
     "1-min quiz landing page"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 148278441,
@@ -303,7 +323,11 @@
     "60% OFF + Free Shipping"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   }
  ]
 }

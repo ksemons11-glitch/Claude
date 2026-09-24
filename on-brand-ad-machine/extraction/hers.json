@@ -44,8 +44,12 @@
     "We're here to help when you're ready",
     "Actor portrayal (on-screen)"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "I thought I had to go to in-person appointments to get stress and anxiety medications. But through HERS, I got prescribed one pill to manage stress and treat anxiety with no in-person appointments, completely online from the comfort of my home after a licensed provider reviewed my information. It's called Balance Blend and it combines the same active ingredients as Lexapro to treat anxiety with L-theanine for stress support. I didn't even need insurance and it's delivered right to my door with free shipping if prescribed. Now I feel like myself again. I wish I knew about this sooner.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 182687820,
@@ -263,8 +267,12 @@
     "#herspartner (paid partner)",
     "HELP! None of my clothes fit! (on-screen)"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "No one warned me that when I started my HRS plan, I was going to have to buy a whole new wardrobe. I did not expect it to work this well. And I just had a huge non-skill victory. If you understand why being able to run my fingers along this part where my thighs go is a huge deal, then you're probably in the right place because I have never been able to wear shorts and have them hang correctly on my legs. I've been on my HRS program for 16 weeks now. I've lost just over 30 pounds and I could go shopping, but I've never gotten to participate in the oversized clothing trend. So I think I'm going to soak it up a little bit more. So let me tell you why I decided to become a HRS partner. Every plan is customizable and it's determined by a provider what will work best for you. And clearly it's working for me. I love that it's not a one size fits all situation and you can check in with your provider whenever you need to. I can trust my program because GLP-1s are clinically proven to help lose up to 20% of your body weight. And after 16 weeks, I'm already more than halfway there. And finally, the process is so simple. It's 100% online. You can find out today what the best plan is for you. And if you want to start your journey along with me, you can go to forehers.com slash Samantha and maybe we can go shopping together once you get started.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   }
  ]
 }

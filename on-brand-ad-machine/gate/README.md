@@ -27,3 +27,10 @@ Input shapes: `ads.json` = `[{"id", "brand", "headline", "body", "transcript"}]`
 **Policy (owner decision, 2026-09-24):** competitor ads are extracted with *every* claim captured and none filtered; the rules only *annotate* the shortlist. Hard-fail applies to our own prompts (step 5) and outputs (step 7), and even there the owner has the final word on which claims to use.
 
 Thresholds (`gate/rank.py`) are the plan's starting guesses — label ~30 prompts, compare, move them.
+
+## Krok 4 — jak powstała shortlista
+
+`extraction/judge-answers.json` = odpowiedzi sędziego (manual) dla 90 reklam, w kształcie `AdScore`.
+`python3 extraction/shortlist.py` kopiuje je do `gate/judge-io/`, uruchamia `ManualJudge` + `rank_ads`
+i zapisuje `extraction/shortlist.json` (pełna tabela) oraz `extraction/shortlist.md` (write-up).
+Zmiana wag → `gate/gate/rank.py`, ponowne uruchomienie skryptu; remisy rozstrzyga średnia pewność sędziego.

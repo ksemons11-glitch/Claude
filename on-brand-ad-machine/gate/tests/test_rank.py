@@ -40,3 +40,14 @@ def test_route_output():
     assert route_output(bad)[0] == "reject"
     meh = good.model_copy(update={"tone_match": S(2, 0.7)})
     assert route_output(meh)[0] == "review"
+
+
+def test_rank_tiebreak_by_confidence():
+    def mk(conf):
+        return AdScore(angle_strength=ScoreAnswer(level=1, confidence=conf, reason="x"),
+                       positioning_fit=ScoreAnswer(level=1, confidence=conf, reason="x"),
+                       reproducibility=ScoreAnswer(level=1, confidence=conf, reason="x"),
+                       borrowed_ip=BoolAnswer(value=False, confidence=0.9, reason="x"))
+    ranked = rank_ads({"low": mk(0.5), "high": mk(0.9)}, top_n=2)
+    assert [r.id for r in ranked] == ["high", "low"]
+    assert ranked[0].score == ranked[1].score

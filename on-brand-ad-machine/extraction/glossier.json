@@ -41,7 +41,11 @@
     "NEW: build your own Glossier You duo (on-screen)"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181697096,
@@ -92,7 +96,11 @@
     "\"The easiest eyebrow product I have ever used\" (customer comment on-screen)"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 150266455,
@@ -117,8 +125,12 @@
     "Fragrance sets for every occasion (on-screen)",
     "Glossier is letting you pick two full size (on-screen)"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "Glossier is letting you pick two full-size fragrances for a bundled price And if you need help choosing which two scents to get, let me help you decide You is my everyday scent and definitely what I get the most compliments on. It's very soft, warm, clean, and a little sweet Fleur is very fresh, airy, and floral So I love this for a Sunday brunch, shopping with the girls, or a first date. Rev is my go-to for a night out It's sexy, bold, with notes of plum and toasted almond. It gives you that boost of confidence Dew is woody, earthy, and musky. This is my post-shower fragrance So I love it for a cozy, slow morning, or a self-care night And Soie is what I'm taking with me on vacations and beach days It's creamy, sun-warmed, a little salty, and dewy With the flexible sets, you could do You and Rev for a day-to-night combo If you have some trips coming up, I would do Soie and Dew If you're always making plans with your girls, I would go with Rev and Fleur Thankfully, you don't have to commit to just one Head to glossier.com to build your discounted set",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 143112966,

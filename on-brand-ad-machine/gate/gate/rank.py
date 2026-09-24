@@ -26,14 +26,22 @@ class Ranked:
     reason: str
 
 
+def _mean_confidence(s: AdScore) -> float:
+    return (s.angle_strength.confidence + s.positioning_fit.confidence
+            + s.reproducibility.confidence + s.borrowed_ip.confidence) / 4
+
+
 def rank_ads(scored: dict[str, AdScore], top_n: int = 10) -> list[Ranked]:
+    """Weighted score first; ties broken by the judge's mean confidence, then by id (deterministic)."""
     out: list[Ranked] = []
+    conf: dict[str, float] = {}
     for ad_id, s in scored.items():
         p_ip = _p_true(s.borrowed_ip)
         score = sum(WEIGHTS[k] * _norm(getattr(s, k).level) for k in WEIGHTS)
         dropped = p_ip > BORROWED_IP_DROP
+        conf[ad_id] = _mean_confidence(s)
         out.append(Ranked(ad_id, round(score, 4), dropped, "borrowed_ip" if dropped else ""))
-    kept = sorted([r for r in out if not r.dropped], key=lambda r: -r.score)
+    kept = sorted([r for r in out if not r.dropped], key=lambda r: (-r.score, -conf[r.id], r.id))
     return kept[:top_n] + [r for r in out if r.dropped]
 
 

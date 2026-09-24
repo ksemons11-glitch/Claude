@@ -44,8 +44,38 @@
     "Covered by Marie Claire",
     "Loved by customers, celebrities and editors"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "As a plastic surgeon, one of the most frequently asked questions I receive from patients is about the best solution for deep set lines and wrinkles. But if surgery or aesthetic treatments is not a solution for you, you should try 111SKIN's Wrinkle Erasing Retinol Patches. It's an overnight needle-free fix that you can try at home to precisely target frown lines, forehead lines, crow's feet and nasolabial folds. The Wrinkle Erasing Retinol Patches use microcone technology to deliver active ingredients twice as deep as topical skincare. It's no surprise then that they have become quickly a five-star favorite by customers, beloved by celebrities and editors including Harper's Bazaar, Vogue, Glamour and many more.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [
+    "Script: Copy voice = Expert",
+    "Script: Written hook = Expert claim",
+    "Angles & psychology: Angle = Problem / solution",
+    "Angles & psychology: Secondary angle = Mechanism",
+    "Angles & psychology: Niche angle = anti-aging",
+    "Angles & psychology: Niche angle = wrinkles",
+    "Angles & psychology: Niche angle = retinol",
+    "Angles & psychology: Niche angle = skincare",
+    "Angles & psychology: Claim level = Mechanism",
+    "Angles & psychology: Desire = Looks",
+    "Angles & psychology: Awareness = Problem aware",
+    "Angles & psychology: Tone = Premium",
+    "Angles & psychology: Claims = Health function",
+    "Angles & psychology: Claims = Sensory",
+    "Angles & psychology: Copy signals = Review",
+    "Angles & psychology: Copy signals = Testimonial",
+    "Angles & psychology: Seasonality = Evergreen",
+    "Angles & psychology: Promise = wrinkle erasing",
+    "Angles & psychology: Promise = needle-free fix",
+    "Angles & psychology: Promise = active ingredients deeper",
+    "Offers & on-screen: Offer = No offer",
+    "Offers & on-screen: Social proof",
+    "Landing page: Funnel stage = TOFU",
+    "Landing page: Above-the-fold claim = Luxury innovative skincare",
+    "Landing page: Price point = Premium"
+   ],
+   "on_screen_text": ""
   },
   {
    "id": 160463730,
@@ -123,7 +153,35 @@
     "Experience the Lift"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [
+    "Script: Copy voice = Regular person",
+    "Script: Written hook = Bold claim",
+    "Angles & psychology: Angle = Benefits",
+    "Angles & psychology: Secondary angle = Mechanism",
+    "Angles & psychology: Niche angle = skincare",
+    "Angles & psychology: Niche angle = anti-aging",
+    "Angles & psychology: Niche angle = facial_contouring",
+    "Angles & psychology: Claim level = Mechanism",
+    "Angles & psychology: Desire = Looks",
+    "Angles & psychology: Awareness = Solution aware",
+    "Angles & psychology: Tone = Premium",
+    "Angles & psychology: Claims = Cosmetic",
+    "Angles & psychology: Copy signals = Comparison",
+    "Angles & psychology: Seasonality = Evergreen",
+    "Angles & psychology: Promise = lift",
+    "Angles & psychology: Promise = contour",
+    "Angles & psychology: Promise = injectable-like results",
+    "Offers & on-screen: Offer = No offer",
+    "Landing page: Funnel stage = TOFU",
+    "Landing page: Landing page headline = Black Diamond Contour Gel",
+    "Landing page: Above-the-fold claim = Illuminate your beauty",
+    "Landing page: Above-the-fold claim = Enhance delicate areas for a refreshed, radiant appearance",
+    "Landing page: Price point = Premium"
+   ],
+   "on_screen_text": ""
   },
   {
    "id": 160463513,
@@ -200,7 +258,11 @@
     "Loved by real customers"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181415082,
@@ -228,7 +290,11 @@
     "Skin prepped, polished, ready for the show"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181415079,
@@ -250,8 +316,12 @@
     "Camera-ready glass skin for NYFW",
     "Thanks to the new 111SKIN Precision Peel"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "Good morning. We are right in the thick of New York Fashion Week now. Before I start glam, I like to prep my skin with this 111 Skin Precision Peel. It has been so helpful for me. I put it on and leave it on for 20 minutes. Wash it off. The Precision Peel gently exfoliates my skin to leave it looking smoother, brighter, and so glowy. So let's go. Come get ready with me as I head to Proenza Schooler.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181415073,
@@ -275,7 +345,11 @@
     "Exclusively at Harrods"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181415072,
@@ -299,8 +373,12 @@
     "Signature 'Sean Garrette Glow'",
     "Backstage Skin Edit: Cleansing Oil, Precision Peel, Black Diamond Essence, Celestial Black Diamond Eye Mask, Y Theorem Bio Cellulose Mask, Black Diamond Serum, Black Diamond Contour Gel, Black Diamond Emulsion, All Day Radiance Mist"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "Come with me backstage at the Proenta Schooler Spring Summer 2027 show, where I let the skin prep with 111 Skin. For the skin this season, I envisioned a woman who puts in the maximum effort to achieve maximum results, an ethos I feel 111 Skin embodies perfectly. I designed the facial around the Black Diamond Collection, an opulent range of concentrated, high-performance formulas designed to intensely preserve, restore, and renew the complexion. I prepped the skin with the 111 Skin Cleansing Oil and All Day Radiance Face Mist before applying the Black Diamond Essence and Serum. Then, to achieve the maximum radiance to the skin, I applied the Celestial Black Diamond Eye Mask and layered over the Y Theorem Biolaceous Mask. I focused a lot on sculpting the skin with my signature facial massage, as well as using the 111 Skin Cryoglobes on the face to de-puff, sculpt, and soothe the skin. Just like a Black Diamond, I wanted the skin to reflect light with brilliant shine and unparalleled radiance while maintaining a smooth, refined, and flawless-looking complexion. And with this precise skin prep, the model's skin was infused with hydration, was visibly plumper, and prepped for makeup.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   }
  ]
 }

@@ -67,7 +67,11 @@
     "No body copy (DCO, title only)"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "no_speech",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 181977003,
@@ -345,8 +349,12 @@
     "Personalized to you",
     "Try it at home risk-free for 30 nights"
    ],
-   "transcript": null,
-   "transcript_queued": true
+   "transcript": "I've been sleeping on the pod for three years now. So it's been a very long time. When you fall asleep with Autopilot, I mean, it changes the temperature and helps to have more deep sleep and to be more into the deep sleep and feel more refreshed in the morning. And that is a super, super cool feature as well. It makes a huge difference in terms of recovery. || I've been sleeping on the pod for three years now. So it's been a very long time. When you fall asleep with Autopilot, I mean, it changes the temperature and helps to have more deep sleep and to be more into the deep sleep and feel more refreshed in the morning. And that is a super, super cool feature as well. It makes a huge difference in terms of recovery. || I've been sleeping on the pod for three years now. So it's been a very long time. When you fall asleep with Autopilot, I mean, it changes the temperature and helps to have more deep sleep and to be more into the deep sleep and feel more refreshed in the morning. And that is a super, super cool feature as well. It makes a huge difference in terms of recovery. || I've been sleeping on the pod for three years now. So it's been a very long time. When you fall asleep with Autopilot, I mean, it changes the temperature and helps to have more deep sleep and to be more into the deep sleep and feel more refreshed in the morning. And that is a super, super cool feature as well. It makes a huge difference in terms of recovery. || I've been sleeping on the pod for three years now. So it's been a very long time. When you fall asleep with Autopilot, I mean, it changes the temperature and helps to have more deep sleep and to be more into the deep sleep and feel more refreshed in the morning. And that is a super, super cool feature as well. It makes a huge difference in terms of recovery.",
+   "transcript_queued": true,
+   "transcript_state": "done",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   },
   {
    "id": 138103466,
@@ -418,7 +426,11 @@
     "Try it at home risk-free for 30 nights"
    ],
    "transcript": null,
-   "transcript_queued": true
+   "transcript_queued": true,
+   "transcript_state": "pending",
+   "script_anatomy": null,
+   "insights": [],
+   "on_screen_text": ""
   }
  ]
 }
