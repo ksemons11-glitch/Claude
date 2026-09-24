@@ -1,13 +1,22 @@
-rule_id,check,type,status
-C1,Nagłówek = jedno zdanie / jedna propozycja; bez drugiego zdania tłumaczącego puentę,must,confirmed
-C2,Zero wykrzykników w nagłówku i podtytule,must,confirmed
-C3,Nagłówek NIE zaczyna się od „silikon klasy medycznej” / „medical-grade”,must,confirmed
-C4,"Zero „-50%”, „promocja”, „tylko dziś”, odliczania, starburstów",must,confirmed
-C5,"Oferta zawsze jako lockup: „2 zestawy — 99,90 zł” (małym tekstem przy CTA)",must,confirmed
-C6,"CTA: „Kup teraz” lub czasownik korzyści (np. „Wygładź zmarszczki”); nigdy „Kliknij tutaj”",must,confirmed
-C7,Pisownia marki: „VeluSkin”,must,confirmed
-C8,"Bez obietnic medycznych („leczy”, „usuwa na stałe”, „jak botoks w 100%”); dozwolone: „wygładza”, „redukuje widoczność”, „efekt przez noc”",must,confirmed
-C9,Język: naturalny polski; bez kalek z angielskiego („skincare routine” → „pielęgnacja”),should,draft
-C10,"Ton: pewny, spokojny, lekko przewrotny; bez krzyku i bez „kochane”",should,draft
-C11,Podtytuł ≤ 12 słów; nagłówek ≤ 9 słów,should,draft
-C12,Każda kreacja odwołuje się do dokładnie jednego kąta z inspirations.csv,must,confirmed
+rule_id,check,type,source,status
+C1,Nagłówek = jedno zdanie / jedna propozycja / jeden kąt z inspirations.csv,must,brain,confirmed
+C2,Zero wykrzykników,must,user,confirmed
+C3,"Zero „silikon medyczny / klasy medycznej / medical-grade” — gdziekolwiek w copy (tylko „100% silikon”)",must,user+brief,confirmed
+C4,"Zero „zastępuje botoks / jak botoks / alternatywa dla botoksu”; dozwolone „bez igieł”, „bez zabiegu” jako cecha formatu",must,user+brief,confirmed
+C5,"Zero procentów i liczb bez przypiętego źródła w claims.csv (87%, 89%, 7240, 1558 — zablokowane do weryfikacji)",must,brief,confirmed
+C6,"Zero „-50% tylko dziś”, odliczania, fałszywych deadline’ów, starburstów, „najczęściej wybierane”",must,brief,confirmed
+C7,"Zero ekspertów/dermatologów/laboratorium/„latami badań” — nie ma takiej historii",must,brief,confirmed
+C8,"Zero „efekt od 1. nocy”, „klinicznie potwierdzone”, „trwale usuwa”, „bezpieczne w ciąży”, „stymuluje kolagen”",must,brief,confirmed
+C9,"Każdy mocniejszy claim ma claim_id z claims.csv (allowed = yes)",must,brief,confirmed
+C10,"Oferta jako lockup: „2 zestawy — 99,90 zł” (etykieta REKOMENDOWANY) małym tekstem przy CTA",must,user,confirmed
+C11,"CTA: „Zobacz, jak działa VeluSkin i dobierz zestaw” / „Wybierz zestaw VeluSkin” / „Kup teraz”; nigdy „Kliknij tutaj”",must,brief,confirmed
+C12,"Pisownia: „VeluSkin” (nigdy Veluskin / VELUSKIN)",must,brain,confirmed
+C13,"Strefa zamiast etykiety: „pionowe linie wokół ust”, „11 między brwiami”; „zmarszczki palacza” najwyżej pomocniczo",must,brief,confirmed
+C14,"Bez wstydu wokół wieku; bez straszenia starzeniem; bez infantylnego tonu i „kochane”",must,brief,confirmed
+C15,"Język korzyści: „pomaga wygładzić wygląd”, „wspiera”, „ogranicza utratę wilgoci” — nie „usuwa”, „likwiduje”, „cofa”",must,brief,confirmed
+C16,"Pokaż, nie obiecuj: w kreacji jest demonstracja lub dowód (aplikacja / rano / reuse / PRZED-PO), nie sam przymiotnik",should,brief,confirmed
+C17,"Naturalny polski; bez kalek („skincare routine” → „pielęgnacja”)",should,brain,draft
+C18,"Nagłówek ≤ 9 słów; podtytuł ≤ 14 słów",should,brain,draft
+C19,"Lekko przewrotny ton dopuszczalny w hooku, nigdy kosztem wiarygodności",should,user,confirmed
+C20,"Mechanizm prostym językiem: „tworzy barierę”, „pomaga zachować wilgoć w skórze przez noc”; słowo „okluzja” tylko w sekcji edukacyjnej / remarketingu",should,exec_summary,confirmed
+C21,"Zero żargonu „efekt WOW”, „rewolucja w anti-aging”, „100% gwarancji”",must,exec_summary,confirmed

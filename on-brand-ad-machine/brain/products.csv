@@ -1,6 +1,24 @@
-sku,name,placement,variant,price_pln,reuses,key_claim,photo_path,status
-TODO-01,Plaster na czoło,czoło,duży prostokąt,TODO,do 20,Wygładza poziome zmarszczki czoła przez noc,brain/assets/TODO-czolo.jpg,missing
-TODO-02,Plaster na lwią zmarszczkę,międzybrwie,mały trójkąt/prostokąt,TODO,do 20,Rozprostowuje pionowe „lwie zmarszczki”,brain/assets/TODO-lwia.jpg,missing
-TODO-03,Plastry pod oczy,pod oczy,para,TODO,do 20,Wygładza kurze łapki; redukuje opuchliznę i cienie rano,brain/assets/TODO-oczy.jpg,missing
-TODO-04,Plaster na dekolt,dekolt,duży,TODO,do 20,Wygładza zmarszczki dekoltu po nocy na boku,brain/assets/TODO-dekolt.jpg,missing
-SET-2,Zestaw 2 zestawy (oferta główna),mix,2 komplety,99.90,do 20 każdy,"Główna oferta w reklamach: 2 zestawy — 99,90 zł",brain/assets/TODO-zestaw.jpg,partial
+field,value,source,status
+product_name,VeluSkin — Wielorazowe Plastry Antyzmarszczkowe (16 sztuk),user,confirmed
+descriptor_recommended,VeluSkin — Wielorazowe Plastry Silikonowe,brief,recommended
+sku_structure,JEDEN produkt — brak osobnych SKU na strefy,user,confirmed
+set_contents,"16 plastrów na różne partie twarzy (czoło, okolice oczu, policzki, usta) + elektroniczna instrukcja",user,confirmed
+material,"100% silikon, bezwonny — NIE „silikon medyczny / klasy medycznej”",user,confirmed
+reuses_per_patch,do ok. 20,user,confirmed
+usage,"Na noc, 2–3 razy w tygodniu; po użyciu płukać pod chłodną wodą i odłożyć do pudełka",user,confirmed
+set_duration,1 zestaw ≈ 30 dni kuracji,user,confirmed
+key_zones_for_comms,"Okolice ust (pionowe linie) i między brwiami („11”) — najważniejsze komunikacyjnie",brief,confirmed
+price_1_set,"59,90 zł (59,90 zł/zestaw) — wejście / test produktu",user,confirmed
+price_2_sets,"99,90 zł (49,95 zł/zestaw) — REKOMENDOWANY; 32 plastry; darmowa dostawa; oszczędność 19,90 zł vs 2×1",user,confirmed
+price_3_sets,"129,90 zł (43,30 zł/zestaw) — NAJLEPSZA CENA / ZESTAW; darmowa dostawa; oszczędność 49,80 zł vs 3×1",user,confirmed
+cost_per_use,"≈ 0,19 zł za jedno użycie plastra (59,90 zł ÷ (16 × ~20)) — liczba się broni, dozwolona w copy",user,confirmed
+regular_price_anchor,"BRAK — nie budować sztucznej kotwicy „z 129,99 zł”",brief,confirmed
+bonuses,"BRAK — nie dodawać e-booków „o wartości X zł”; dopuszczalna instrukcja „jak nakleić, myć, suszyć, przechowywać” jako redukcja obiekcji",brief,confirmed
+delivery,"Paczkomat InPost 8,99 zł (1–2 dni); kurier InPost 10,80 zł (1–2 dni); pobranie 11,90 zł (2–3 dni); pakiety 2 i 3 — darmowa dostawa",user,confirmed
+payments,BLIK i pobranie,user,confirmed
+returns,14 dni,user,confirmed
+label_rule,"„REKOMENDOWANY” przy 2 szt.; „NAJLEPSZA CENA / ZESTAW” przy 3 szt.; NIGDY „najczęściej wybierane” bez danych sprzedażowych",brief,confirmed
+order_bump_upsell,BRAK na start; AOV budować pakietami pre-purchase,brief,recommended
+photo_packshot,TODO — brain/assets/packshot.jpg,user,missing
+photo_on_face,TODO — brain/assets/on-face-usta.jpg oraz on-face-11.jpg,user,missing
+schematic_16_patches,TODO — schemat 16 plastrów i miejsc aplikacji (kluczowy dla przekonania nr 1),brief,missing

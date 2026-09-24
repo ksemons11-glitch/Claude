@@ -27,17 +27,20 @@ CELLB = ParagraphStyle("cb", parent=CELL, fontName="DVB")
 
 # (file, title, intro, columns to show or None=all)
 SECTIONS = [
-    ("brand-core.csv", "1. Brand core", "Kim jest VeluSkin, co obiecuje i jakich zasad nie łamie.", ["key", "value", "status"]),
-    ("audiences.csv", "2. Audiences (ICP)", "Do kogo mówimy i co ich boli.", ["name", "age", "pain_points", "triggers", "objections", "status"]),
-    ("visual-universe.csv", "3. Visual universe", "Jak marka wygląda — i jak nigdy nie wygląda.", ["element", "rule", "status"]),
-    ("brand-kit.csv", "4. Brand kit", "Logo, kolory, fonty, linki.", ["asset", "value", "status"]),
-    ("products.csv", "5. Products", "Co sprzedajemy i za ile.", ["name", "placement", "price_pln", "reuses", "key_claim", "status"]),
-    ("competitors.csv", "6. Competitors (GetHookd spy)", "Kto wygrywa w kategorii i jakim kątem.", ["brand", "best_tier", "formats", "signature_angle", "watched"]),
-    ("inspiration-set.csv", "6b. Inspiration set — 10 marek (Krok 2)", "5 bezpośrednich + 5 sąsiednich; sąsiednie dają kąty, których kategoria jeszcze nie używa.", ["rank", "type", "brand", "why", "status"]),
-    ("winning-creatives.csv", "6c. Dawne winnery (referencja)", "Tylko jako kontekst dla Jev (positioning_fit) — hard_rule_1 zabrania remiksu.", ["creative_id", "headline_pl", "angle", "why_it_worked", "status"]),
-    ("inspirations.csv", "7. Inspirations — 10 kątów", "Zwycięskie kąty kategorii i ich świeży re-voice dla VeluSkin.", ["rank", "angle", "pl_headline", "pl_subcopy", "status"]),
-    ("copy-rules.csv", "8. Copy rules (checklista JEV)", "Każda kreacja przechodzi przez tę listę.", ["rule_id", "check", "type"]),
-    ("campaign-learnings.csv", "9. Campaign learnings", "Czego się nauczyliśmy i co z tego wynika.", ["date", "learning", "implication", "status"]),
+    ("brand-core.csv", "1. Brand core", "Firma, Big Idea, pozycjonowanie, obietnice, mechanizm, ton, twarde zasady.", ["key", "value", "status"]),
+    ("products.csv", "2. Product & offer", "Jeden produkt, cennik 1/2/3, koszt użycia, dostawa, płatność, zwrot.", ["field", "value", "status"]),
+    ("audiences.csv", "3. Audiences", "Segment główny 40–55, poboczne 35–44 i 50+, hipotezy.", ["segment_id", "name", "age", "pain_points", "objections", "proof_wanted", "status"]),
+    ("belief-chain.csv", "4. Łańcuch przekonań", "6 przekonań w kolejności — storyboard każdej kreacji i strony.", ["step", "belief", "how_to_build", "evidence_gap"]),
+    ("claims.csv", "5. Claim sheet", "Co wolno, co zakazane, co niezweryfikowane. Brak dowodu = brak claimu.", ["claim_id", "claim", "allowed", "evidence", "note"]),
+    ("proof-assets.csv", "6. Materiały dowodowe do nagrania", "Bez nich kreacje nie przejdą przekonań 4–5.", ["asset_id", "asset", "spec", "unlocks", "status"]),
+    ("copy-rules.csv", "7. Copy rules (checklista Jev)", "Każdy prompt i każda kreacja przechodzi przez tę listę.", ["rule_id", "check", "type", "status"]),
+    ("visual-universe.csv", "8. Visual universe", "Jak marka wygląda — i jak nigdy nie wygląda.", ["element", "rule", "status"]),
+    ("brand-kit.csv", "9. Brand kit", "Sklep, firma, logo, paleta po nazwach, fonty.", ["asset", "value", "status"]),
+    ("competitors.csv", "10. Competitors", "Z researchu + GetHookd spy: kto wygrywa, jakim kątem, czego nie kopiować.", ["brand", "best_tier", "signature_angle", "notes"]),
+    ("inspiration-set.csv", "11. Inspiration set — 10 marek (Krok 2)", "5 direct + 5 adjacent; adjacent dają kąty, których kategoria nie używa.", ["rank", "type", "brand", "why", "status"]),
+    ("inspirations.csv", "12. Kąty reklamowe", "5 kierunków z briefu + kąty kategorii; status ready / blocked / banned.", ["rank", "angle", "role", "pl_headline", "pl_subcopy", "status"]),
+    ("winning-creatives.csv", "13. Dawne winnery (referencja)", "Kontekst dla Jev — hard_rule_1 zabrania remiksu.", ["creative_id", "headline_pl", "angle", "why_it_worked", "status"]),
+    ("campaign-learnings.csv", "14. Campaign learnings", "Wnioski, hipotezy testowe, write-back.", ["date", "learning", "implication", "status"]),
 ]
 
 

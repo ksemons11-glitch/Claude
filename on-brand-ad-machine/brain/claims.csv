@@ -1,0 +1,24 @@
+claim_id,claim,allowed,evidence,source,note
+K1,"100% silikon, bezwonny",yes,Specyfikacja produktu od właściciela,user,Jedyny dozwolony opis materiału
+K2,"16 wielorazowych plastrów w zestawie",yes,Specyfikacja produktu,user,
+K3,"Do ok. 20 użyć na plaster",yes_with_caveat,Deklaracja właściciela; brak własnego udokumentowanego testu przyczepności,user+brief,"Wesprzeć własnym materiałem testowym (mycie → suszenie → ponowna aplikacja)"
+K4,"Stosowanie na noc, 2–3 razy w tygodniu; 1 zestaw ≈ 30 dni",yes,Instrukcja produktu,user,
+K5,"Okluzja silikonem pomaga ograniczyć utratę wilgoci (TEWL) i zwiększa nawilżenie warstwy rogowej",yes,Literatura mechanistyczna o okluzji,brief,"Mechanizm ogólny — NIE przedstawiać jako badania VeluSkin na zmarszczki"
+K6,"Pomaga wygładzić wygląd wybranych linii podczas nocnej pielęgnacji",yes,"Mechanizm K5 + własne PRZED/PO (do dostarczenia)",brief,"Język „wygląd”, „pomaga”, „wspiera” — bez gwarancji"
+K7,"Bez igieł / bez wizyty w gabinecie / bez kolejnego kremu",yes,Format produktu,brief,Język kategorii — nie porównanie skuteczności z zabiegiem
+K8,"≈ 0,19 zł za jedno użycie plastra",yes,"59,90 zł ÷ (16 × ~20)",user,Arytmetyka się broni; opierać na K3
+K9,"2 zestawy — 99,90 zł: 32 plastry + darmowa dostawa; oszczędność 19,90 zł",yes,Cennik,user,
+K10,"Silikon medyczny / klasy medycznej / medical-grade",NO,Właściciel potwierdził tylko 100% silikon,user+brief,"Obecnie NA STRONIE — do usunięcia. UWAGA: Executive Summary (s. 1, 15) dopuszcza „100% medyczny silikon” — decyzja właściciela i brief są nadrzędne; odblokować tylko z certyfikatem/atestem materiału"
+K11,"Bezpieczne w ciąży / w laktacji / nie podrażnia u każdej osoby",NO,Brak dokumentacji,brief,"Obecnie NA STRONIE — do usunięcia"
+K12,"Efekt od 1. nocy / po jednej nocy (gwarantowany)",NO,Brak własnego dowodu przypisanego do VeluSkin,brief,"Obecnie NA STRONIE — do usunięcia; dozwolone: „wieczorem naklejasz, rano sprawdzasz tę samą strefę” bez obietnicy wyniku"
+K13,"Zastępuje botoks / jak botoks / alternatywa dla botoksu",NO,Brief wprost odradza,user+brief,"Dozwolone tylko: „bez igieł”, „bez zabiegu” jako cechy formatu"
+K14,"Klinicznie potwierdzone / badania kliniczne VeluSkin",NO,Brak badania produktu,brief,
+K15,"Trwałe usunięcie zmarszczek",NO,Brak dowodu; niezgodne z mechanizmem,brief,
+K16,"Stymuluje kolagen o X% / redukcja zmarszczek o X%",NO,Claimy konkurencji; brak własnego badania,brief,
+K17,"1558 opinii, ocena 4,74",unverified,Widnieje na stronie; źródło niepotwierdzone,user,"NIE używać w reklamie do potwierdzenia źródła (system opinii? zweryfikowane?)"
+K18,"Ponad 7 000 / +7240 zadowolonych klientek",unverified,Widnieje na stronie; źródło niepotwierdzone,user,"NIE używać w reklamie do potwierdzenia (liczba zamówień? ankieta?)"
+K19,"87% / 89% skuteczności",unverified,Widnieje na stronie; brak źródła i metodologii,user,"NIE używać — procent bez źródła łamie regułę tonu; jeśli to ankieta klientek, podać n i pytanie"
+K20,"Najczęściej wybierane (pakiet 2 szt.)",NO,Brak publicznego dowodu sprzedażowego,brief,"Używać „REKOMENDOWANY”"
+K21,"Cena regularna „z 129,99 zł”",NO,Brak historii ceny,brief,
+K22,"Dermatolodzy polecają / ekspert",NO,Brak eksperta; fałszywy autorytet podnosi sceptycyzm,brief,"Kąt „autorytet eksperta” z inspirations — ZABLOKOWANY"
+K23,"Działa na każdą zmarszczkę / na pewno zadziała u Ciebie",NO,Nieuczciwe,brief,

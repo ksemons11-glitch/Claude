@@ -1,7 +1,15 @@
 date,learning,implication,source,status
-2026-09-23,Stare reklamy wypalone; brak nowych rentownych kreacji; nudne hooki; drogie kliknięcia,Nie remiksować starych winnerów; testować świeże kąty (inspirations #1–8),profile,confirmed
-2026-09-23,Cała kategoria otwiera hookiem „medical-grade silicone” (ScarAway/WS/SoSmooth),Ten hook jest tłem — używać co najwyżej w podtytule; nigdy jako nagłówek,teardown,confirmed
-2026-09-23,Kąt emocjonalny (Scarlette) i overnight (SiO) mają najwyższe tiery przy najprostszym copy,Priorytet testu: #1 emocjonalny + #2 overnight na zimnym ruchu,teardown,confirmed
-2026-09-23,Cost-per-use (SoSmooth) działa jako racjonalizacja — lepiej w retargetingu niż na zimno,Kreacja #4 do retargetingu,teardown,draft
-2026-09-23,Plan testu ABO ~300 zł/dzień: 2–3 ad sety; kill po ~3 dniach na CPC/CTR; skalować winnera i robić wariacje,Rytm iteracji tygodniowej,run,draft
-TODO,Wyniki testu batch 1 (CPC / CTR / CPA per kreacja),Uzupełnić po pierwszych 3 dniach,user,missing
+2026-09-23,Stare reklamy wypalone; nudne hooki; drogie kliknięcia,Nie remiksować starych winnerów; testować świeże kąty z inspirations.csv,profile,confirmed
+2026-09-23,"Cała kategoria otwiera hookiem „medical-grade silicone”",U nas zakazane w ogóle (C3) — tylko „100% silikon”,teardown + brief,confirmed
+2026-09-24,"Brief: NIE pozycjonować jako zamiennik botoksu; nie używać zagranicznych procentów; nie tworzyć fałszywego eksperta","Kreacja #1 z runu 23.09 („Zero botoksu”) — do przepisania; kąt „ekspert” zablokowany; kąt „social proof” zablokowany do weryfikacji",brief,confirmed
+2026-09-24,"Na stronie lekiro.pl są claimy sprzeczne z briefem: „silikon medyczny”, „bezpieczne w ciąży”, „efekt od 1. nocy”, „87%/89%”",Usunąć lub udokumentować przed skalowaniem reklam — inaczej landing podważa kreację,user,action_needed
+2026-09-24,"Największa luka dowodowa: brak standaryzowanego PRZED/PO i testu przyczepności/reuse",Priorytet produkcji materiałów: P1–P4 przed skalowaniem,łańcuch przekonań,confirmed
+2026-09-24,"Rekomendowany wzorzec kreacji: hook „Nie kolejny krem” → sytuacja (makijaż/światło) → mechanizm (okluzja) → dowód (wieczór→rano) → CTA „Zobacz, jak działa VeluSkin i dobierz zestaw”",Szablon storyboardu dla każdej kreacji wideo,brief,confirmed
+2026-09-24,"Cold traffic: osobne kreacje „linie wokół ust” vs „11” → jedna strona",Test siły problemów bez rozbijania oferty,brief,confirmed
+2026-09-24,"Remarketing: (1) PRZED/PO tej samej strefy, (2) „rano nadal na miejscu”, (3) „nie kolejny krem” + okluzja, (4) trust: pakowanie / polska obsługa / zwrot / płatność",4 kreacje retargetingowe do przygotowania,brief,confirmed
+2026-09-24,"Hipotezy do testu: (H1) „Nie kolejny krem” + okluzja > ogólny anti-aging; (H2) konkretna strefa > ogólne „zmarszczki”; (H3) proof-led > rabat + procenty; (H4) benefit za przedpłatę obniży udział pobrań",Plan testów ABO ~300 zł/dzień,brief,to_test
+2026-09-24,"Rynek PL (research): plastry silikonowe niszowe; klientka szuka „botoks / krem na zmarszczki / retinol”, rzadziej „plaster na zmarszczki”; VeluSkin praktycznie nieobecny na Allegro/Ceneo; wysoki udział pobrań w kategorii","Kreacja musi edukować (czym jest silikon i co robi) w 1–2 zdaniach; trust + zachęta do przedpłaty (darmowa dostawa przy 2 zestawach już jest)",exec_summary,confirmed
+2026-09-24,"Research (Executive Summary) zawiera rekomendacje, które brief później ODRZUCA: „najczęściej wybierane”, „tylko dziś -50%”, „odbudowa kolagenu”, „dermatolodzy potwierdzają”, „100% medyczny silikon”","Brief i decyzja właściciela są nadrzędne — te sformułowania pozostają zakazane (C3, C5, C6, C7, K10, K16, K20)",brief > exec_summary,confirmed
+2026-09-24,"Research: „okluzja silikonowa” jest zbyt techniczna dla klientki; lepiej „tworzy barierę ochronną” / „zachowuje wilgoć w skórze”","Reguła C20: w copy konsumenckim tłumaczyć mechanizm prostym językiem; „okluzja” tylko w sekcji edukacyjnej",exec_summary,confirmed
+2026-09-24,"Konkurencja: w kategorii wygrywa hierarchia dowodów (badania, tysiące recenzji, 99-dniowa gwarancja) + produkt na konkretną strefę","Nie ścigać się na procenty; ścigać się na wiarygodność demonstracji + strefę + polskość; rozważyć dłuższy zwrot jako test (research: 60–90 dni nie jest powszechne w PL)",exec_summary,to_test
+TODO,Wyniki batch 1 (CPC / CTR / CPA per kąt i strefa),Uzupełnić po pierwszych 3 dniach,user,missing

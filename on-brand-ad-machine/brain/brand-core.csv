@@ -1,20 +1,37 @@
 key,value,source,status
-brand_name,VeluSkin,profile,confirmed
-category,Beauty / anti-aging — wielorazowe silikonowe plastry przeciwzmarszczkowe,profile,confirmed
-product_type,Plastry z silikonu klasy medycznej; wielorazowe (do ok. 20 użyć z jednego zestawu),profile,confirmed
-market,PL (Polska),profile,confirmed
+brand_name,VeluSkin,user,confirmed
+company,"Lekiro Adrian Zieliński, Gostynin",user,confirmed
+shop,"lekiro.pl (strona produktu VeluSkin) — VeluSkin to marka produktu, nie osobny sklep",user,confirmed
+contact,"kontakt@lekiro.pl; tel. 791 283 845",user,confirmed
+instagram_url,TODO,user,missing
+facebook_page_url,TODO,user,missing
+category,"Nocne, wielorazowe silikonowe plastry na zmarszczki / domowa pielęgnacja anti-aging bez iniekcji",brief,confirmed
+product_one_liner,"Zestaw 16 wielorazowych plastrów ze 100% silikonu, naklejanych na wybrane strefy twarzy na noc, aby tworzyć warstwę okluzyjną, pomagać zatrzymać wilgoć i wspierać gładszy wygląd skóry",brief,confirmed
+market,PL,profile,confirmed
 language,Polski,profile,confirmed
-main_offer,"2 zestawy — 99,90 zł",profile,confirmed
-positioning_one_sentence,"VeluSkin to wielorazowe silikonowe plastry, które wygładzają zmarszczki przez noc — domowa alternatywa dla igły, licząca się w groszach na użycie",draft,draft
+big_idea,"Nie kolejny krem. Nocne wsparcie dokładnie tam, gdzie widzisz linie.",brief,recommended
+current_site_lead,"Jedna rzecz zamiast drogich kremów — wygładza zmarszczki, gdy śpisz",user,confirmed
+recommended_headline,"Naklej VeluSkin na noc dokładnie tam, gdzie linie najbardziej Ci przeszkadzają.",brief,recommended
+recommended_subheadline,"16 wielorazowych plastrów ze 100% silikonu. Tworzą punktową warstwę okluzyjną, która pomaga zatrzymać wilgoć i wspiera bardziej gładki, nawilżony wygląd wybranych stref — bez igieł i bez wizyty w gabinecie.",brief,recommended
+positioning,"Prosty, punktowy rytuał na noc dla konkretnych linii (pionowe linie wokół ust, „11” między brwiami) — zamiast kolejnego kremu i bez zabiegu. NIE pozycjonować jako zamiennika botoksu.",user+brief,confirmed
+core_promise,"Pomaga wygładzić wygląd wybranych linii podczas nocnej pielęgnacji — bez igieł i bez kolejnego kremu.",brief,confirmed
+promise_situational,"Naklej VeluSkin przed snem na okolice ust lub między brwiami i zamień tę konkretną strefę w prosty, powtarzalny rytuał pielęgnacyjny.",brief,confirmed
+promise_mechanism,"100% silikon tworzy punktową warstwę okluzyjną, która pomaga zatrzymać wilgoć w skórze i wspiera bardziej gładki, nawilżony wygląd.",brief,confirmed
+metaphor,"Punktowa maska okluzyjna na noc — fizyczna warstwa 100% silikonu dokładnie na wybranej strefie, zamiast kolejnej warstwy kremu na całą twarz",brief,recommended
+mechanism_fact,"FAKT: okluzja silikonem ogranicza utratę wody (TEWL) i zwiększa nawilżenie warstwy rogowej",brief,confirmed
+mechanism_hypothesis,"HIPOTEZA: że przełoży się to na określony, długotrwały poziom redukcji linii wokół ust / „11” u VeluSkin — brak niezależnego badania produktu; nie budować twardego claimu",brief,hypothesis
+awareness_level,"Świadomy rozwiązań (dominująco): zna kremy, retinol, taping, botoks, inne plastry; potrzebuje odpowiedzi „dlaczego ten plaster ma sens po kremach i dlaczego mu ufać”",brief,confirmed
+market_saturation,"Poziom 4 — zmęczenie obietnicami w anti-aging; same plastry silikonowe w PL niszowe; komunikacja musi być dowodowa",brief,confirmed
+tone_of_voice,"Dorosły, konkretny, spokojny. „Pokaż, nie obiecuj.” Zero wykrzykników. Lekko przewrotny dopuszczalny w hookach, nigdy kosztem wiarygodności. Bez magicznych mechanizmów, fałszywych ekspertów, „-50% tylko dziś” i procentów bez źródła.",user+brief,confirmed
+spokesperson,"Prawdziwa klientka / twórczyni UGC 40–55 + marka jako spokojny narrator. Nigdy fałszywy ekspert ani dermatolog.",brief,confirmed
+founder_story,"BRAK — nie tworzyć narracji o laboratorium, dermatologu, odkryciu ani „latach badań”. Zamiast historii: demonstracja formatu.",brief,confirmed
+main_offer,"2 zestawy — 99,90 zł (REKOMENDOWANY): 32 plastry (2×16) + darmowa dostawa",user,confirmed
 test_budget,ok. 300 zł / dzień (ABO),profile,confirmed
+traffic_source,Meta Ads (główne źródło),brief,confirmed
 production_capability,"Grafiki, filmy AI i montaż in-house; bez aktorek UGC",profile,confirmed
-mechanism,"Silikon klasy medycznej przylega do skóry, nawilża i wygładza zmarszczki mimiczne przez noc; efekt widoczny rano, kumuluje się przy regularnym użyciu",teardown,draft
-core_promise,Gładsza skóra rano — bez igieł i bez wychodzenia z domu,teardown,draft
-tone_of_voice,"Pewny siebie, spokojny, konkretny; krótkie zdania; lekki humor bez taniości; zero krzyku, zero wykrzykników",draft,draft
-positioning,Domowa alternatywa dla zabiegów — wielorazowa i tania w przeliczeniu na użycie,teardown,draft
 hard_rule_1,NIE budować nowych reklam na starych winnerach — stare kreacje są wypalone,profile,confirmed
-hard_rule_2,Unikać nudnych hooków typu „silikon klasy medycznej” jako otwarcia — to jest wypalone w całej kategorii,teardown,confirmed
-hard_rule_3,Cel: tańsze kliknięcia i świeże kąty; każda kreacja = jedna propozycja (jeden kąt na kreację),profile,confirmed
-website_url,TODO — podaj URL sklepu,user,missing
-mission_statement,TODO — jedno zdanie,user,missing
-tagline,TODO,user,missing
+hard_rule_2,"Każdy mocniejszy claim przypięty do dowodu w claims.csv; brak dowodu = brak claimu",brief,confirmed
+hard_rule_3,"Jedna kreacja = jeden kąt (inspirations.csv); strefy (usta / „11”) jako osobne kąty pod parasolem „Nie kolejny krem”",brief,confirmed
+hard_rule_4,"Nie budować wstydu wokół wieku; mówić o strefie, rutynie, wygodzie i dowodzie",brief,confirmed
+mission_statement,BRAK oficjalnej — nie wymyślać,user,confirmed
+tagline,BRAK oficjalnego — używać Big Idea,user,confirmed
