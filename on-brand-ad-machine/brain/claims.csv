@@ -1,24 +1,26 @@
-claim_id,claim,allowed,evidence,source,note
-K1,"100% silikon, bezwonny",yes,Specyfikacja produktu od właściciela,user,Jedyny dozwolony opis materiału
-K2,"16 wielorazowych plastrów w zestawie",yes,Specyfikacja produktu,user,
-K3,"Do ok. 20 użyć na plaster",yes_with_caveat,Deklaracja właściciela; brak własnego udokumentowanego testu przyczepności,user+brief,"Wesprzeć własnym materiałem testowym (mycie → suszenie → ponowna aplikacja)"
-K4,"Stosowanie na noc, 2–3 razy w tygodniu; 1 zestaw ≈ 30 dni",yes,Instrukcja produktu,user,
-K5,"Okluzja silikonem pomaga ograniczyć utratę wilgoci (TEWL) i zwiększa nawilżenie warstwy rogowej",yes,Literatura mechanistyczna o okluzji,brief,"Mechanizm ogólny — NIE przedstawiać jako badania VeluSkin na zmarszczki"
-K6,"Pomaga wygładzić wygląd wybranych linii podczas nocnej pielęgnacji",yes,"Mechanizm K5 + własne PRZED/PO (do dostarczenia)",brief,"Język „wygląd”, „pomaga”, „wspiera” — bez gwarancji"
-K7,"Bez igieł / bez wizyty w gabinecie / bez kolejnego kremu",yes,Format produktu,brief,Język kategorii — nie porównanie skuteczności z zabiegiem
-K8,"≈ 0,19 zł za jedno użycie plastra",yes,"59,90 zł ÷ (16 × ~20)",user,Arytmetyka się broni; opierać na K3
-K9,"2 zestawy — 99,90 zł: 32 plastry + darmowa dostawa; oszczędność 19,90 zł",yes,Cennik,user,
-K10,"Silikon medyczny / klasy medycznej / medical-grade",NO,Właściciel potwierdził tylko 100% silikon,user+brief,"Obecnie NA STRONIE — do usunięcia. UWAGA: Executive Summary (s. 1, 15) dopuszcza „100% medyczny silikon” — decyzja właściciela i brief są nadrzędne; odblokować tylko z certyfikatem/atestem materiału"
-K11,"Bezpieczne w ciąży / w laktacji / nie podrażnia u każdej osoby",NO,Brak dokumentacji,brief,"Obecnie NA STRONIE — do usunięcia"
-K12,"Efekt od 1. nocy / po jednej nocy (gwarantowany)",NO,Brak własnego dowodu przypisanego do VeluSkin,brief,"Obecnie NA STRONIE — do usunięcia; dozwolone: „wieczorem naklejasz, rano sprawdzasz tę samą strefę” bez obietnicy wyniku"
-K13,"Zastępuje botoks / jak botoks / alternatywa dla botoksu",NO,Brief wprost odradza,user+brief,"Dozwolone tylko: „bez igieł”, „bez zabiegu” jako cechy formatu"
-K14,"Klinicznie potwierdzone / badania kliniczne VeluSkin",NO,Brak badania produktu,brief,
-K15,"Trwałe usunięcie zmarszczek",NO,Brak dowodu; niezgodne z mechanizmem,brief,
-K16,"Stymuluje kolagen o X% / redukcja zmarszczek o X%",NO,Claimy konkurencji; brak własnego badania,brief,
-K17,"1558 opinii, ocena 4,74",unverified,Widnieje na stronie; źródło niepotwierdzone,user,"NIE używać w reklamie do potwierdzenia źródła (system opinii? zweryfikowane?)"
-K18,"Ponad 7 000 / +7240 zadowolonych klientek",unverified,Widnieje na stronie; źródło niepotwierdzone,user,"NIE używać w reklamie do potwierdzenia (liczba zamówień? ankieta?)"
-K19,"87% / 89% skuteczności",unverified,Widnieje na stronie; brak źródła i metodologii,user,"NIE używać — procent bez źródła łamie regułę tonu; jeśli to ankieta klientek, podać n i pytanie"
-K20,"Najczęściej wybierane (pakiet 2 szt.)",NO,Brak publicznego dowodu sprzedażowego,brief,"Używać „REKOMENDOWANY”"
-K21,"Cena regularna „z 129,99 zł”",NO,Brak historii ceny,brief,
-K22,"Dermatolodzy polecają / ekspert",NO,Brak eksperta; fałszywy autorytet podnosi sceptycyzm,brief,"Kąt „autorytet eksperta” z inspirations — ZABLOKOWANY"
-K23,"Działa na każdą zmarszczkę / na pewno zadziała u Ciebie",NO,Nieuczciwe,brief,
+"claim_id","claim","allowed","evidence","source","note"
+"K1","100% silikon, bezwonny","yes","Specyfikacja produktu od właściciela","user","Jedyny dozwolony opis materiału"
+"K2","16 wielorazowych plastrów w zestawie","yes","Specyfikacja produktu","user",""
+"K3","Do ok. 20 użyć na plaster","yes_with_caveat","Deklaracja właściciela; brak własnego udokumentowanego testu przyczepności","user+brief","Wesprzeć własnym materiałem testowym (mycie → suszenie → ponowna aplikacja)"
+"K4","Stosowanie na noc, 2–3 razy w tygodniu; 1 zestaw ≈ 30 dni","yes","Instrukcja produktu","user",""
+"K5","Okluzja silikonem pomaga ograniczyć utratę wilgoci (TEWL) i zwiększa nawilżenie warstwy rogowej","yes","Literatura mechanistyczna o okluzji","brief","Mechanizm ogólny — NIE przedstawiać jako badania VeluSkin na zmarszczki"
+"K6","Pomaga wygładzić wygląd wybranych linii podczas nocnej pielęgnacji","yes","Mechanizm K5 + własne PRZED/PO (do dostarczenia)","brief","Język „wygląd”, „pomaga”, „wspiera” — bez gwarancji"
+"K7","Bez igieł / bez wizyty w gabinecie / bez kolejnego kremu","yes","Format produktu","brief","Język kategorii — nie porównanie skuteczności z zabiegiem"
+"K8","≈ 0,19 zł za jedno użycie plastra","yes","59,90 zł ÷ (16 × ~20)","user","Arytmetyka się broni; opierać na K3"
+"K9","2 zestawy — 99,90 zł: 32 plastry + darmowa dostawa; oszczędność 19,90 zł","yes","Cennik","user",""
+"K10","Silikon medyczny / klasy medycznej / medical-grade","NO","Właściciel potwierdził tylko 100% silikon","user+brief","KONFLIKT DO ROZSTRZYGNIĘCIA: „100% silikon medyczny” jest NA OPAKOWANIU i na stronie („silikonu klasy medycznej — tego samego, który stosuje się w leczeniu blizn”); brief mówi: tylko „100% silikon”. Albo dokument/atest materiału → odblokować, albo usunąć ze strony i przy kolejnym nakładzie z packu"
+"K11","Bezpieczne w ciąży / w laktacji / nie podrażnia u każdej osoby","NO","Brak dokumentacji","brief","NA STRONIE w hero: „✅ Bezpieczne w ciąży i podczas karmienia” — usunąć"
+"K12","Efekt od 1. nocy / po jednej nocy (gwarantowany)","NO","Brak własnego dowodu przypisanego do VeluSkin","brief","NA STRONIE: „Widoczny efekt już od 1. nocy”, „już po pierwszym użyciu!” ×2; NA OPAKOWANIU: badge „Efekt już po 1 użyciu”; w opiniach: „gładsza po jednym użyciu”"
+"K13","Zastępuje botoks / jak botoks / alternatywa dla botoksu","NO","Brief wprost odradza","user+brief","NA STRONIE: „Botoks boli, kosztuje i wymaga odwagi. VeluSkin to skuteczna alternatywa”, „Efekty jak po zabiegu”; w opiniach: „Efekt zbliżony do botoksu”, „Twarz jak po liftingu”"
+"K14","Klinicznie potwierdzone / badania kliniczne VeluSkin","NO","Brak badania produktu","brief",""
+"K15","Trwałe usunięcie zmarszczek","NO","Brak dowodu; niezgodne z mechanizmem","brief",""
+"K16","Stymuluje kolagen o X% / redukcja zmarszczek o X%","NO","Claimy konkurencji; brak własnego badania","brief",""
+"K17","1558 opinii, ocena 4,74","yes_with_source","Widget opinii na stronie: 4.74 z 1558 opinii; opinie oznaczone „(zweryfikowany)”","user","Właściciel: liczby z naszych opinii. UWAGA: wszystkie widoczne opinie mają datę 21/07/2025 (import hurtowy?) — w reklamie używać „ponad 1500 opinii, 4,7/5” tylko jeśli system opinii jest zewnętrznie weryfikowalny"
+"K18","Ponad 7 000 / +7240 zadowolonych klientek","no_until_consistent","Strona podaje trzy różne liczby: „Ponad 7.000”, „+7240”, „4,7/5”","user","Ujednolicić do jednej liczby ze źródłem (liczba zamówień? klientek?) — do tego czasu nie używać"
+"K19","87% / 89% skuteczności","no_until_method","Właściciel: „liczby są z naszych opinii”","user","Potrzebne: n (ile ankiet/opinii), dokładne pytanie, data — wtedy dopuszczalne jako „w ankiecie X klientek 87% …”; bez tego procent bez źródła (C5)"
+"K20","Najczęściej wybierane (pakiet 2 szt.)","NO","Brak publicznego dowodu sprzedażowego","brief","NA STRONIE: pakiet 2 oznaczony „POPULARNY 🔥”, pakiet 3 „TO SIĘ OPŁACA” — zamienić na „REKOMENDOWANY” / „NAJLEPSZA CENA / ZESTAW”"
+"K21","Cena regularna „z 129,99 zł”","NO","Brak historii ceny","brief","NA STRONIE: przekreślone 129,99 zł → 59,90 zł, „-45%”, „Oszczędzasz 70 zł”; jednocześnie Omnibus: „Poprzednia najniższa cena: 59,90 zł” — kotwica 129,99 nie ma historii. Ryzyko UOKiK + niespójność z briefem"
+"K22","Dermatolodzy polecają / ekspert","NO","Brak eksperta; fałszywy autorytet podnosi sceptycyzm","brief","Kąt „autorytet eksperta” z inspirations — ZABLOKOWANY"
+"K23","Działa na każdą zmarszczkę / na pewno zadziała u Ciebie","NO","Nieuczciwe","brief",""
+"K24","„Nasi partnerzy” (sekcja z logotypami na stronie)","unverified","Brak danych, kim są partnerzy","site","Jeśli to media/dystrybucja — udokumentować; jeśli dekoracja — usunąć"
+"K25","„Pobudzają skórę do intensywnej odnowy” / „napina skórę” / „poprawa napięcia skóry”","NO","Brak dowodu; mechanizm to okluzja/nawilżenie","site + ugc-ai-v1.1","Dozwolone: „pomaga zachować wilgoć”, „gładszy wygląd rano”"

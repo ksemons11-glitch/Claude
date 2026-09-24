@@ -1,17 +1,20 @@
-element,rule,rationale,source,status
-principle,"Demonstracja zamiast deklaracji: każda kreacja pokazuje produkt w użyciu (aplikacja / rano / reuse / PRZED-PO) — nie sam claim","Rynek sceptyczny; „pokaż, nie obiecuj”",brief,confirmed
-product_placement,"Plaster pokazany NA konkretnej strefie (usta / „11”), nie obok pudełka; makro skóry + plaster jako półprzezroczysta warstwa",Przekonanie nr 1 i metafora „punktowa maska okluzyjna”,brief,confirmed
-mode_studio,"Czyste, spokojne, premium bez chłodu; dużo ciepłej bieli; skóra lub produkt jako bohater; neutralne tła",Odróżnienie od krzykliwych kreacji konkurencji,brain,draft
-mode_lifestyle,"Prawdziwa kobieta 40–55 w naturalnym świetle (sypialnia, łazienka, poranek); bez filtra; twarz neutralna lub lekki uśmiech; bez zawstydzania",Awatar: „kobieta taka jak ja”; hard_rule_4,brief,confirmed
-photo_light,"Miękkie poranne / okienne światło; w PRZED/PO to samo światło, kąt i odległość",Wiarygodność proofu,brief,confirmed
-skin_rendering,"Skóra dojrzała realistycznie (pory, tekstura); efekt „gładszy wygląd”, nigdy „plastikowy”; zero idealizowanego retuszu",Sceptycyzm wobec podkręconych before/after,brief,confirmed
-schematic,"Schemat 16 plastrów i miejsc aplikacji jako stały element edukacyjny",Przekonanie nr 1,brief,confirmed
-occlusion_graphic,"„Wilgoć zostaje pod plastrem” vs „ucieka bez okluzji” — BEZ strzałek sugerujących wnikanie silikonu do skóry",Przekonanie nr 3; uczciwość mechanizmu,brief,confirmed
-typography,"Gruby, nowoczesny bezszeryfowy nagłówek (1–2 linijki); mały podtytuł; brak serifów i cienkich fontów",Czytelność na mobile,brain,draft
-headline_rule,"Jeden kąt, jedno zdanie; zero wykrzykników; zero CAPS LOCK poza akcentem",Dyscyplina „jedna propozycja”,brain,confirmed
-palette_named,"Koralowy (z opakowania — jedyny mocny akcent), ciepła biel (tło), piaskowy beż (tło alt.), grafit (tekst), blady pudrowy róż (skóra)",Opakowanie jest koralowe — kreacja musi być z nim spójna; brak innej oficjalnej palety,meta_ads + user,draft_updated
-packshot_rule,"Saszetka koralowa pokazana realnie (nie AI-render) obok plastra na skórze; bez wymyślonych marek-konkurentów na półce",Wiarygodność (przekonanie nr 6); grafika B5 z półką i fikcyjnymi markami to AI-render,meta_ads,draft
-logo_rules,"Logo małe w rogu lub na dole; nigdy jako główny element; pisownia VeluSkin",—,brain,draft
-offer_lockup,"„2 zestawy — 99,90 zł · REKOMENDOWANY” małym tekstem przy CTA",Spójność oferty,user,confirmed
-banned_visuals,"Strzykawki/igły; fałszywy ekspert / laboratorium / fartuch; idealizowane PRZED/PO; badge „-50%” i starburst; odliczanie; stockowe 20-latki; krzykliwa czerwień / neon; sugestia wnikania silikonu",Wypalone lub nieuczciwe; ryzyko odrzucenia reklamy,brief,confirmed
-formats,"Statyczne 4:5 (1080×1350) i 9:16 (1080×1920); wideo AI 9:16 do 15 s; UGC 9:16",Meta feed + stories/reels,brain,confirmed
+"element","rule","rationale","source","status"
+"principle","Demonstracja zamiast deklaracji: każda kreacja pokazuje produkt w użyciu (aplikacja / rano / reuse / PRZED-PO) — nie sam claim","Rynek sceptyczny; „pokaż, nie obiecuj”","brief","confirmed"
+"product_placement","Plaster pokazany NA konkretnej strefie (usta / „11”), nie obok pudełka; makro skóry + plaster jako półprzezroczysta warstwa","Przekonanie nr 1 i metafora „punktowa maska okluzyjna”","brief","confirmed"
+"mode_studio","Czyste, spokojne, premium bez chłodu; dużo ciepłej bieli; skóra lub produkt jako bohater; neutralne tła","Odróżnienie od krzykliwych kreacji konkurencji","brain","draft"
+"mode_lifestyle","Prawdziwa kobieta 40–55 w naturalnym świetle (sypialnia, łazienka, poranek); bez filtra; twarz neutralna lub lekki uśmiech; bez zawstydzania","Awatar: „kobieta taka jak ja”; hard_rule_4","brief","confirmed"
+"photo_light","Miękkie poranne / okienne światło; w PRZED/PO to samo światło, kąt i odległość","Wiarygodność proofu","brief","confirmed"
+"skin_rendering","Skóra dojrzała realistycznie (pory, tekstura); efekt „gładszy wygląd”, nigdy „plastikowy”; zero idealizowanego retuszu","Sceptycyzm wobec podkręconych before/after","brief","confirmed"
+"schematic","Schemat 16 plastrów i miejsc aplikacji jako stały element edukacyjny","Przekonanie nr 1","brief","confirmed"
+"occlusion_graphic","„Wilgoć zostaje pod plastrem” vs „ucieka bez okluzji” — BEZ strzałek sugerujących wnikanie silikonu do skóry","Przekonanie nr 3; uczciwość mechanizmu","brief","confirmed"
+"typography","Gruby, nowoczesny bezszeryfowy nagłówek (1–2 linijki); mały podtytuł; brak serifów i cienkich fontów","Czytelność na mobile","brain","draft"
+"headline_rule","Jeden kąt, jedno zdanie; zero wykrzykników; zero CAPS LOCK poza akcentem","Dyscyplina „jedna propozycja”","brain","confirmed"
+"palette_named","Koralowy (z opakowania — jedyny mocny akcent), ciepła biel (tło), piaskowy beż (tło alt.), grafit (tekst), blady pudrowy róż (skóra)","Opakowanie jest koralowe — kreacja musi być z nim spójna; brak innej oficjalnej palety","meta_ads + user","draft_updated"
+"packshot_rule","Saszetka koralowa pokazana realnie (nie AI-render) obok plastra na skórze; bez wymyślonych marek-konkurentów na półce","Wiarygodność (przekonanie nr 6); grafika B5 z półką i fikcyjnymi markami to AI-render","meta_ads","draft"
+"logo_rules","Logo małe w rogu lub na dole; nigdy jako główny element; pisownia VeluSkin","—","brain","draft"
+"offer_lockup","„2 zestawy — 99,90 zł · REKOMENDOWANY” małym tekstem przy CTA","Spójność oferty","user","confirmed"
+"banned_visuals","Strzykawki/igły; fałszywy ekspert / laboratorium / fartuch; idealizowane PRZED/PO; badge „-50%” i starburst; odliczanie; stockowe 20-latki; krzykliwa czerwień / neon; sugestia wnikania silikonu","Wypalone lub nieuczciwe; ryzyko odrzucenia reklamy","brief","confirmed"
+"formats","Statyczne 4:5 (1080×1350) i 9:16 (1080×1920); wideo AI 9:16 do 15 s; UGC 9:16","Meta feed + stories/reels","brain","confirmed"
+"ugc_character","Bohaterka AI-UGC: kobieta ok. 45–50, blond półdługie włosy, beżowa bluzka w drobne kwiaty, naturalny makijaż; wnętrze: jasny beż, salon z roślinami, łazienka z okrągłym lustrem i oknem; plastry widoczne na czole, między brwiami, pod oczami","To postać z 2 obecnie działających reklam — spójność między wariantami (odpowiednik „Characters” w Pletorze)","assets/ugc-ai-v1.1.mp4","confirmed"
+"ugc_structure","25 s: hook (mit → prawda) → codzienny rytuał (wieczór) → produkt w ręku (saszetka) → mechanizm 1 zdanie → poranek przy lustrze (dotyk skóry) → CTA na kanapie","Struktura działającej reklamy = łańcuch przekonań 1–5 w skrócie","video","confirmed"
+"humor_rule","Humor/absurd (np. „ogłoszenie parafialne”) dozwolony TYLKO jako hook pierwszych 2 s; dalej musi wejść strefa + mechanizm + dowód + oferta","Czysty humor = najtańszy klik i zero sprzedaży (learning 2026-09-24)","user","confirmed"

@@ -41,6 +41,7 @@ SECTIONS = [
     ("inspirations.csv", "12. Kąty reklamowe", "5 kierunków z briefu + kąty kategorii; status ready / blocked / banned.", ["rank", "angle", "role", "pl_headline", "pl_subcopy", "status"]),
     ("winning-creatives.csv", "13. Dawne winnery (Meta, konto Pooa)", "Referencja i benchmark — hard_rule_1 zabrania remiksu.", ["rank", "ad_name", "created", "spend_pln", "purchases", "cpa_pln", "ctr", "format_guess", "note"]),
     ("creative-library.csv", "13b. Biblioteka copy VeluSkin + audyt claimów", "15 unikalnych copy z konta; flagi = claimy zakazane przez brief.", ["copy_id", "variants", "angle", "headline", "banned_flags", "status"]),
+    ("site-audit.csv", "13c. Audyt strony lekiro.pl", "Co na landingu podważa brief — do poprawy przed skalowaniem.", ["item", "where_on_page", "what_it_says", "action", "priority"]),
     ("campaign-learnings.csv", "14. Campaign learnings", "Wnioski, hipotezy testowe, write-back.", ["date", "learning", "implication", "status"]),
 ]
 

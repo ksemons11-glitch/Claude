@@ -24,10 +24,11 @@ czyta przed każdym krokiem Ad Machine (spy → inspiracje → gate promptów �
 | `inspirations.csv` | Kąty reklamowe: 5 kierunków z briefu + kąty kategorii; status ready/blocked/banned | Krok 4–5 (2 produkty × 10 kreacji → u nas 1 produkt × 2 strefy) |
 | `winning-creatives.csv` | Top 12 reklam VeluSkin z Meta (konto Pooa) z metrykami — benchmark i referencja, NIE do remiksu | Krok 4 |
 | `creative-library.csv` | 15 unikalnych copy z konta + audyt claimów wg `claims.csv` / `copy-rules.csv` | Krok 4–5, write-back |
+| `site-audit.csv` | Audyt strony produktu lekiro.pl vs brief/claim sheet (S1–S14) — do poprawy przed skalowaniem | Landing = część kreacji |
 | `meta-images.csv` | Obrazy reklam VeluSkin w Meta (hash, wymiary, permalink) — do wyboru packshotu i reużycia przez API | Krok 6 |
 | `campaign-learnings.csv` | Wnioski, hipotezy testowe, wyniki (write-back po każdym runie i po każdej odrzuconej kreacji) | Pętla zwrotna |
 | `VeluSkin-Brand-Brain.pdf` | Skompilowany widok całości | Ludzie |
-| `assets/` | Logo, packshoty, zdjęcia na twarzy, schemat 16 plastrów (do wgrania) | Generacja |
+| `assets/` | logo-lekiro.png, packshot-veluskin-16-plastrow-a/b.png, ugc-ai-v1.1.mp4 (działający AI-UGC) | Generacja |
 
 ## Konwencja `status`
 `confirmed` (właściciel/produkt) · `recommended` (brief) · `pattern` (wzorzec z researchu) · `hypothesis` (do testu) ·

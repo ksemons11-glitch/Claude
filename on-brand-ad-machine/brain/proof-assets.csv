@@ -1,11 +1,11 @@
-asset_id,asset,purpose,spec,unlocks,status
-P1,"Standaryzowane PRZED/PO — linie wokół ust","Przekonanie nr 4; kreacja remarketingowa nr 1","Ta sama osoba 40–55, ta sama strefa, to samo światło, odległość i kąt, bez makijażu; podana liczba nocy/tygodni",Kąt „linie wokół ust”; K6,missing
-P2,"Standaryzowane PRZED/PO — „11” między brwiami",Przekonanie nr 4,Jak P1,Kąt „11”; K6,missing
-P3,"UGC wieczór → noc → rano (40–55)","Przekonania 4 i 5; proof-first hook w reklamie","Aplikacja na usta / „11”, sen, poranek: plaster nadal na miejscu, zbliżenie tej samej strefy; bez filtra; realna klientka lub twórczyni w wieku segmentu",Kąt „rano nadal na miejscu”,missing
-P4,"Test przyczepności i reuse","Przekonanie nr 5; K3 (do 20 użyć)","Mycie → suszenie → ponowna aplikacja; seria kolejnych użyć (np. 1/5/10/20)",Kąt „wielorazowość”; K3,missing
-P5,"Animacja / grafika okluzji","Przekonanie nr 3; kreacja edukacyjna","„Wilgoć zostaje pod warstwą” vs „ucieka bez okluzji”; BEZ strzałek sugerujących wnikanie silikonu w skórę",Kąt „100% silikon / okluzja”,missing
-P6,"Schemat 16 plastrów i miejsc aplikacji",Przekonanie nr 1,"Twarz z zaznaczonymi strefami: czoło, oczy, policzki, usta; który plaster gdzie",Kąt „konkretna strefa”,missing
-P7,"Trust / backstage",Przekonanie nr 6; kreacja remarketingowa nr 4,"Realne opakowanie, pakowanie paczki, polska obsługa, dane firmy, zwrot 14 dni, BLIK/pobranie",Warstwa trust,missing
-P8,"Weryfikacja liczb ze strony (1558 opinii 4,74; 7240 klientek; 87%/89%)",Odblokowanie social proof (K17–K19),"Źródło każdej liczby: system opinii, liczba zamówień, ankieta (n, pytanie, data)",Kąt „social proof w skali”,unverified
-P9,"Packshot + zdjęcie plastra na twarzy",Generacja kreacji (brief każdej grafiki),"Białe tło; makro plastra na skórze jako półprzezroczysta warstwa",Wszystkie kreacje,missing
-P10,"Logo (SVG/PNG) + fonty",Brand kit; Jev logo_correct,Plik wektorowy; nazwy fontów,Wszystkie kreacje,missing
+"asset_id","asset","purpose","spec","unlocks","status"
+"P1","Standaryzowane PRZED/PO — linie wokół ust","Przekonanie nr 4; kreacja remarketingowa nr 1","Ta sama osoba 40–55, ta sama strefa, to samo światło, odległość i kąt, bez makijażu; podana liczba nocy/tygodni","Kąt „linie wokół ust”; K6","missing"
+"P2","Standaryzowane PRZED/PO — „11” między brwiami","Przekonanie nr 4","Jak P1","Kąt „11”; K6","missing"
+"P3","UGC wieczór → noc → rano (40–55)","Przekonania 4 i 5; proof-first hook w reklamie","Aplikacja na usta / „11”, sen, poranek: plaster nadal na miejscu, zbliżenie tej samej strefy; bez filtra; realna klientka lub twórczyni w wieku segmentu","Kąt „rano nadal na miejscu”","partial — istnieje AI-UGC (ugc-ai-v1.1.mp4), nie realna klientka; sprzedaje. Brakuje wersji „wieczór → rano ta sama strefa”"
+"P4","Test przyczepności i reuse","Przekonanie nr 5; K3 (do 20 użyć)","Mycie → suszenie → ponowna aplikacja; seria kolejnych użyć (np. 1/5/10/20)","Kąt „wielorazowość”; K3","missing"
+"P5","Animacja / grafika okluzji","Przekonanie nr 3; kreacja edukacyjna","„Wilgoć zostaje pod warstwą” vs „ucieka bez okluzji”; BEZ strzałek sugerujących wnikanie silikonu w skórę","Kąt „100% silikon / okluzja”","missing"
+"P6","Schemat 16 plastrów i miejsc aplikacji","Przekonanie nr 1","Twarz z zaznaczonymi strefami: czoło, oczy, policzki, usta; który plaster gdzie","Kąt „konkretna strefa”","missing"
+"P7","Trust / backstage","Przekonanie nr 6; kreacja remarketingowa nr 4","Realne opakowanie, pakowanie paczki, polska obsługa, dane firmy, zwrot 14 dni, BLIK/pobranie","Warstwa trust","missing"
+"P8","Weryfikacja liczb ze strony (1558 opinii 4,74; 7240 klientek; 87%/89%)","Odblokowanie social proof (K17–K19)","Źródło każdej liczby: system opinii, liczba zamówień, ankieta (n, pytanie, data)","Kąt „social proof w skali”","partial — 1558 opinii / 4,74 z systemu opinii (K17 ok ze źródłem); 87%/89% i 7000/7240 wymagają n + metody"
+"P9","Packshot + zdjęcie plastra na twarzy","Generacja kreacji (brief każdej grafiki)","Białe tło; makro plastra na skórze jako półprzezroczysta warstwa","Wszystkie kreacje","done — assets/packshot-veluskin-16-plastrow-a/b.png (białe tło, saszetka + 16 plastrów)"
+"P10","Logo (SVG/PNG) + fonty","Brand kit; Jev logo_correct","Plik wektorowy; nazwy fontów","Wszystkie kreacje","done — logo Lekiro (assets/logo-lekiro.png), fonty Poppins; brak osobnego logo VeluSkin (wordmark z packu)"

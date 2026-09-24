@@ -1,24 +1,26 @@
-asset,value,where,status
-website_url,https://lekiro.pl (strona produktu VeluSkin),user,confirmed
-company,"Lekiro Adrian Zieliński, Gostynin — kontakt@lekiro.pl, tel. 791 283 845",user,confirmed
-instagram_url,"BRAK — żadne konto IG nie jest podpięte do kont reklamowych (Meta API); podaj ręcznie, jeśli istnieje",meta_api,missing
-facebook_page_url,https://www.facebook.com/734347096423155 (strona „VeluSkin”; page_id 734347096423155),meta_api,confirmed
-facebook_pages_other,"„Lekiro.pl” (637514099436639), „Lekiro” (833693426496702)",meta_api,confirmed
-meta_ad_account,"„Pooa” — act_1022565782878410 (business Pooa 434611672530823); tu lecą kampanie [Velu]",user+meta_api,confirmed
-meta_image_hashes_veluskin,"09ab91150f9381799b4ec2c0916cd084; 3a70479da70b4957de7e78e5feadfacc; a3be0280c40fce417e747107a90dd5c4; 39b6ced640869465dfa16c5dba0ecaa4; 93e1b5b6be758208092322f4e1635e71; c8f053ad3e1f80df5629b766e9edf673; a14c1e90c57d556393724bb24b039ab5; d2c3770dfe49965541f213679b909eaa; 04b1450f654b9c6d70651b3db2775723; a0a303b56acc6e1f4e93ff19755e82f2; 67876322fe0c119db69b75d45fb58a64",meta_api,confirmed
-meta_video_ids_veluskin,"874511268731121; 4484389008496014",meta_api,confirmed
-canva_brand_kit_id,kAFnyx_hPeA,Canva,confirmed
-logo_primary,TODO — wgraj plik do brain/assets/logo.svg lub .png,brain/assets/,missing
-logo_wordmark_rules,"Pisownia: „VeluSkin”; nigdy „Veluskin” / „VELUSKIN”",brain,draft
-packaging,"Stojąca saszetka (doypack) w kolorze koralowym/łososiowym; biały napis „Plastry wygładzające przeciw zmarszczkom”, biały schemat plastrów, „VeluSkin · 100% silikon”; badge „Efekt już po 1 użyciu” (K12 — na opakowaniu!)",meta_ads preview (creative 2761489990912955),confirmed
-palette_named,"KORALOWY / łososiowy (kolor opakowania — główny akcent marki) · ciepła biel (tło) · piaskowy beż (tło alternatywne) · grafit (tekst) · blady pudrowy róż (skóra). Szałwia usunięta — nie występuje w marce",packaging + szkic,draft_updated
-color_hex_primary,TODO — koralowy z opakowania (propozycja do potwierdzenia: #F0806A),do produkcji,missing
-palette_banned_named,"Krzykliwa czerwień, neon, czysta czerń jako tło, żółty starburst",brain,draft
-color_hex_background,TODO (propozycja: ciepła biel #FAF7F2),do produkcji; Jev nie używa hex,missing
-color_hex_secondary,TODO (propozycja: piaskowy beż #E9DFD2),do produkcji,missing
-color_hex_accent_skin,TODO (propozycja: pudrowy róż #E8C9C4),do produkcji,missing
-color_hex_text,TODO (propozycja: grafit #2B2B2B),do produkcji,missing
-color_hex_accent,TODO (propozycja: szałwia #9AA98F),do produkcji,missing
-font_headline,TODO (propozycja: Inter Bold / Montserrat Bold),user,missing
-font_body,TODO (propozycja: Inter Regular),user,missing
-product_photos,TODO — packshot + plaster na twarzy (usta / „11”) → brain/assets/,user,missing
+"asset","value","where","status"
+"website_url","https://lekiro.pl (strona produktu VeluSkin)","user","confirmed"
+"company","Lekiro Adrian Zieliński, Gostynin — kontakt@lekiro.pl, tel. 791 283 845","user","confirmed"
+"instagram_url","BRAK — żadne konto IG nie jest podpięte do kont reklamowych (Meta API); podaj ręcznie, jeśli istnieje","meta_api","missing"
+"facebook_page_url","https://www.facebook.com/734347096423155 (strona „VeluSkin”; page_id 734347096423155)","meta_api","confirmed"
+"facebook_pages_other","„Lekiro.pl” (637514099436639), „Lekiro” (833693426496702)","meta_api","confirmed"
+"meta_ad_account","„Pooa” — act_1022565782878410 (business Pooa 434611672530823); tu lecą kampanie [Velu]","user+meta_api","confirmed"
+"meta_image_hashes_veluskin","09ab91150f9381799b4ec2c0916cd084; 3a70479da70b4957de7e78e5feadfacc; a3be0280c40fce417e747107a90dd5c4; 39b6ced640869465dfa16c5dba0ecaa4; 93e1b5b6be758208092322f4e1635e71; c8f053ad3e1f80df5629b766e9edf673; a14c1e90c57d556393724bb24b039ab5; d2c3770dfe49965541f213679b909eaa; 04b1450f654b9c6d70651b3db2775723; a0a303b56acc6e1f4e93ff19755e82f2; 67876322fe0c119db69b75d45fb58a64","meta_api","confirmed"
+"meta_video_ids_veluskin","874511268731121; 4484389008496014","meta_api","confirmed"
+"canva_brand_kit_id","kAFnyx_hPeA","Canva","confirmed"
+"logo_primary","assets/logo-lekiro.png — logo SKLEPU Lekiro (koralowy skrypt w kremowym kole); VeluSkin nie ma osobnego logo, tylko wordmark na opakowaniu (białe, zaokrąglony sans)","user upload","confirmed"
+"logo_wordmark_rules","Pisownia: „VeluSkin”; nigdy „Veluskin” / „VELUSKIN”","brain","draft"
+"packaging","Stojąca saszetka koralowa (#F89080); biały napis „Plastry wygładzające przeciw zmarszczkom”, biały schemat plastrów, „VeluSkin · 100% silikon medyczny” (!), badge „Efekt już po 1 użyciu” (!)","packshot","confirmed"
+"palette_named","KORALOWY / łososiowy (kolor opakowania — główny akcent marki) · ciepła biel (tło) · piaskowy beż (tło alternatywne) · grafit (tekst) · blady pudrowy róż (skóra). Szałwia usunięta — nie występuje w marce","packaging + szkic","draft_updated"
+"color_hex_primary","#F89080 koralowy (pomiar z packshotu; wariant ciemniejszy #F87860, jaśniejszy #F8A898); logo Lekiro: #E89888","assets/packshot (PIL)","confirmed"
+"palette_banned_named","Krzykliwa czerwień, neon, czysta czerń jako tło, żółty starburst","brain","draft"
+"color_hex_background","TODO (propozycja: ciepła biel #FAF7F2)","do produkcji; Jev nie używa hex","missing"
+"color_hex_secondary","TODO (propozycja: piaskowy beż #E9DFD2)","do produkcji","missing"
+"color_hex_accent_skin","TODO (propozycja: pudrowy róż #E8C9C4)","do produkcji","missing"
+"color_hex_text","TODO (propozycja: grafit #2B2B2B)","do produkcji","missing"
+"color_hex_accent","TODO (propozycja: szałwia #9AA98F)","do produkcji","missing"
+"font_headline","Poppins Bold / SemiBold","user","confirmed"
+"font_body","Poppins Regular","user","confirmed"
+"product_photos","assets/packshot-veluskin-16-plastrow-a.png i -b.png (saszetka + rozłożone 16 plastrów, białe tło); brak jeszcze zdjęcia plastra na twarzy kobiety 40–55 (jest AI-UGC wideo)","user upload","partial"
+"ugc_video_reference","assets/ugc-ai-v1.1.mp4 — jedna z 2 reklam AI-UGC, które obecnie działają (25 s, 9:16)","user upload","confirmed"
+"caption_style","Napisy: biały bold sans z czarną obwódką, dół-środek kadru, 2 linie, jak w ugc-ai-v1.1 (docelowo Poppins)","video","confirmed"
