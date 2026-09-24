@@ -1,0 +1,149 @@
+{
+ "brand": "Glossier",
+ "brand_id_or_domain": "glossier.com",
+ "pulled": "2026-09-24",
+ "calls": [
+  {
+   "set": "newest",
+   "rows_billed": 10,
+   "unique": 3,
+   "credits_used": 0.03
+  },
+  {
+   "set": "best",
+   "rows_billed": 8,
+   "unique": 2,
+   "credits_used": 0.02,
+   "note": "2 rows withheld server-side as outside tier"
+  }
+ ],
+ "ads": [
+  {
+   "id": 181971268,
+   "brand": "Glossier",
+   "brand_id": 393,
+   "set": "newest",
+   "format": "video 12s",
+   "tier": "Testing (28)",
+   "days_active": 2,
+   "start_date": "2026-09-23",
+   "variant_count": 5,
+   "headline": "Build your dream fragrance set",
+   "body": "Build your own set with the pieces you love most. Fragrance and makeup, made your way.",
+   "link_description": "Choose your own scents",
+   "cta": "SHOP_NOW",
+   "landing_page": "https://www.glossier.com/products/fragrance-duo",
+   "visual": "Four Glossier You perfume bottles (white, lavender, magenta, pink) lying on beige linen in dappled sunlight, text banner \"NEW! Build your own Glossier You duo\".",
+   "claims": [
+    "Build your own set with the pieces you love most",
+    "Fragrance and makeup, made your way",
+    "Choose your own scents",
+    "NEW: build your own Glossier You duo (on-screen)"
+   ],
+   "transcript": null,
+   "transcript_queued": true
+  },
+  {
+   "id": 181697096,
+   "brand": "Glossier",
+   "brand_id": 393,
+   "set": "newest",
+   "format": "image",
+   "tier": "Scaling (46)",
+   "days_active": 3,
+   "start_date": "2026-09-22",
+   "variant_count": 2,
+   "headline": "Glossier",
+   "body": "Smells different on everyone and that's totally the point! Spritz on the iconic scent in full + travel size.",
+   "link_description": null,
+   "cta": "SHOP_NOW",
+   "landing_page": "https://www.glossier.com/products/more-of-you-duo",
+   "visual": "White static titled \"Save with the Glossier You Duo\" showing a full-size and travel-size pink Glossier You bottle with \"VALUE $114\" struck through and \"YOURS FOR $97\", plus a Shop now button.",
+   "claims": [
+    "Smells different on everyone and that's the point",
+    "Iconic scent",
+    "Full + travel size",
+    "Value $114, yours for $97 (on-image)"
+   ],
+   "transcript": null,
+   "transcript_queued": false
+  },
+  {
+   "id": 180667103,
+   "brand": "Glossier",
+   "brand_id": 393,
+   "set": "newest",
+   "format": "video 11s",
+   "tier": "Testing (28)",
+   "days_active": 6,
+   "start_date": "2026-09-19",
+   "variant_count": 3,
+   "headline": "Glossier Boy Brow™",
+   "body": "Meet cult-favorite Boy Brow. One swipe for fuller, groomed brows in your perfect shade.",
+   "link_description": "So easy anyone can do it",
+   "cta": "SHOP_NOW",
+   "landing_page": "https://www.glossier.com/products/boy-brow",
+   "visual": "Close-up of a dark-haired woman brushing Boy Brow through her eyebrow with a social-comment overlay \"@Brianna N: The easiest eyebrow product I have ever used.\"",
+   "claims": [
+    "Cult-favorite Boy Brow",
+    "One swipe for fuller, groomed brows",
+    "In your perfect shade",
+    "So easy anyone can do it",
+    "\"The easiest eyebrow product I have ever used\" (customer comment on-screen)"
+   ],
+   "transcript": null,
+   "transcript_queued": true
+  },
+  {
+   "id": 150266455,
+   "brand": "Glossier",
+   "brand_id": 393,
+   "set": "best",
+   "format": "video 57s",
+   "tier": "Optimized (81)",
+   "days_active": 42,
+   "start_date": "2026-08-14",
+   "variant_count": 7,
+   "headline": "Build your dream fragrance set",
+   "body": "Build your own set with the pieces you love most. Fragrance and makeup, made your way.",
+   "link_description": "Choose your own scents",
+   "cta": "SHOP_NOW",
+   "landing_page": "https://www.glossier.com/products/fragrance-duo",
+   "visual": "Red-haired woman in a white top holding five Glossier You bottles fanned in her hands, script overlay \"Fragrance Sets For Every Occassion\" and caption \"Glossier is letting you pick two full size\".",
+   "claims": [
+    "Build your own set with the pieces you love most",
+    "Fragrance and makeup, made your way",
+    "Choose your own scents",
+    "Fragrance sets for every occasion (on-screen)",
+    "Glossier is letting you pick two full size (on-screen)"
+   ],
+   "transcript": null,
+   "transcript_queued": true
+  },
+  {
+   "id": 143112966,
+   "brand": "Glossier",
+   "brand_id": 393,
+   "set": "best",
+   "format": "dco/carousel 2 images",
+   "tier": "Optimized (86)",
+   "days_active": 45,
+   "start_date": "2026-08-11",
+   "variant_count": 1,
+   "headline": "Glossier You Duo",
+   "body": "Smells different on everyone and that's totally the point! Spritz on the iconic scent in full + travel size.",
+   "link_description": "One iconic scent, doubled",
+   "cta": "SHOP_NOW",
+   "landing_page": "https://www.glossier.com/products/more-of-you-duo",
+   "visual": "White static \"Save with the Glossier You Duo\" with full-size and travel-size pink bottles, \"VALUE $114\" struck through and \"YOURS FOR $97\" (portrait and square variants).",
+   "claims": [
+    "Smells different on everyone and that's the point",
+    "Iconic scent, full + travel size",
+    "One iconic scent, doubled",
+    "Value $114, yours for $97 (on-image)"
+   ],
+   "transcript": null,
+   "transcript_queued": false
+  }
+ ]
+}

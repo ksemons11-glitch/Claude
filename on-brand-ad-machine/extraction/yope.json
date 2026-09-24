@@ -1,0 +1,51 @@
+{
+ "brand": "Yope",
+ "brand_id_or_domain": "yope.pl (also tried yopeshop.pl, yope.eu, query=Yope strict)",
+ "pulled": "2026-09-24",
+ "calls": [
+  {
+   "set": "newest",
+   "selector": "landing_page_domain=yope.pl",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "best",
+   "selector": "landing_page_domain=yope.pl",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "newest",
+   "selector": "landing_page_domain=yopeshop.pl",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "newest",
+   "selector": "landing_page_domain=yope.eu",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "newest",
+   "selector": "query=Yope strict_query=true",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "best",
+   "selector": "query=Yope strict_query=true",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  }
+ ],
+ "ads": [],
+ "note": "No Yope ads in the GetHookd library under any selector."
+}

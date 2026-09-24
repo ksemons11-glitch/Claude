@@ -1,0 +1,46 @@
+{
+ "brand": "Resibo",
+ "brand_id_or_domain": "resibo.pl (also tried resibo.com, query=Resibo strict)",
+ "pulled": "2026-09-24",
+ "calls": [
+  {
+   "set": "newest",
+   "selector": "landing_page_domain=resibo.pl",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "best",
+   "selector": "landing_page_domain=resibo.pl",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "newest",
+   "selector": "landing_page_domain=resibo.com",
+   "rows_billed": 0,
+   "unique": 0,
+   "credits_used": 0
+  },
+  {
+   "set": "newest",
+   "selector": "query=Resibo strict_query=true",
+   "rows_billed": 7,
+   "unique": 5,
+   "credits_used": 0.05,
+   "note": "all rows are false positives: Filipino ads containing the Tagalog word 'resibo' (receipt) - Technogrid Solar 178314005, TaxEase 171163671, Lumyra Eye Care 151565408, Cream Silk Philippines 139882128, Goodies Nutrition 115236904"
+  },
+  {
+   "set": "best",
+   "selector": "query=Resibo strict_query=true",
+   "rows_billed": 4,
+   "unique": 4,
+   "credits_used": 0.04,
+   "note": "false positives again: Technogrid Solar 178314005, Lumyra Eye Care 151565401, TaxEase 136181183, Goodies Nutrition 115236904"
+  }
+ ],
+ "ads": [],
+ "note": "No Resibo (Polish cosmetics) ads in the GetHookd library; the strict-query rows were unrelated Philippine ads and were not stored as brand ads."
+}
