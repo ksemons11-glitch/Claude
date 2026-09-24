@@ -9,7 +9,8 @@ schematic,"Schemat 16 plastrów i miejsc aplikacji jako stały element edukacyjn
 occlusion_graphic,"„Wilgoć zostaje pod plastrem” vs „ucieka bez okluzji” — BEZ strzałek sugerujących wnikanie silikonu do skóry",Przekonanie nr 3; uczciwość mechanizmu,brief,confirmed
 typography,"Gruby, nowoczesny bezszeryfowy nagłówek (1–2 linijki); mały podtytuł; brak serifów i cienkich fontów",Czytelność na mobile,brain,draft
 headline_rule,"Jeden kąt, jedno zdanie; zero wykrzykników; zero CAPS LOCK poza akcentem",Dyscyplina „jedna propozycja”,brain,confirmed
-palette_named,"Ciepła biel (tło), piaskowy beż (tło alt.), blady pudrowy róż (akcent skóry), grafit (tekst), przygaszona szałwia (akcent)",Pasuje do tonu; brak oficjalnej palety w materiałach,user,draft_accepted
+palette_named,"Koralowy (z opakowania — jedyny mocny akcent), ciepła biel (tło), piaskowy beż (tło alt.), grafit (tekst), blady pudrowy róż (skóra)",Opakowanie jest koralowe — kreacja musi być z nim spójna; brak innej oficjalnej palety,meta_ads + user,draft_updated
+packshot_rule,"Saszetka koralowa pokazana realnie (nie AI-render) obok plastra na skórze; bez wymyślonych marek-konkurentów na półce",Wiarygodność (przekonanie nr 6); grafika B5 z półką i fikcyjnymi markami to AI-render,meta_ads,draft
 logo_rules,"Logo małe w rogu lub na dole; nigdy jako główny element; pisownia VeluSkin",—,brain,draft
 offer_lockup,"„2 zestawy — 99,90 zł · REKOMENDOWANY” małym tekstem przy CTA",Spójność oferty,user,confirmed
 banned_visuals,"Strzykawki/igły; fałszywy ekspert / laboratorium / fartuch; idealizowane PRZED/PO; badge „-50%” i starburst; odliczanie; stockowe 20-latki; krzykliwa czerwień / neon; sugestia wnikania silikonu",Wypalone lub nieuczciwe; ryzyko odrzucenia reklamy,brief,confirmed

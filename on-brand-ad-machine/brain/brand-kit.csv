@@ -10,7 +10,9 @@ meta_video_ids_veluskin,"874511268731121; 4484389008496014",meta_api,confirmed
 canva_brand_kit_id,kAFnyx_hPeA,Canva,confirmed
 logo_primary,TODO — wgraj plik do brain/assets/logo.svg lub .png,brain/assets/,missing
 logo_wordmark_rules,"Pisownia: „VeluSkin”; nigdy „Veluskin” / „VELUSKIN”",brain,draft
-palette_named,"Ciepła biel (tło) · piaskowy beż (tło alternatywne) · blady pudrowy róż (akcent skóry) · grafit (tekst) · przygaszona szałwia (akcent premium)",user zaakceptował szkic,draft_accepted
+packaging,"Stojąca saszetka (doypack) w kolorze koralowym/łososiowym; biały napis „Plastry wygładzające przeciw zmarszczkom”, biały schemat plastrów, „VeluSkin · 100% silikon”; badge „Efekt już po 1 użyciu” (K12 — na opakowaniu!)",meta_ads preview (creative 2761489990912955),confirmed
+palette_named,"KORALOWY / łososiowy (kolor opakowania — główny akcent marki) · ciepła biel (tło) · piaskowy beż (tło alternatywne) · grafit (tekst) · blady pudrowy róż (skóra). Szałwia usunięta — nie występuje w marce",packaging + szkic,draft_updated
+color_hex_primary,TODO — koralowy z opakowania (propozycja do potwierdzenia: #F0806A),do produkcji,missing
 palette_banned_named,"Krzykliwa czerwień, neon, czysta czerń jako tło, żółty starburst",brain,draft
 color_hex_background,TODO (propozycja: ciepła biel #FAF7F2),do produkcji; Jev nie używa hex,missing
 color_hex_secondary,TODO (propozycja: piaskowy beż #E9DFD2),do produkcji,missing
