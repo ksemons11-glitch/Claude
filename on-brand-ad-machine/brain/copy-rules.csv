@@ -1,0 +1,13 @@
+rule_id,check,type,status
+C1,Nagłówek = jedno zdanie / jedna propozycja; bez drugiego zdania tłumaczącego puentę,must,confirmed
+C2,Zero wykrzykników w nagłówku i podtytule,must,confirmed
+C3,Nagłówek NIE zaczyna się od „silikon klasy medycznej” / „medical-grade”,must,confirmed
+C4,"Zero „-50%”, „promocja”, „tylko dziś”, odliczania, starburstów",must,confirmed
+C5,"Oferta zawsze jako lockup: „2 zestawy — 99,90 zł” (małym tekstem przy CTA)",must,confirmed
+C6,"CTA: „Kup teraz” lub czasownik korzyści (np. „Wygładź zmarszczki”); nigdy „Kliknij tutaj”",must,confirmed
+C7,Pisownia marki: „VeluSkin”,must,confirmed
+C8,"Bez obietnic medycznych („leczy”, „usuwa na stałe”, „jak botoks w 100%”); dozwolone: „wygładza”, „redukuje widoczność”, „efekt przez noc”",must,confirmed
+C9,Język: naturalny polski; bez kalek z angielskiego („skincare routine” → „pielęgnacja”),should,draft
+C10,"Ton: pewny, spokojny, lekko przewrotny; bez krzyku i bez „kochane”",should,draft
+C11,Podtytuł ≤ 12 słów; nagłówek ≤ 9 słów,should,draft
+C12,Każda kreacja odwołuje się do dokładnie jednego kąta z inspirations.csv,must,confirmed

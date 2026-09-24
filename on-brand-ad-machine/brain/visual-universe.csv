@@ -1,0 +1,13 @@
+element,rule,rationale,status
+mode_studio,"Czyste, premium, minimalistyczne; dużo białej przestrzeni; produkt lub skóra jako bohater; miękkie neutralne tła (ciepła biel, beż, blady róż)",Odróżnienie od krzykliwych kreacji konkurencji (Ulta/Shark Tank/50% OFF),draft
+mode_lifestyle,"Szczery, ciepły portret kobiety 35–55 w naturalnym świetle (poranek, sypialnia, łazienka); autentycznie, nie glossy; twarz neutralna lub lekki uśmiech",Kąt emocjonalny (Scarlette) wygrywa na CTR; autentyczność obniża CPC,draft
+photo_light,"Miękkie światło poranne lub okienne; zero twardego flasha; zero filtrów „glass skin”",Wiarygodność efektu „rano”,draft
+skin_rendering,Skóra dojrzała pokazana realistycznie (pory i tekstura widoczne); efekt „gładsza” a nie „plastikowa”,Unikamy nierealnych obietnic i odrzucenia przez grupę 45+,draft
+product_render,"Plaster pokazany na twarzy lub na neutralnym tle jako flat-lay; zawsze czysty, półprzezroczysty, elegancki",Produkt musi być rozpoznawalny w feedzie,draft
+typography,"Gruby, nowoczesny bezszeryfowy nagłówek (1 zdanie–2 linijki); mały podtytuł; brak serifów i cienkich fontów",Czytelność na mobile w 1 sekundę,draft
+headline_rule,"Nagłówek = jeden kąt, jedno zdanie; puenta bez tłumaczenia; zero wykrzykników; zero CAPS LOCK poza akcentem",Fresh hooki; dyscyplina „jedna propozycja”,confirmed
+color_palette,TODO — hex kolorów z brand kitu (Canva kAFnyx_hPeA lub strona www),user,missing
+logo_rules,Logo małe w rogu lub na dole; nigdy jako główny element,draft,draft
+banned_visuals,"Strzykawki/igły jako bohater; przed/po ze sztucznym retuszem; badge „50% OFF” i starburst; stockowe modelki 20-letnie; czerwone krzykliwe tła",Wypalone/obce dla marki; ryzyko odrzucenia reklamy,draft
+offer_lockup,"„2 zestawy — 99,90 zł” małym tekstem przy CTA; CTA: „Kup teraz” lub czasownik korzyści (np. „Wygładź zmarszczki”)",Spójność oferty w każdej kreacji,confirmed
+formats,"Statyczne 4:5 (1080x1350) i 9:16 (1080x1920); wideo AI 9:16 do 15 s",Meta feed + stories/reels,confirmed

@@ -1,0 +1,16 @@
+asset,value,where,status
+canva_brand_kit_id,kAFnyx_hPeA,Canva (użyty do 4 kreacji z runu 2026-09-23),confirmed
+logo_primary,TODO — wgraj plik do brain/assets/logo.svg lub .png,brain/assets/,missing
+logo_wordmark_rules,Pisownia: „VeluSkin” (V i S wielkie); nigdy „Veluskin” / „VELUSKIN” w copy,draft,draft
+palette_named,"Paleta PO NAZWACH (Jev porównuje nazwy, nie hex): ciepła biel (tło), piaskowy beż (tło alternatywne), blady pudrowy róż (akcent skóry), grafit (tekst), przygaszona szałwia (akcent premium)",draft — potwierdź z brand kitem,draft
+palette_banned_named,"Zakazane kolory dominujące: krzykliwa czerwień, neon, czysta czerń jako tło, żółty starburst",draft,draft
+color_primary_hex,TODO (tylko do produkcji; Jev nie używa),brand kit / www,missing
+color_secondary_hex,TODO (tylko do produkcji),brand kit / www,missing
+color_accent_hex,TODO (tylko do produkcji),brand kit / www,missing
+color_background_hex,TODO (rekomendacja: ciepła biel #FAF7F2),draft,draft
+font_headline,TODO (rekomendacja: gruby bezszeryfowy — np. Inter Bold / Montserrat Bold),draft,draft
+font_body,TODO (rekomendacja: Inter Regular),draft,draft
+product_photos,TODO — wgraj do brain/assets/ (packshot na białym tle + plaster na twarzy),brain/assets/,missing
+website_url,TODO,user,missing
+instagram_url,TODO,user,missing
+facebook_page_url,TODO,user,missing

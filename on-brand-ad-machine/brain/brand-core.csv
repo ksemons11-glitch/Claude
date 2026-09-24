@@ -1,0 +1,20 @@
+key,value,source,status
+brand_name,VeluSkin,profile,confirmed
+category,Beauty / anti-aging — wielorazowe silikonowe plastry przeciwzmarszczkowe,profile,confirmed
+product_type,Plastry z silikonu klasy medycznej; wielorazowe (do ok. 20 użyć z jednego zestawu),profile,confirmed
+market,PL (Polska),profile,confirmed
+language,Polski,profile,confirmed
+main_offer,"2 zestawy — 99,90 zł",profile,confirmed
+positioning_one_sentence,"VeluSkin to wielorazowe silikonowe plastry, które wygładzają zmarszczki przez noc — domowa alternatywa dla igły, licząca się w groszach na użycie",draft,draft
+test_budget,ok. 300 zł / dzień (ABO),profile,confirmed
+production_capability,"Grafiki, filmy AI i montaż in-house; bez aktorek UGC",profile,confirmed
+mechanism,"Silikon klasy medycznej przylega do skóry, nawilża i wygładza zmarszczki mimiczne przez noc; efekt widoczny rano, kumuluje się przy regularnym użyciu",teardown,draft
+core_promise,Gładsza skóra rano — bez igieł i bez wychodzenia z domu,teardown,draft
+tone_of_voice,"Pewny siebie, spokojny, konkretny; krótkie zdania; lekki humor bez taniości; zero krzyku, zero wykrzykników",draft,draft
+positioning,Domowa alternatywa dla zabiegów — wielorazowa i tania w przeliczeniu na użycie,teardown,draft
+hard_rule_1,NIE budować nowych reklam na starych winnerach — stare kreacje są wypalone,profile,confirmed
+hard_rule_2,Unikać nudnych hooków typu „silikon klasy medycznej” jako otwarcia — to jest wypalone w całej kategorii,teardown,confirmed
+hard_rule_3,Cel: tańsze kliknięcia i świeże kąty; każda kreacja = jedna propozycja (jeden kąt na kreację),profile,confirmed
+website_url,TODO — podaj URL sklepu,user,missing
+mission_statement,TODO — jedno zdanie,user,missing
+tagline,TODO,user,missing
