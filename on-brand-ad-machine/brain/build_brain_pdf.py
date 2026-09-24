@@ -39,7 +39,8 @@ SECTIONS = [
     ("competitors.csv", "10. Competitors", "Z researchu + GetHookd spy: kto wygrywa, jakim kątem, czego nie kopiować.", ["brand", "best_tier", "signature_angle", "notes"]),
     ("inspiration-set.csv", "11. Inspiration set — 10 marek (Krok 2)", "5 direct + 5 adjacent; adjacent dają kąty, których kategoria nie używa.", ["rank", "type", "brand", "why", "status"]),
     ("inspirations.csv", "12. Kąty reklamowe", "5 kierunków z briefu + kąty kategorii; status ready / blocked / banned.", ["rank", "angle", "role", "pl_headline", "pl_subcopy", "status"]),
-    ("winning-creatives.csv", "13. Dawne winnery (referencja)", "Kontekst dla Jev — hard_rule_1 zabrania remiksu.", ["creative_id", "headline_pl", "angle", "why_it_worked", "status"]),
+    ("winning-creatives.csv", "13. Dawne winnery (Meta, konto Pooa)", "Referencja i benchmark — hard_rule_1 zabrania remiksu.", ["rank", "ad_name", "created", "spend_pln", "purchases", "cpa_pln", "ctr", "format_guess", "note"]),
+    ("creative-library.csv", "13b. Biblioteka copy VeluSkin + audyt claimów", "15 unikalnych copy z konta; flagi = claimy zakazane przez brief.", ["copy_id", "variants", "angle", "headline", "banned_flags", "status"]),
     ("campaign-learnings.csv", "14. Campaign learnings", "Wnioski, hipotezy testowe, write-back.", ["date", "learning", "implication", "status"]),
 ]
 

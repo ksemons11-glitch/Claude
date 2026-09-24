@@ -1,2 +1,13 @@
-creative_id,date_run,format,headline_pl,angle,result_cpc_pln,result_ctr,result_cpa_pln,why_it_worked,asset_path,status
-TODO-W1,TODO,TODO,TODO,TODO,TODO,TODO,TODO,"Wpisz dawne winnery TYLKO jako referencję — hard_rule_1: nie remiksujemy ich, Jev używa ich do positioning_fit",brain/assets/TODO-w1.jpg,missing
+rank,ad_id,ad_name,campaign,created,spend_pln,purchases,cpa_pln,ctr,cpc_pln,format_guess,note,status
+1,120238985786400589,v4,[Velu] CBO SKALOWANIE BLACK WEEK,2025-11-30,13127.69,489,26.85,4.11%,0.41,wideo/statyk „v4”,"Największy wydatek w historii konta; ten sam „v4” skalowany w 6+ kampaniach (10–12.2025, 01.2026, LAL 04–05.2026) — WYPALONY (hard_rule_1)",reference_only
+2,120236951049150589,v4,[Velu] ADV best reklamy 27.10.2025,2025-10-27,8870.23,393,22.57,4.23%,0.46,„v4”,Najniższe CPA przy dużej skali,reference_only
+3,120216923759470589,v1,Adv + [Velu] Kampania 28.01,2025-01-27,8742.89,322,27.15,4.38%,0.44,„v1”,Pierwszy skalowany winner (styczeń 2025),reference_only
+4,120233009747740589,v4,[Velu] CBO skalowanie zainteresowań 21.08.2025,2025-08-21,8382.08,345,24.30,3.87%,0.48,„v4”,Skalowanie na „Rabaty i zniżki”,reference_only
+5,120241390416200589,v1 – kopia – kopia,[Velu] ADV 23.01.2026,2026-01-26,4525.40,151,29.97,5.51%,0.41,„v1”,Wysoki CTR,reference_only
+6,120240736533690589,v4,[Velu] ABO test zainteresowań 06.01.2026,2026-01-05,2902.81,138,21.03,3.92%,0.49,„v4”,Najniższe CPA w top 20,reference_only
+7,120235017442310589,26 grafika,[Velu] ABO test kreacje (sklejki+grafika) 23.09.2025,2025-09-22,1004.89,49,20.51,10.72%,0.22,STATYK,"„POZBĄDŹ SIĘ pionowych zmarszczek NAD USTAMI” — zbliżenie ust 50+, palec z watermarkiem lekiro.pl. CTR 10,7% / CPC 0,22 zł — POTWIERDZA kąt „linie wokół ust” (inspirations #2). Copy „pozbądź się” łamie C15 — nie remiksować, przenieść tylko strefę",reference_only
+8,120218357868170589,ugc1,[Veluskin] CBO 22.02,2025-02-22,1879.14,71,26.47,9.29%,0.23,UGC wideo,"UGC: CTR 8–9,6% w 4 kampaniach (02–03.2025) — format UGC daje najtańszy klik",reference_only
+9,120219384988710589,ugc1,[Veluskin] CBO 8.03,2025-03-07,1067.10,42,25.41,9.64%,0.23,UGC wideo,Najwyższy CTR w historii konta,reference_only
+10,120252528743390589,v3,[Velu] ABO test reklam winnerów (01.08–30.09.2025) 27.08.2026,2026-08-26,1080.08,31,34.84,8.98%,0.35,„v3” (2026),"Ostatni test winnerów (08.2026): CTR wysoki, CPA już 35 zł — objaw wypalenia",reference_only
+11,120225927924200589,v3 UGC,[VELU]ADV UGC 08.04,2025-05-07,1305.58,47,27.78,6.68%,0.40,UGC wideo,,reference_only
+12,120242416328750589,v4 grafika,[Velu] ABO test reklam 19.02.2026,2026-02-18,2249.05,86,26.15,2.77%,0.62,STATYK,Statyk bez strefy — słabszy CTR niż #7,reference_only

@@ -22,7 +22,9 @@ czyta przed każdym krokiem Ad Machine (spy → inspiracje → gate promptów �
 | `competitors.csv` | Konkurenci z researchu + GetHookd spy (id, tier, kąt, czego nie kopiować) | Krok 2–3 |
 | `inspiration-set.csv` | 10 marek do ekstrakcji (5 direct + 5 adjacent) z URL FB | Krok 2–3 |
 | `inspirations.csv` | Kąty reklamowe: 5 kierunków z briefu + kąty kategorii; status ready/blocked/banned | Krok 4–5 (2 produkty × 10 kreacji → u nas 1 produkt × 2 strefy) |
-| `winning-creatives.csv` | Dawne kreacje jako referencja dla Jev (`positioning_fit`), NIE do remiksu | Krok 4 |
+| `winning-creatives.csv` | Top 12 reklam VeluSkin z Meta (konto Pooa) z metrykami — benchmark i referencja, NIE do remiksu | Krok 4 |
+| `creative-library.csv` | 15 unikalnych copy z konta + audyt claimów wg `claims.csv` / `copy-rules.csv` | Krok 4–5, write-back |
+| `meta-images.csv` | Obrazy reklam VeluSkin w Meta (hash, wymiary, permalink) — do wyboru packshotu i reużycia przez API | Krok 6 |
 | `campaign-learnings.csv` | Wnioski, hipotezy testowe, wyniki (write-back po każdym runie i po każdej odrzuconej kreacji) | Pętla zwrotna |
 | `VeluSkin-Brand-Brain.pdf` | Skompilowany widok całości | Ludzie |
 | `assets/` | Logo, packshoty, zdjęcia na twarzy, schemat 16 plastrów (do wgrania) | Generacja |

@@ -1,8 +1,12 @@
 asset,value,where,status
 website_url,https://lekiro.pl (strona produktu VeluSkin),user,confirmed
 company,"Lekiro Adrian Zieliński, Gostynin — kontakt@lekiro.pl, tel. 791 283 845",user,confirmed
-instagram_url,TODO,user,missing
-facebook_page_url,TODO,user,missing
+instagram_url,"BRAK — żadne konto IG nie jest podpięte do kont reklamowych (Meta API); podaj ręcznie, jeśli istnieje",meta_api,missing
+facebook_page_url,https://www.facebook.com/734347096423155 (strona „VeluSkin”; page_id 734347096423155),meta_api,confirmed
+facebook_pages_other,"„Lekiro.pl” (637514099436639), „Lekiro” (833693426496702)",meta_api,confirmed
+meta_ad_account,"„Pooa” — act_1022565782878410 (business Pooa 434611672530823); tu lecą kampanie [Velu]",user+meta_api,confirmed
+meta_image_hashes_veluskin,"09ab91150f9381799b4ec2c0916cd084; 3a70479da70b4957de7e78e5feadfacc; a3be0280c40fce417e747107a90dd5c4; 39b6ced640869465dfa16c5dba0ecaa4; 93e1b5b6be758208092322f4e1635e71; c8f053ad3e1f80df5629b766e9edf673; a14c1e90c57d556393724bb24b039ab5; d2c3770dfe49965541f213679b909eaa; 04b1450f654b9c6d70651b3db2775723; a0a303b56acc6e1f4e93ff19755e82f2; 67876322fe0c119db69b75d45fb58a64",meta_api,confirmed
+meta_video_ids_veluskin,"874511268731121; 4484389008496014",meta_api,confirmed
 canva_brand_kit_id,kAFnyx_hPeA,Canva,confirmed
 logo_primary,TODO — wgraj plik do brain/assets/logo.svg lub .png,brain/assets/,missing
 logo_wordmark_rules,"Pisownia: „VeluSkin”; nigdy „Veluskin” / „VELUSKIN”",brain,draft
