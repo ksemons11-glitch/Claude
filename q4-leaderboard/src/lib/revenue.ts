@@ -2,8 +2,8 @@ import 'server-only';
 import type { RowDataPacket } from 'mysql2/promise';
 import { query, transaction } from './db';
 
-/** Latest cumulative value the user reported in weeks before `weekNumber` (0 if none). */
-export async function previousCumulative(userId: number, eventId: number, weekNumber: number): Promise<number> {
+/** Latest cumulative value the user reported in weeks before `weekNumber` (null if none). */
+export async function previousCumulative(userId: number, eventId: number, weekNumber: number): Promise<number | null> {
   const rows = await query<{ v: number | string }>(
     `SELECT e.cumulative_revenue AS v
      FROM revenue_entries e JOIN reporting_periods p ON p.id = e.reporting_period_id
@@ -11,7 +11,7 @@ export async function previousCumulative(userId: number, eventId: number, weekNu
      ORDER BY p.week_number DESC LIMIT 1`,
     [userId, eventId, weekNumber],
   );
-  return rows[0] ? Number(rows[0].v) : 0;
+  return rows[0] ? Number(rows[0].v) : null;
 }
 
 export async function entryFor(userId: number, periodId: number): Promise<number | null> {

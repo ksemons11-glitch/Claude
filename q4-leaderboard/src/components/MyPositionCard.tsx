@@ -71,7 +71,15 @@ export function MyPositionCard({ user, lb }: { user: UserRow; lb: Leaderboard })
             <ChangeBadge change={row.change} isNew={row.isNew} />
           </div>
           <div className="text-xs text-muted">
-            Ten tydzień: <span className="font-semibold text-white">+{formatPln(row.weekly ?? 0)}</span>
+            {row.weekly !== null ? (
+              <>
+                Ten tydzień: <span className="font-semibold text-white">+{formatPln(row.weekly)}</span>
+              </>
+            ) : row.isNew ? (
+              'Pierwszy wpis — w rankingu tygodniowym od następnego tygodnia'
+            ) : (
+              'Ten tydzień: brak wpisu'
+            )}
           </div>
         </div>
       </div>

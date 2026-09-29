@@ -30,6 +30,18 @@ describe('weekly revenue', () => {
     expect(weeklyAt(ledger, 1, 2)).toBeNull();
   });
 
+  it("does not count a late joiner's first entry as a weekly increase", () => {
+    const ledger = buildLedger(people, [
+      { userId: 2, periodIndex: 2, value: 50_000 },
+      { userId: 2, periodIndex: 3, value: 56_000 },
+    ], 4);
+    expect(weeklyAt(ledger, 2, 2)).toBeNull();
+    expect(weeklyAt(ledger, 2, 3)).toBe(6_000);
+    expect(q4Ranking(people, ledger, 2).map((r) => [r.nickname, r.value, r.weekly, r.isNew])).toEqual([['Bartek', 50_000, null, true]]);
+    expect(weeklyRanking(people, ledger, 2)).toEqual([]);
+    expect(weeklyRanking(people, ledger, 3).map((r) => r.value)).toEqual([6_000]);
+  });
+
   it('carries the last value forward over a skipped week', () => {
     const ledger = buildLedger(people, [
       { userId: 1, periodIndex: 0, value: 10_000 },

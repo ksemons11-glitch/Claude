@@ -62,13 +62,16 @@ export async function GET(req: NextRequest) {
       [event.id],
     );
     const week = new Map(periods.map((p) => [p.id, p.weekNumber]));
+    const firstWeek = periods[0]?.weekNumber;
     entries.sort((a, b) => a.nick.localeCompare(b.nick, 'pl') || (week.get(a.periodId) ?? 0) - (week.get(b.periodId) ?? 0));
     const last = new Map<number, number>();
     body = csv([
       ['nick', 'email', 'tydzien', 'przychod_narastajaco', 'przyrost_tygodnia', 'zmieniono'],
       ...entries.map((e) => {
         const v = Number(e.value);
-        const weekly = v - (last.get(e.userId) ?? 0);
+        const prev = last.get(e.userId);
+        // A late joiner's first entry is not a weekly increase (same rule as the ranking).
+        const weekly = prev === undefined && week.get(e.periodId) !== firstWeek ? null : v - (prev ?? 0);
         last.set(e.userId, v);
         return [e.nick, e.email, week.get(e.periodId) ?? null, v, weekly, formatFull(e.updatedAt)];
       }),

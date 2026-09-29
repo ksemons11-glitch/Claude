@@ -29,7 +29,7 @@ async function openPeriod() {
   if (state.phase === 'finished') return { error: 'Event się zakończył — wyniki są zamknięte.' } as const;
   const period = periods[state.index];
   if (!isPeriodOpen(period, now)) return { error: `Tydzień ${period.weekNumber} jest już zamknięty.` } as const;
-  return { event, period } as const;
+  return { event, period, isFirstWeek: state.index === 0 } as const;
 }
 
 export async function saveRevenueAction(_prev: FormState, fd: FormData): Promise<FormState> {
@@ -37,7 +37,7 @@ export async function saveRevenueAction(_prev: FormState, fd: FormData): Promise
   if ('error' in auth) return { error: auth.error };
   const open = await openPeriod();
   if ('error' in open) return { error: open.error };
-  const { event, period } = open;
+  const { event, period, isFirstWeek } = open;
   const user = auth.user;
 
   const raw = str(fd, 'revenue');
@@ -46,7 +46,8 @@ export async function saveRevenueAction(_prev: FormState, fd: FormData): Promise
   if (value < 0) return { error: 'Kwota nie może być ujemna.', fields: { revenue: raw } };
   if (value > MAX_REVENUE) return { error: 'Ta kwota wygląda na pomyłkę. Sprawdź ją jeszcze raz.', fields: { revenue: raw } };
 
-  const floor = await previousCumulative(user.id, event.id, period.weekNumber);
+  const previous = await previousCumulative(user.id, event.id, period.weekNumber);
+  const floor = previous ?? 0;
   if (value < floor) {
     return {
       error: `Wynik narastający nie może być niższy niż ostatnio zgłoszony (${formatPln(floor)}). Jeśli wcześniej wpisałeś błędną kwotę, zgłoś korektę organizatorowi.`,
@@ -65,8 +66,13 @@ export async function saveRevenueAction(_prev: FormState, fd: FormData): Promise
   });
   revalidatePath('/', 'layout');
 
-  const growth = value - floor;
-  const parts = [`Zapisano: ${formatPln(value)} od początku Q4.`, `Przyrost w tygodniu ${period.weekNumber}: +${formatPln(growth)}.`];
+  const parts = [`Zapisano: ${formatPln(value)} od początku Q4.`];
+  if (previous === null && !isFirstWeek) {
+    // Late joiner: the first entry holds all sales since the start of Q4, so it only counts for the Q4 ranking.
+    parts.push('To Twój pierwszy wpis — liczy się do rankingu całego Q4. W rankingu tygodniowym pojawisz się od następnego tygodnia.');
+  } else {
+    parts.push(`Przyrost w tygodniu ${period.weekNumber}: +${formatPln(value - floor)}.`);
+  }
   if (oldValue !== null && oldValue !== value) parts.push(`(Poprzedni wpis w tym tygodniu: ${formatPln(oldValue)}.)`);
   return { success: parts.join(' ') };
 }

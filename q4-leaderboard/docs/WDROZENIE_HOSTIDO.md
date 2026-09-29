@@ -1,54 +1,57 @@
-# Wdrożenie na Hostido (nextlevel-q4.pl)
+# Wdrożenie na Hostido (nextlevel-q4.pl, panel DirectAdmin)
 
-Czas: ok. 20–30 minut. Potrzebujesz dostępu do panelu Hostido (cPanel) i pliku `q4-leaderboard.zip`.
+Czas: ok. 20–30 minut. Potrzebujesz dostępu do panelu Hostido (DirectAdmin) i pliku `q4-leaderboard.zip`.
+Ścieżki poniżej zakładają konto `host308836` (widoczne w Menedżerze plików jako UID/GID).
 
-## 1. Domena
+## 1. Domena i SSL
 
-W panelu Hostido upewnij się, że domena `nextlevel-q4.pl` jest podpięta do konta hostingowego
-(Domeny → Domeny dodatkowe / Addon Domains) i ma włączony darmowy certyfikat SSL
-(SSL/TLS Status → „Run AutoSSL”). Aplikacja musi działać pod `https://`.
+Domena `nextlevel-q4.pl` jest już podpięta (w Menedżerze plików jest `domains/nextlevel-q4.pl`).
+Sprawdź w DirectAdmin → **Certyfikat SSL**, że dla domeny jest włączony darmowy certyfikat Let's Encrypt —
+aplikacja musi działać pod `https://`.
 
 ## 2. Baza danych
 
-cPanel → **Bazy danych MySQL** (MySQL Database Wizard):
+DirectAdmin → **Zarządzanie MySQL** → **Utwórz nową bazę danych**:
 
-1. Utwórz bazę, np. `konto_leaderboard`.
-2. Utwórz użytkownika z mocnym hasłem, np. `konto_lb`.
-3. Nadaj mu **wszystkie uprawnienia** do tej bazy.
+- nazwa bazy, np. `leaderboard` (panel doda prefiks: `host308836_leaderboard`),
+- użytkownik, np. `lb` (→ `host308836_lb`), hasło wygenerowane przez panel — **bez znaków `@ : / ? #`**.
 
-Zapisz: nazwę bazy, użytkownika i hasło. Tabel nie trzeba tworzyć — aplikacja zrobi to sama przy pierwszym starcie.
+Zapisz pełną nazwę bazy, użytkownika i hasło. Tabel nie trzeba tworzyć — aplikacja zrobi to sama przy pierwszym starcie.
 
 ## 3. Wgranie plików
 
-cPanel → **Menedżer plików**:
+DirectAdmin → **Menedżer plików**:
 
-1. W katalogu domowym (np. `/home/konto/`) wgraj `q4-leaderboard.zip` i wybierz **Wypakuj**.
-   Powstanie folder `/home/konto/q4-leaderboard/` (w nim m.in. `server.js`, `package.json`, `.next/`, `public/`).
-2. Utwórz pusty folder na awatary **poza** folderem aplikacji: `/home/konto/leaderboard-uploads`
-   (dzięki temu zdjęcia nie znikną przy aktualizacji aplikacji).
+1. Wejdź do `domains/nextlevel-q4.pl` (tam, gdzie są `public_ftp` i `public_html`).
+2. **Prześlij** `q4-leaderboard.zip`, zaznacz go i wybierz **Wypakuj** (Extract).
+   Powstanie folder `domains/nextlevel-q4.pl/q4-leaderboard/` (w nim m.in. `server.js`, `package.json`, `.next/`, `public/`).
+   Plików aplikacji **nie** wrzucaj do `public_html`.
+3. Obok utwórz **Nowy folder** `leaderboard-uploads` (na awatary — poza folderem aplikacji,
+   żeby zdjęcia nie znikały przy aktualizacji).
 
 ## 4. Aplikacja Node.js
 
-cPanel → **Setup Node.js App** → **Create Application**:
+DirectAdmin → **Setup Node.js App** (zwykle w sekcji „Dodatkowe funkcje” / „Extra Features”) → **Create Application**.
+Jeśli nie widzisz tej opcji, napisz do supportu Hostido: „Proszę o włączenie Node.js (Setup Node.js App) dla konta host308836”.
 
 | Pole | Wartość |
 |---|---|
 | Node.js version | najwyższa dostępna 20.x lub 22.x |
 | Application mode | Production |
-| Application root | `q4-leaderboard` |
-| Application URL | `nextlevel-q4.pl` |
+| Application root | `domains/nextlevel-q4.pl/q4-leaderboard` |
+| Application URL | `nextlevel-q4.pl` (bez dopisku po ukośniku) |
 | Application startup file | `server.js` |
 
-W sekcji **Environment variables** dodaj (wartości wg `.env.example`):
+W sekcji **Environment variables** dodaj (opis wszystkich w `.env.example`):
 
-| Zmienna | Przykład |
+| Zmienna | Wartość |
 |---|---|
 | `NODE_ENV` | `production` |
-| `DATABASE_URL` | `mysql://konto_lb:HASLO@localhost:3306/konto_leaderboard` |
+| `DATABASE_URL` | `mysql://host308836_lb:HASLO@localhost:3306/host308836_leaderboard` |
 | `APP_URL` | `https://nextlevel-q4.pl` |
 | `EVENT_ACCESS_CODE` | kod, który podacie w grupie (np. `NEXTLEVEL-Q4`) |
 | `ADMIN_EMAILS` | e-mail(e) organizatorów, oddzielone przecinkami |
-| `UPLOAD_DIR` | `/home/konto/leaderboard-uploads` |
+| `UPLOAD_DIR` | `/home/host308836/domains/nextlevel-q4.pl/leaderboard-uploads` |
 | `TERMS_URL` | link do regulaminu |
 | `PRIVACY_URL` | link do polityki prywatności |
 | `DATA_CONTROLLER` | nazwa i adres administratora danych |
@@ -59,7 +62,7 @@ W sekcji **Environment variables** dodaj (wartości wg `.env.example`):
 | `SMTP_PASS` | klucz SMTP z Brevo |
 | `MAIL_FROM` | `Next Level Q4 <ranking@nextlevel-q4.pl>` (domena nadawcy zweryfikowana w Brevo) |
 
-> Jeśli hasło do bazy zawiera znaki `@ : / ? #`, zamień je w `DATABASE_URL` na kody URL (`@` → `%40`, `#` → `%23` itd.) albo ustaw hasło bez tych znaków.
+Maile (SMTP) możesz uzupełnić później — bez nich aplikacja działa, tylko nie wyśle linku do resetu hasła.
 
 Następnie:
 
@@ -89,7 +92,8 @@ dane SMTP i czy domena nadawcy (`MAIL_FROM`) jest zweryfikowana w Brevo.
 
 ## Problemy
 
-- **Błąd 503 / aplikacja nie startuje** — Setup Node.js App → otwórz aplikację i sprawdź log (`stderr.log` w folderze aplikacji).
+- **Błąd 503 / aplikacja nie startuje** — sprawdź log `stderr.log` w folderze `domains/nextlevel-q4.pl/q4-leaderboard/`.
   Najczęściej: literówka w `DATABASE_URL` albo brak uprawnień użytkownika bazy.
 - **„DATABASE_URL is not set”** — zmienne środowiskowe nie zostały zapisane; dodaj je i zrestartuj.
 - **Awatary znikają po aktualizacji** — `UPLOAD_DIR` wskazuje do wnętrza folderu aplikacji; ustaw folder poza nim.
+- **Widać starą stronę Hostido zamiast rankingu** — usuń domyślny `index.html` z `public_html` i zrestartuj aplikację.

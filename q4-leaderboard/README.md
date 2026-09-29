@@ -6,7 +6,7 @@ akceptacja kont przez administratora, dziennik zmian wyników, eksport CSV.
 
 **Stos:** Next.js 15 (App Router, TypeScript) · Tailwind CSS · MySQL/MariaDB (`mysql2`) · własne logowanie
 (bcrypt + sesje w bazie) · SMTP (Brevo) przez `nodemailer`. Brak natywnych zależności — działa na hostingu
-współdzielonym z Node.js (Hostido / cPanel).
+współdzielonym z Node.js (Hostido — DirectAdmin + CloudLinux).
 
 Wdrożenie: [docs/WDROZENIE_HOSTIDO.md](docs/WDROZENIE_HOSTIDO.md).
 

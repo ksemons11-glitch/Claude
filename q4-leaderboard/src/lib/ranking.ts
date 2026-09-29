@@ -75,8 +75,19 @@ export function cumulativeAt(ledger: Ledger, userId: number, index: number): num
   return ledger.cumulative.get(userId)?.[index] ?? null;
 }
 
+/** True when the user's very first entry falls in this week, but not in week 1 (a late joiner). */
+export function isLateFirstEntry(ledger: Ledger, userId: number, index: number): boolean {
+  return index > 0 && Boolean(ledger.reported.get(userId)?.[index]) && cumulativeAt(ledger, userId, index - 1) === null;
+}
+
+/**
+ * Revenue generated in week `index`. null when the user did not report that week, and also
+ * for a late joiner's first entry: it contains all sales since 1 October, so it counts for
+ * the Q4 ranking but not as a weekly increase.
+ */
 export function weeklyAt(ledger: Ledger, userId: number, index: number): number | null {
   if (index < 0 || !ledger.reported.get(userId)?.[index]) return null;
+  if (isLateFirstEntry(ledger, userId, index)) return null;
   const now = cumulativeAt(ledger, userId, index) ?? 0;
   const before = cumulativeAt(ledger, userId, index - 1) ?? 0;
   return now - before;

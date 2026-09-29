@@ -50,9 +50,10 @@ export default async function AccountPage() {
 
   const period = lb.currentPeriod;
   const open = period && lb.state.phase === 'running' && isPeriodOpen(period, lb.now);
-  const [current, previous] = period
+  const [current, previousOrNull] = period
     ? await Promise.all([entryFor(user.id, period.id), previousCumulative(user.id, lb.event.id, period.weekNumber)])
-    : [null, 0];
+    : [null, null];
+  const previous = previousOrNull ?? 0;
 
   const history = await query<{ week: number; value: number | string; updatedAt: Date; startsAt: Date; endsAt: Date }>(
     `SELECT p.week_number AS week, e.cumulative_revenue AS value, e.updated_at AS updatedAt, p.starts_at AS startsAt, p.ends_at AS endsAt
@@ -63,7 +64,8 @@ export default async function AccountPage() {
   const rows = history.map((h, i) => ({
     ...h,
     value: Number(h.value),
-    weekly: Number(h.value) - (i > 0 ? Number(history[i - 1].value) : 0),
+    // A first entry after week 1 is not a weekly increase (see weeklyAt in lib/ranking).
+    weekly: i === 0 && h.week !== lb.periods[0]?.weekNumber ? null : Number(h.value) - (i > 0 ? Number(history[i - 1].value) : 0),
   }));
 
   const pos = myPosition(lb, user.id);
@@ -130,7 +132,11 @@ export default async function AccountPage() {
                   </div>
                   <div className="text-right">
                     <div className="font-bold tabular-nums">{formatPln(r.value)}</div>
-                    <div className="text-sm tabular-nums text-accent">+{formatPln(r.weekly)}</div>
+                    {r.weekly === null ? (
+                      <div className="text-xs text-muted">pierwszy wpis</div>
+                    ) : (
+                      <div className="text-sm tabular-nums text-accent">+{formatPln(r.weekly)}</div>
+                    )}
                   </div>
                 </li>
               ))}
