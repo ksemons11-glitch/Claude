@@ -5,9 +5,12 @@ import { getEvent } from '@/lib/data';
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const event = await getEvent();
+  // Falls back to a fixed title so the app can also be built without a database connection.
+  const name = await getEvent()
+    .then((e) => e.name)
+    .catch(() => 'Q4 Leaderboard');
   return {
-    title: event.name,
+    title: name,
     description: 'Ranking przychodów uczestników w Q4.',
     robots: { index: false, follow: false },
   };
