@@ -26,7 +26,7 @@ export async function registerAction(_prev: FormState, fd: FormData): Promise<Fo
   };
   const fail = (error: string): FormState => ({ error, fields });
 
-  if (!hit(`register:${await clientIp()}`, 10, 3_600_000)) return fail('Zbyt wiele prób. Spróbuj ponownie za godzinę.');
+  if (!hit(`register:${await clientIp()}`, 60, 3_600_000)) return fail('Zbyt wiele prób. Spróbuj ponownie za godzinę.');
 
   const event = await getEvent();
   if (!event.registrationOpen) return fail('Rejestracja jest obecnie zamknięta.');

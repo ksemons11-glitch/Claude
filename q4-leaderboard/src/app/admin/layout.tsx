@@ -23,7 +23,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   ];
   return (
     <>
-      <Header />
+      <Header wide />
       <div className="mx-auto max-w-5xl px-4 pb-16 pt-4">
         <nav className="-mx-4 mb-5 overflow-x-auto px-4">
           <div className="flex w-max gap-1.5">

@@ -4,11 +4,11 @@ import { avatarUrl, getEvent } from '@/lib/data';
 import { logoutAction } from '@/app/actions/auth';
 import { Avatar } from './Avatar';
 
-export async function Header() {
+export async function Header({ wide = false }: { wide?: boolean }) {
   const [user, event] = await Promise.all([getCurrentUser(), getEvent()]);
   return (
     <header className="sticky top-0 z-30 border-b border-line/70 bg-bg/85 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-3xl items-center justify-between gap-3 px-4">
+      <div className={`mx-auto flex h-14 ${wide ? 'max-w-5xl' : 'max-w-3xl'} items-center justify-between gap-3 px-4`}>
         <Link href="/" className="truncate text-base font-extrabold tracking-tight">
           <span className="text-accent">●</span> {event.name}
         </Link>
