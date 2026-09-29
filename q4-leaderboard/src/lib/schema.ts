@@ -94,6 +94,12 @@ export const SCHEMA: string[] = [
     CONSTRAINT fk_corr_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
   ) ${opts}`,
 
+  `CREATE TABLE IF NOT EXISTS avatars (
+    name VARCHAR(64) NOT NULL PRIMARY KEY,
+    data MEDIUMBLOB NOT NULL,
+    created_at DATETIME NOT NULL
+  ) ${opts}`,
+
   `CREATE TABLE IF NOT EXISTS sessions (
     id CHAR(64) NOT NULL PRIMARY KEY,
     user_id INT UNSIGNED NOT NULL,

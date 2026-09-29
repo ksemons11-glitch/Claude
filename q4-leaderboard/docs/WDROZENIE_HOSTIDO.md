@@ -1,5 +1,8 @@
 # Wdrożenie na Hostido (nextlevel-q4.pl, panel DirectAdmin)
 
+> **Nieaktualne dla nowych usług Hostido** — Hostido wycofało uruchamianie aplikacji Node.js pod domeną.
+> Użyj [WDROZENIE_VERCEL.md](WDROZENIE_VERCEL.md). Ta instrukcja zostaje dla hostingów z „Setup Node.js App”.
+
 Czas: ok. 20–30 minut. Potrzebujesz dostępu do panelu Hostido (DirectAdmin) i pliku `q4-leaderboard.zip`.
 Ścieżki poniżej zakładają konto `host308836` (widoczne w Menedżerze plików jako UID/GID).
 
@@ -26,8 +29,6 @@ DirectAdmin → **Menedżer plików**:
 2. **Prześlij** `q4-leaderboard.zip`, zaznacz go i wybierz **Wypakuj** (Extract).
    Powstanie folder `domains/nextlevel-q4.pl/q4-leaderboard/` (w nim m.in. `server.js`, `package.json`, `.next/`, `public/`).
    Plików aplikacji **nie** wrzucaj do `public_html`.
-3. Obok utwórz **Nowy folder** `leaderboard-uploads` (na awatary — poza folderem aplikacji,
-   żeby zdjęcia nie znikały przy aktualizacji).
 
 ## 4. Aplikacja Node.js
 
@@ -51,7 +52,6 @@ W sekcji **Environment variables** dodaj (opis wszystkich w `.env.example`):
 | `APP_URL` | `https://nextlevel-q4.pl` |
 | `EVENT_ACCESS_CODE` | kod, który podacie w grupie (np. `NEXTLEVEL-Q4`) |
 | `ADMIN_EMAILS` | e-mail(e) organizatorów, oddzielone przecinkami |
-| `UPLOAD_DIR` | `/home/host308836/domains/nextlevel-q4.pl/leaderboard-uploads` |
 | `TERMS_URL` | link do regulaminu |
 | `PRIVACY_URL` | link do polityki prywatności |
 | `DATA_CONTROLLER` | nazwa i adres administratora danych |
@@ -95,5 +95,4 @@ dane SMTP i czy domena nadawcy (`MAIL_FROM`) jest zweryfikowana w Brevo.
 - **Błąd 503 / aplikacja nie startuje** — sprawdź log `stderr.log` w folderze `domains/nextlevel-q4.pl/q4-leaderboard/`.
   Najczęściej: literówka w `DATABASE_URL` albo brak uprawnień użytkownika bazy.
 - **„DATABASE_URL is not set”** — zmienne środowiskowe nie zostały zapisane; dodaj je i zrestartuj.
-- **Awatary znikają po aktualizacji** — `UPLOAD_DIR` wskazuje do wnętrza folderu aplikacji; ustaw folder poza nim.
 - **Widać starą stronę Hostido zamiast rankingu** — usuń domyślny `index.html` z `public_html` i zrestartuj aplikację.

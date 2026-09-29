@@ -16,9 +16,13 @@ function pool(): mysql.Pool {
     state.pool = mysql.createPool({
       uri: config.databaseUrl,
       timezone: 'Z',
-      connectionLimit: 5,
+      connectionLimit: 4,
+      maxIdle: 2,
+      idleTimeout: 60_000,
       charset: 'utf8mb4',
       supportBigNumbers: true,
+      // Managed cloud databases require TLS; a MySQL on the same host does not.
+      ssl: config.databaseSsl ? { minVersion: 'TLSv1.2', rejectUnauthorized: true } : undefined,
     });
   }
   return state.pool;

@@ -8,7 +8,8 @@ akceptacja kont przez administratora, dziennik zmian wyników, eksport CSV.
 (bcrypt + sesje w bazie) · SMTP (Brevo) przez `nodemailer`. Brak natywnych zależności — działa na hostingu
 współdzielonym z Node.js (Hostido — DirectAdmin + CloudLinux).
 
-Wdrożenie: [docs/WDROZENIE_HOSTIDO.md](docs/WDROZENIE_HOSTIDO.md).
+Wdrożenie: [docs/WDROZENIE_VERCEL.md](docs/WDROZENIE_VERCEL.md) (Vercel + MySQL na Hostido). Hosting z panelem
+„Setup Node.js App”: [docs/WDROZENIE_HOSTIDO.md](docs/WDROZENIE_HOSTIDO.md).
 
 ## Jak działa ranking
 
@@ -30,7 +31,7 @@ Logika jest w czystych funkcjach (`src/lib/ranking.ts`, `src/lib/periods.ts`) po
 Publiczna strona i `/api/ranking` budują odpowiedź z białej listy pól (`toPublicRow` w `src/lib/leaderboard.ts`):
 nick, awatar, miejsce, kwoty, zmiana pozycji. E-mail, nick Discord i identyfikatory kont nigdy nie trafiają do
 odpowiedzi dla gości. Własne zdjęcia są skalowane w przeglądarce do 256×256, a serwer sprawdza typ pliku po jego
-zawartości (JPG/PNG/WEBP, maks. 300 KB).
+zawartości (JPG/PNG/WEBP, maks. 300 KB) i trzymane w bazie, więc aplikacja nie potrzebuje zapisywalnego dysku.
 
 ## Praca lokalna
 
