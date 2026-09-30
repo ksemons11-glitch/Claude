@@ -116,7 +116,7 @@ export default async function AccountPage() {
             {open ? (
               <RevenueForm current={current} previous={previous} />
             ) : lb.state.phase === 'before' ? (
-              <p className="alert-info">Raportowanie ruszy wraz ze startem Q4 ({lb.periods[0] ? formatDateTime(lb.periods[0].startsAt) : ''}).</p>
+              <p className="alert-info">Dodawanie wyników ruszy {lb.periods[0] ? formatDateTime(lb.periods[0].startsAt) : 'wkrótce'}. Wpiszesz wtedy całą sprzedaż od 1 października.</p>
             ) : lb.state.phase === 'finished' ? (
               <p className="alert-info">Q4 zakończony — wyniki są zamknięte. Dziękujemy!</p>
             ) : (

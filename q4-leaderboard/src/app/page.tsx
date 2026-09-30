@@ -42,7 +42,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
   const shownPeriod = view === 'prev' ? prevPeriod : view === 'week' ? period : null;
 
   let countdown: { target: Date; label: string } | null = null;
-  if (lb.state.phase === 'before' && lb.periods[0]) countdown = { target: lb.periods[0].startsAt, label: 'Start Q4 za' };
+  if (lb.state.phase === 'before' && lb.periods[0]) countdown = { target: lb.periods[0].startsAt, label: 'Start rankingu za' };
   else if (lb.state.phase === 'running' && period) {
     countdown =
       lb.now < period.entryDeadline
@@ -156,7 +156,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
                 <div className="text-4xl" aria-hidden>🏁</div>
                 <p className="mt-3 font-semibold">
                   {lb.state.phase === 'before'
-                    ? 'Ranking wystartuje razem z Q4.'
+                    ? `Ranking wystartuje ${lb.periods[0] ? formatDateTime(lb.periods[0].startsAt) : 'wkrótce'}. Zarejestruj się już teraz!`
                     : weekly
                       ? 'Nikt jeszcze nie zgłosił wyniku w tym tygodniu.'
                       : 'Ranking ruszy, gdy pierwsi uczestnicy dodadzą swoje wyniki.'}
