@@ -19,10 +19,11 @@ Zasada: ustawienia aplikacji (daty, kod, tryby, kopie) zmieniamy **w panelu admi
   Tabele i nowe kolumny tworzą się same przy starcie aplikacji.
 - **Domena:** `nextlevel-q4.pl` (DNS w DirectAdmin → Vercel).
 - **Maile:** Brevo SMTP (reset hasła, „konto zaakceptowane”) — skonfigurowane.
-- **Wdrażanie (obecnie):** Vercel buduje produkcję **bezpośrednio z gałęzi `claude/funny-turing-fsl3d7`** —
-  każdy push z chmury trafia na stronę po 1–2 min.
-- **Wdrażanie (plan, NIE zrobione):** `docs/BEZPIECZNE_WDRAZANIE.md` — gałąź `produkcja`, testowa baza
-  `host308836_test` dla podglądów, publikacja przez „Promote to Production”.
+- **Wdrażanie:** produkcja (`nextlevel-q4.pl`) budowana z gałęzi **`produkcja`**. Push z chmury na
+  `claude/funny-turing-fsl3d7` tworzy tylko **podgląd** (Preview, testowa baza `host308836_test`, widoczny tylko dla
+  zespołu Vercel). **Publikacja:** organizator pisze sesji w chmurze „publikuj” → sesja przesuwa gałąź `produkcja`
+  na sprawdzoną wersję → Vercel wdraża. Awaryjnie: Vercel → Deployments → Instant Rollback. Szczegóły:
+  `docs/BEZPIECZNE_WDRAZANIE.md`.
 
 ### Zmienne środowiskowe (Vercel)
 Wymagane: `DATABASE_URL`, `APP_URL=https://nextlevel-q4.pl`, `EVENT_ACCESS_CODE` (tylko przy pierwszym starcie),
@@ -70,7 +71,10 @@ dane testowe: 50 kont jednym kliknięciem i usuwanie) · **Kopie i serwis** · e
 
 ## Otwarte sprawy
 
-- [ ] Bezpieczne wdrażanie (gałąź `produkcja` + testowa baza) — `docs/BEZPIECZNE_WDRAZANIE.md`.
+- [x] Bezpieczne wdrażanie: gałąź `produkcja`, testowa baza `host308836_test`, `DATABASE_URL` osobno dla Production/Preview,
+  Branch Tracking = `produkcja`, Deployment Protection = Standard.
+- [ ] Preview: dodać `EVENT_ACCESS_CODE` i `ADMIN_EMAILS` (bez SMTP), potem pierwszy podgląd i publikacja
+  poprawki „niedziela 23:59 jako jedyny termin”.
 - [ ] Potwierdzić w panelu: odsłonięcie 5.10 00:00, kod `NEXTLEVEL-Q4`, 0 kont testowych, tryb „Normalna praca”.
 - [ ] Akapit o rankingu Q4 w polityce prywatności (cel, zakres danych, okres przechowywania).
 - [ ] Kolejni admini (np. Agata): e-mail do `ADMIN_EMAILS` **przed** jej rejestracją + Redeploy; jeśli już ma konto — do ustalenia.

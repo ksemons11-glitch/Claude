@@ -41,8 +41,12 @@ i generować dane testowe bez ryzyka. Konto admina w teście zakładasz osobno (
 
 ### Publikacja na nextlevel-q4.pl
 1. (Opcjonalnie) Panel admina → **Kopie i serwis** → **Utwórz kopię teraz** i włącz **Tylko odczyt**.
-2. Vercel → **Deployments** → sprawdzony podgląd → menu **⋯** → **Promote to Production** → potwierdź.
+2. Napisz sesji Claude w chmurze **„publikuj”**. Przesunie gałąź `produkcja` na sprawdzoną w podglądzie wersję,
+   a Vercel sam wdroży ją na stronę (tak `produkcja` na GitHubie zawsze odpowiada temu, co jest na stronie).
 3. Po 1–2 minutach sprawdź stronę, potem w panelu admina wyłącz tryb serwisowy.
+
+Alternatywa bez sesji w chmurze: Vercel → **Deployments** → sprawdzony podgląd → **⋯** → **Promote to Production**
+(wtedy gałąź `produkcja` zostaje w tyle — przy następnej publikacji przez sesję w chmurze wyrówna się sama).
 
 ### Coś poszło nie tak po publikacji
 Vercel → **Deployments** → poprzednie wdrożenie produkcyjne → **⋯** → **Instant Rollback**.
