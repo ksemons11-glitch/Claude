@@ -26,7 +26,7 @@ export async function registerAction(_prev: FormState, fd: FormData): Promise<Fo
   };
   const fail = (error: string): FormState => ({ error, fields });
 
-  if (!hit(`register:${await clientIp()}`, 60, 3_600_000)) return fail('Zbyt wiele prób. Spróbuj ponownie za godzinę.');
+  if (!(await hit(`register:${await clientIp()}`, 60, 3_600_000))) return fail('Zbyt wiele prób. Spróbuj ponownie za godzinę.');
 
   const event = await getEvent();
   if (!event.registrationOpen) return fail('Rejestracja jest obecnie zamknięta.');
@@ -102,7 +102,7 @@ export async function registerAction(_prev: FormState, fd: FormData): Promise<Fo
 export async function loginAction(_prev: FormState, fd: FormData): Promise<FormState> {
   const email = normalizeEmail(str(fd, 'email'));
   const fields = { email };
-  if (!hit(`login:${await clientIp()}:${email}`, 10, 15 * 60_000)) {
+  if (!(await hit(`login:${await clientIp()}:${email}`, 10, 15 * 60_000))) {
     return { error: 'Zbyt wiele prób logowania. Odczekaj 15 minut.', fields };
   }
   const rows = await query<{ id: number; password_hash: string; role: string; status: string }>(
@@ -128,7 +128,7 @@ export async function requestPasswordResetAction(_prev: FormState, fd: FormData)
     success: 'Jeśli konto z tym adresem istnieje, wysłaliśmy link do ustawienia nowego hasła. Sprawdź skrzynkę (także spam).',
   };
   if (validateEmail(email)) return { error: 'Podaj poprawny adres e-mail.', fields: { email } };
-  if (!hit(`reset-ip:${await clientIp()}`, 10, 3_600_000) || !hit(`reset:${email}`, 3, 3_600_000)) return done;
+  if (!(await hit(`reset-ip:${await clientIp()}`, 10, 3_600_000)) || !(await hit(`reset:${email}`, 3, 3_600_000))) return done;
 
   const rows = await query<{ id: number }>("SELECT id FROM users WHERE email = ? AND status <> 'deleted'", [email]);
   if (rows[0]) {

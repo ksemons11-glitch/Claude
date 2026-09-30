@@ -117,4 +117,11 @@ export const SCHEMA: string[] = [
     created_at DATETIME NOT NULL,
     CONSTRAINT fk_reset_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
   ) ${opts}`,
+
+  `CREATE TABLE IF NOT EXISTS rate_limits (
+    bucket CHAR(64) NOT NULL,
+    hit_at DATETIME(3) NOT NULL,
+    KEY idx_rl_bucket (bucket, hit_at),
+    KEY idx_rl_time (hit_at)
+  ) ${opts}`,
 ];
