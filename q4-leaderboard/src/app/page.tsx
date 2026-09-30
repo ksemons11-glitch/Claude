@@ -9,7 +9,7 @@ import { FullRanking } from '@/components/FullRanking';
 import { MyPositionCard } from '@/components/MyPositionCard';
 import { Avatar } from '@/components/Avatar';
 import { getCurrentUser } from '@/lib/auth';
-import { loadLeaderboard, parseView, toPublicRow, type RankingView } from '@/lib/leaderboard';
+import { isRankingHidden, loadLeaderboard, parseView, toPublicRow, type RankingView } from '@/lib/leaderboard';
 import { formatDate, formatDateTime } from '@/lib/time';
 import { formatPln } from '@/lib/validation';
 
@@ -30,7 +30,10 @@ function BrandTitle({ name }: { name: string }) {
 export default async function Home({ searchParams }: { searchParams: Promise<{ view?: string }> }) {
   const view = parseView((await searchParams).view);
   const user = await getCurrentUser();
-  const lb = await loadLeaderboard(user?.role === 'admin' && user.status === 'active');
+  const isAdmin = user?.role === 'admin' && user.status === 'active';
+  const lb = await loadLeaderboard(isAdmin);
+  const revealAt = isRankingHidden(lb.event, lb.now) ? lb.event.rankingRevealAt : null;
+  const hidden = revealAt !== null && !isAdmin;
   const canSee = lb.event.isPublicLeaderboard || user?.status === 'active';
   const weekly = view !== 'q4';
   const meId = user?.status === 'active' ? user.id : null;
@@ -49,6 +52,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
         ? { target: period.entryDeadline, label: `Termin wpisów — tydzień ${period.weekNumber}` }
         : { target: period.endsAt, label: `Ostatnia szansa! Tydzień ${period.weekNumber} zamyka się za` };
   }
+  if (hidden) countdown = { target: revealAt, label: 'Odsłonięcie rankingu za' };
   const daysToEnd = Math.max(0, Math.ceil((lb.event.endsAt.getTime() - lb.now.getTime()) / 86_400_000));
 
   const tabs: { key: RankingView; label: string }[] = [
@@ -99,8 +103,31 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
           </p>
         )}
 
+        {revealAt && isAdmin && (
+          <p className="alert-info mt-4">
+            <b>Ranking ukryty do {formatDateTime(revealAt)}.</b> Uczestnicy mogą już wpisywać wyniki, ale widzą tylko odliczanie. Ty jako
+            admin widzisz podgląd.
+          </p>
+        )}
+
         {!canSee ? (
           <p className="alert-info mt-6">Ranking jest widoczny tylko dla zalogowanych uczestników.</p>
+        ) : hidden ? (
+          <section className="card mt-6 px-5 py-8 text-center">
+            <div className="text-4xl" aria-hidden>🔒</div>
+            <h2 className="mt-3 text-xl font-extrabold">
+              Ranking odsłonimy <span className="text-accent">{formatDateTime(revealAt)}</span>
+            </h2>
+            <p className="mx-auto mt-2 max-w-md text-white/80">
+              Do tego czasu wpisz swój łączny przychód od 1 października. W chwili odsłonięcia zobaczysz swoje miejsce i całą tabelę.
+            </p>
+            <p className="mt-4 text-sm text-muted">
+              Dołączyło już <b className="text-white">{lb.participantsCount}</b> uczestników.
+            </p>
+            {user?.status === 'active' && lb.state.phase === 'running' && (
+              <Link href="/konto" className="btn-primary mt-5">Wpisz / zaktualizuj przychód</Link>
+            )}
+          </section>
         ) : (
           <>
             <div className="mt-4">
@@ -113,7 +140,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
               />
             </div>
 
-            <nav aria-label="Rodzaj rankingu" className="sticky top-14 z-10 -mx-4 mt-6 bg-bg/90 px-4 py-2 backdrop-blur">
+            <nav aria-label="Rodzaj rankingu" className="sticky top-16 z-10 -mx-4 mt-6 bg-bg/90 px-4 py-2 backdrop-blur">
               <div className="grid auto-cols-fr grid-flow-col gap-1 rounded-full border border-line bg-card p-1">
                 {tabs.map((t) => (
                   <Link
@@ -191,7 +218,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
           Ranking opiera się na wynikach deklarowanych przez uczestników. Publicznie widoczne są wyłącznie pseudonimy, awatary i wyniki.
         </footer>
       </main>
-      {user && <MyPositionCard user={user} lb={lb} />}
+      {user && <MyPositionCard user={user} lb={lb} hiddenUntil={hidden ? revealAt : null} />}
     </>
   );
 }

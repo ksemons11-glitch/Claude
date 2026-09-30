@@ -2,7 +2,7 @@ import 'server-only';
 import mysql from 'mysql2/promise';
 import bcrypt from 'bcryptjs';
 import { config } from './config';
-import { SCHEMA } from './schema';
+import { ADDED_COLUMNS, SCHEMA } from './schema';
 import { generateDefaultPeriods } from './periods';
 import { parseIsoDate, warsawToUtc } from './time';
 
@@ -31,6 +31,14 @@ function pool(): mysql.Pool {
 async function bootstrap(): Promise<void> {
   const p = pool();
   for (const stmt of SCHEMA) await p.query(stmt);
+  // Portable "ADD COLUMN IF NOT EXISTS" (MySQL 8 has no such syntax, MariaDB does).
+  for (const [table, column, definition] of ADDED_COLUMNS) {
+    const [cols] = await p.query<mysql.RowDataPacket[]>(
+      'SELECT 1 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND COLUMN_NAME = ?',
+      [table, column],
+    );
+    if (cols.length === 0) await p.query(`ALTER TABLE \`${table}\` ADD COLUMN \`${column}\` ${definition}`);
+  }
 
   const [rows] = await p.query<mysql.RowDataPacket[]>('SELECT id FROM events WHERE slug = ?', [config.eventSlug]);
   if (rows.length > 0) return;

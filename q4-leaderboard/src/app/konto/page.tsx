@@ -5,7 +5,7 @@ import { RevenueForm } from '@/components/forms/RevenueForm';
 import { requireUser } from '@/lib/auth';
 import { config } from '@/lib/config';
 import { query } from '@/lib/db';
-import { loadLeaderboard, myPosition } from '@/lib/leaderboard';
+import { isRankingHidden, loadLeaderboard, myPosition } from '@/lib/leaderboard';
 import { isPeriodOpen } from '@/lib/periods';
 import { entryFor, previousCumulative } from '@/lib/revenue';
 import { formatDate, formatDateTime, formatFull } from '@/lib/time';
@@ -81,7 +81,7 @@ export default async function AccountPage() {
     <>
       <Header />
       <main className="mx-auto max-w-xl px-4 pb-16 pt-6">
-        {pos.row && (
+        {pos.row && !isRankingHidden(lb.event, lb.now) && (
           <section className="card mb-4 flex items-center gap-4 p-4">
             <div className="text-center">
               <div className="text-3xl font-extrabold tabular-nums text-accent">{pos.row.rank}.</div>

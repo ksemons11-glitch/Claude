@@ -13,6 +13,8 @@ export type EventInfo = {
   accessCodeRequired: boolean;
   registrationOpen: boolean;
   isPublicLeaderboard: boolean;
+  /** Until this moment only admins see positions; participants can already report. */
+  rankingRevealAt: Date | null;
   startsAt: Date;
   endsAt: Date;
 };
@@ -53,7 +55,7 @@ export function avatarUrl(u: { avatarPreset: string | null; avatarFile: string |
 export const getEvent = cache(async (): Promise<EventInfo> => {
   const rows = await query<Record<string, unknown>>(
     `SELECT id, name, slug, motivation_text, access_code_hash, access_code_required, registration_open,
-            is_public_leaderboard, starts_at, ends_at
+            is_public_leaderboard, ranking_reveal_at, starts_at, ends_at
      FROM events WHERE slug = ?`,
     [config.eventSlug],
   );
@@ -68,6 +70,7 @@ export const getEvent = cache(async (): Promise<EventInfo> => {
     accessCodeRequired: Boolean(r.access_code_required),
     registrationOpen: Boolean(r.registration_open),
     isPublicLeaderboard: Boolean(r.is_public_leaderboard),
+    rankingRevealAt: (r.ranking_reveal_at as Date | null) ?? null,
     startsAt: r.starts_at as Date,
     endsAt: r.ends_at as Date,
   };

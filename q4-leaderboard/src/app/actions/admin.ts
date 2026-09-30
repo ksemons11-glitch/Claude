@@ -193,10 +193,13 @@ export async function updateSettingsAction(_prev: FormState, fd: FormData): Prom
     codeHash = await bcrypt.hash(normalizeCode(newCode), 10);
   }
   if (codeRequired && !codeHash) return { error: 'Ustaw kod dostępu albo wyłącz jego wymaganie.' };
+  const revealRaw = str(fd, 'ranking_reveal_at').trim();
+  const revealAt = revealRaw ? fromLocalInput(revealRaw) : null;
+  if (revealRaw && !revealAt) return { error: 'Nieprawidłowa data odsłonięcia rankingu.' };
 
   await execute(
     `UPDATE events SET name = ?, motivation_text = ?, access_code_hash = ?, access_code_required = ?,
-       registration_open = ?, is_public_leaderboard = ? WHERE id = ?`,
+       registration_open = ?, is_public_leaderboard = ?, ranking_reveal_at = ? WHERE id = ?`,
     [
       name,
       motivation,
@@ -204,6 +207,7 @@ export async function updateSettingsAction(_prev: FormState, fd: FormData): Prom
       codeRequired ? 1 : 0,
       fd.get('registration_open') === 'on' ? 1 : 0,
       fd.get('is_public_leaderboard') === 'on' ? 1 : 0,
+      revealAt,
       event.id,
     ],
   );

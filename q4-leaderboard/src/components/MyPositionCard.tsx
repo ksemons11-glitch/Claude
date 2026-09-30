@@ -3,6 +3,7 @@ import type { UserRow } from '@/lib/data';
 import { avatarUrl } from '@/lib/data';
 import { myPosition, type Leaderboard } from '@/lib/leaderboard';
 import { formatPln } from '@/lib/validation';
+import { formatDateTime } from '@/lib/time';
 import { Avatar } from './Avatar';
 import { ChangeBadge } from './ChangeBadge';
 
@@ -16,7 +17,7 @@ function Shell({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function MyPositionCard({ user, lb }: { user: UserRow; lb: Leaderboard }) {
+export function MyPositionCard({ user, lb, hiddenUntil = null }: { user: UserRow; lb: Leaderboard; hiddenUntil?: Date | null }) {
   if (user.role === 'admin') return null;
 
   if (user.status !== 'active') {
@@ -35,6 +36,29 @@ export function MyPositionCard({ user, lb }: { user: UserRow; lb: Leaderboard })
 
   const { row, gap } = myPosition(lb, user.id);
   const canReport = lb.state.phase === 'running';
+
+  if (hiddenUntil) {
+    // Before the reveal: confirm the saved result, but never show a position.
+    return (
+      <Shell>
+        <div className="flex items-center gap-3">
+          <Avatar src={avatarUrl(user)} size={44} />
+          <p className="flex-1 text-sm">
+            {row ? (
+              <>
+                Twój wynik: <b>{formatPln(row.cumulative)}</b>. Swoje miejsce zobaczysz {formatDateTime(hiddenUntil)}.
+              </>
+            ) : (
+              <>Wpisz swój przychód od 1 października — ranking odsłonimy {formatDateTime(hiddenUntil)}.</>
+            )}
+          </p>
+        </div>
+        {canReport && (
+          <Link href="/konto" className="btn-primary mt-3 w-full">{row ? 'Zaktualizuj przychód' : 'Dodaj przychód'}</Link>
+        )}
+      </Shell>
+    );
+  }
 
   if (!row) {
     return (

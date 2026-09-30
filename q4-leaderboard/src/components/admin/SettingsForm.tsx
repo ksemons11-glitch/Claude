@@ -12,6 +12,7 @@ export function SettingsForm(props: {
   hasCode: boolean;
   registrationOpen: boolean;
   isPublicLeaderboard: boolean;
+  rankingRevealAt: string;
 }) {
   const [state, action] = useActionState(updateSettingsAction, undefined);
   const check = (name: string, label: string, def: boolean) => (
@@ -34,6 +35,14 @@ export function SettingsForm(props: {
         <label htmlFor="access_code" className="label">Nowy kod dostępu do eventu</label>
         <input id="access_code" name="access_code" autoComplete="off" placeholder={props.hasCode ? 'kod ustawiony — wpisz, aby zmienić' : 'brak kodu'} className="input" />
         <p className="mt-1 text-xs text-muted">Kod jest przechowywany w formie zaszyfrowanej, dlatego nie da się go tu podejrzeć — tylko ustawić nowy.</p>
+      </div>
+      <div>
+        <label htmlFor="ranking_reveal_at" className="label">Odsłonięcie rankingu (czas polski)</label>
+        <input id="ranking_reveal_at" name="ranking_reveal_at" type="datetime-local" defaultValue={props.rankingRevealAt} className="input" />
+        <p className="mt-1 text-xs text-muted">
+          Do tej chwili uczestnicy mogą już wpisywać wyniki, ale nikt poza adminami nie widzi rankingu ani pozycji. Puste = ranking widoczny od
+          razu.
+        </p>
       </div>
       <div className="space-y-3 rounded-xl border border-line p-4">
         {check('access_code_required', 'Wymagaj kodu dostępu przy rejestracji', props.accessCodeRequired)}

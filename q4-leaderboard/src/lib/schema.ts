@@ -34,6 +34,7 @@ export const SCHEMA: string[] = [
     access_code_required TINYINT(1) NOT NULL DEFAULT 1,
     registration_open TINYINT(1) NOT NULL DEFAULT 1,
     is_public_leaderboard TINYINT(1) NOT NULL DEFAULT 1,
+    ranking_reveal_at DATETIME NULL,
     starts_at DATETIME NOT NULL,
     ends_at DATETIME NOT NULL,
     created_at DATETIME NOT NULL,
@@ -125,3 +126,6 @@ export const SCHEMA: string[] = [
     KEY idx_rl_time (hit_at)
   ) ${opts}`,
 ];
+
+/** Columns added after the first release: [table, column, definition]. Applied if missing. */
+export const ADDED_COLUMNS: [string, string, string][] = [['events', 'ranking_reveal_at', 'DATETIME NULL']];

@@ -47,14 +47,18 @@ type RawEntry = { userId: number; periodId: number; value: number | string };
 // Many people open the ranking at the same moment (e.g. after a Discord announcement).
 // Sharing the raw rows for a few seconds per server instance keeps the database load flat;
 // every write in this instance clears it, so people see their own change immediately.
+// Kept on globalThis: Next.js bundles pages and server actions separately, so a plain
+// module variable would give each bundle its own copy and writes could not clear it.
 const RAW_TTL_MS = 5_000;
-let rawCache: { at: number; eventId: number; users: RawUser[]; entries: RawEntry[] } | null = null;
+type RawCache = { at: number; eventId: number; users: RawUser[]; entries: RawEntry[] };
+const store = globalThis as unknown as { __lbRaw?: RawCache | null };
 
 export function invalidateLeaderboardCache(): void {
-  rawCache = null;
+  store.__lbRaw = null;
 }
 
 async function loadRaw(eventId: number): Promise<{ users: RawUser[]; entries: RawEntry[] }> {
+  const rawCache = store.__lbRaw;
   if (rawCache && rawCache.eventId === eventId && Date.now() - rawCache.at < RAW_TTL_MS) return rawCache;
   const [users, entries] = await Promise.all([
     query<RawUser>(
@@ -67,8 +71,9 @@ async function loadRaw(eventId: number): Promise<{ users: RawUser[]; entries: Ra
       [eventId],
     ),
   ]);
-  rawCache = { at: Date.now(), eventId, users, entries };
-  return rawCache;
+  const fresh: RawCache = { at: Date.now(), eventId, users, entries };
+  store.__lbRaw = fresh;
+  return fresh;
 }
 
 /**
@@ -132,4 +137,9 @@ export function myPosition(lb: Leaderboard, userId: number) {
     gap: gapToNextPlace(lb.rankings.q4, userId),
     total: lb.rankings.q4.length,
   };
+}
+
+/** Whether positions are still hidden from non-admins (the ranking "reveal" has not happened yet). */
+export function isRankingHidden(event: { rankingRevealAt: Date | null }, now: Date): boolean {
+  return event.rankingRevealAt !== null && now < event.rankingRevealAt;
 }

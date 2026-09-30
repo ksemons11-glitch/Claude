@@ -1,5 +1,6 @@
 import { SettingsForm } from '@/components/admin/SettingsForm';
 import { getEvent } from '@/lib/data';
+import { toLocalInput } from '@/lib/time';
 import { countDemoAccounts } from '@/lib/demo';
 import { DemoDataForm } from '@/components/admin/DemoDataForm';
 
@@ -16,6 +17,7 @@ export default async function SettingsPage() {
           hasCode={Boolean(e.accessCodeHash)}
           registrationOpen={e.registrationOpen}
           isPublicLeaderboard={e.isPublicLeaderboard}
+          rankingRevealAt={e.rankingRevealAt ? toLocalInput(e.rankingRevealAt) : ''}
         />
       </div>
       <h2 className="mb-3 mt-8 text-lg font-bold">Dane testowe</h2>

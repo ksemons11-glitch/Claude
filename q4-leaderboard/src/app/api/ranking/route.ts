@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { getCurrentUser } from '@/lib/auth';
-import { loadLeaderboard, parseView, toPublicRow } from '@/lib/leaderboard';
+import { isRankingHidden, loadLeaderboard, parseView, toPublicRow } from '@/lib/leaderboard';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,7 +8,11 @@ export const dynamic = 'force-dynamic';
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams;
   const user = await getCurrentUser();
-  const lb = await loadLeaderboard(user?.role === 'admin' && user.status === 'active');
+  const isAdmin = user?.role === 'admin' && user.status === 'active';
+  const lb = await loadLeaderboard(isAdmin);
+  if (!isAdmin && isRankingHidden(lb.event, lb.now)) {
+    return NextResponse.json({ rows: [], total: 0 }, { headers: { 'Cache-Control': 'no-store' } });
+  }
   if (!lb.event.isPublicLeaderboard && user?.status !== 'active') {
     return NextResponse.json({ error: 'forbidden' }, { status: 403 });
   }
