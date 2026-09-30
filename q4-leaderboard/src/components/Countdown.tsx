@@ -21,8 +21,8 @@ export function Countdown({ target, label }: { target: string; label: string }) 
   }, []);
   const p = parts(new Date(target).getTime() - (now ?? Date.now()));
   const cell = (v: number, unit: string) => (
-    <div className="min-w-[56px] rounded-xl bg-bg/70 px-2 py-1.5 text-center">
-      <div className="text-xl font-extrabold tabular-nums" suppressHydrationWarning>
+    <div className="min-w-[58px] rounded-2xl border border-white/10 bg-black/50 px-2 py-2 text-center">
+      <div className="font-display text-2xl font-extrabold tabular-nums" suppressHydrationWarning>
         {String(v).padStart(2, '0')}
       </div>
       <div className="text-[10px] uppercase tracking-wider text-muted">{unit}</div>

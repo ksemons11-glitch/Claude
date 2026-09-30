@@ -15,6 +15,18 @@ import { formatPln } from '@/lib/validation';
 
 const LIST_END = 50;
 
+/** Event name with its last word in the brand accent, like the headlines on nextlevel-marketing.pl. */
+function BrandTitle({ name }: { name: string }) {
+  const words = name.trim().split(/\s+/);
+  if (words.length < 2) return <span className="text-accent">{name}</span>;
+  const last = words.pop();
+  return (
+    <>
+      {words.join(' ')} <span className="text-accent">{last}</span>
+    </>
+  );
+}
+
 export default async function Home({ searchParams }: { searchParams: Promise<{ view?: string }> }) {
   const view = parseView((await searchParams).view);
   const [lb, user] = await Promise.all([loadLeaderboard(), getCurrentUser()]);
@@ -48,8 +60,11 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
     <>
       <Header />
       <main className={`mx-auto max-w-3xl px-4 pt-5 ${user ? 'pb-56' : 'pb-16'}`}>
-        <section className="card overflow-hidden bg-gradient-to-br from-accent/15 via-card to-card p-5">
-          <h1 className="text-2xl font-extrabold leading-tight tracking-tight">{lb.event.name}</h1>
+        <section className="card glow overflow-hidden p-5 sm:p-7">
+          <span className="eyebrow">Mentoring Ecommerce • Ranking Q4</span>
+          <h1 className="mt-3 text-[28px] font-extrabold leading-[1.05] sm:text-4xl">
+            <BrandTitle name={lb.event.name} />
+          </h1>
           {lb.event.motivationText && <p className="mt-1.5 text-white/80">{lb.event.motivationText}</p>}
           <div className="mt-4 flex flex-wrap items-end justify-between gap-3">
             {countdown ? (
@@ -91,15 +106,15 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
             </div>
 
             <nav aria-label="Rodzaj rankingu" className="sticky top-14 z-10 -mx-4 mt-6 bg-bg/90 px-4 py-2 backdrop-blur">
-              <div className="grid auto-cols-fr grid-flow-col gap-1 rounded-xl border border-line bg-card p-1">
+              <div className="grid auto-cols-fr grid-flow-col gap-1 rounded-full border border-line bg-card p-1">
                 {tabs.map((t) => (
                   <Link
                     key={t.key}
                     href={t.key === 'q4' ? '/' : `/?view=${t.key}`}
                     scroll={false}
                     aria-current={view === t.key ? 'page' : undefined}
-                    className={`flex min-h-[40px] items-center justify-center rounded-lg px-2 text-center text-sm font-semibold ${
-                      view === t.key ? 'bg-accent text-accent-fg' : 'text-muted hover:text-white'
+                    className={`flex min-h-[40px] items-center justify-center rounded-full px-2 text-center font-display text-sm font-bold leading-tight ${
+                      view === t.key ? 'bg-gradient-to-br from-accent to-accent-2 text-accent-fg' : 'text-muted hover:text-white'
                     }`}
                   >
                     {t.label}

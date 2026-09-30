@@ -2,21 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Next Level brand (nextlevel-marketing.pl): near-black background, coral-red accent
+   with a #EB4D5E → #FF6D7B gradient, Plus Jakarta Sans headings, Inter body text,
+   pill buttons and softly rounded cards. Colours are RGB channels. */
 :root {
   color-scheme: dark;
-  /* Brand palette (RGB channels). Change these to re-theme the whole app. */
-  --c-bg: 11 15 26;
-  --c-card: 19 26 42;
-  --c-line: 34 44 66;
-  --c-muted: 139 151 179;
-  --c-fg: 238 242 251;
-  --c-accent: 124 242 156;
-  --c-accent-fg: 11 15 26; /* text on accent buttons */
+  --c-bg: 5 5 5;
+  --c-card: 16 17 21;
+  --c-line: 38 39 46;
+  --c-muted: 168 170 178;
+  --c-fg: 255 255 255;
+  --c-accent: 235 77 94;
+  --c-accent-2: 255 109 123;
+  --c-accent-fg: 255 255 255; /* text on accent buttons */
+  --c-header: 247 248 250;
+  --c-header-fg: 5 5 5;
   --c-gold: 245 197 66;
   --c-silver: 199 208 221;
   --c-bronze: 217 139 82;
-  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-display: var(--font-body);
+  --font-body: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans Variable', var(--font-body);
 }
 
 html,
@@ -29,38 +34,55 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
 @layer components {
   .card {
-    @apply rounded-2xl border border-line bg-card;
+    @apply rounded-[20px] border border-line bg-card;
+  }
+  .glow {
+    background:
+      radial-gradient(120% 90% at 0% 0%, rgb(var(--c-accent) / 0.22), transparent 55%),
+      radial-gradient(90% 70% at 100% 100%, rgb(var(--c-accent) / 0.08), transparent 60%),
+      rgb(var(--c-card));
+  }
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white/80;
   }
   .btn {
-    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl px-5 text-base font-semibold transition active:scale-[0.98] disabled:opacity-50;
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 text-base font-semibold transition active:scale-[0.98] disabled:opacity-50;
+    font-family: var(--font-display);
   }
   .btn-primary {
-    @apply btn bg-accent text-accent-fg hover:brightness-110;
+    @apply btn bg-gradient-to-br from-accent to-accent-2 text-accent-fg shadow-[0_8px_24px_-8px_rgb(var(--c-accent)/0.6)] hover:brightness-110;
   }
   .btn-ghost {
-    @apply btn border border-line bg-transparent text-white hover:bg-white/5;
+    @apply btn border border-white/15 bg-white/[0.03] text-white hover:bg-white/[0.08];
   }
   .btn-sm {
-    @apply inline-flex min-h-[36px] items-center justify-center rounded-lg px-3 text-sm font-semibold transition active:scale-[0.98] disabled:opacity-50;
+    @apply inline-flex min-h-[36px] items-center justify-center rounded-full px-4 text-sm font-semibold transition active:scale-[0.98] disabled:opacity-50;
   }
   .input {
-    @apply block w-full min-h-[48px] rounded-xl border border-line bg-bg px-4 text-base text-white placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30;
+    @apply block w-full min-h-[48px] rounded-2xl border border-line bg-black/40 px-4 text-base text-white placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30;
   }
   .label {
     @apply mb-1.5 block text-sm font-medium text-muted;
   }
   .alert-error {
-    @apply rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200;
+    @apply rounded-2xl border border-accent/50 bg-accent/10 px-4 py-3 text-sm text-red-100;
   }
   .alert-success {
-    @apply rounded-xl border border-accent/40 bg-accent/10 px-4 py-3 text-sm text-accent;
+    @apply rounded-2xl border border-emerald-400/40 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-200;
   }
   .alert-info {
-    @apply rounded-xl border border-sky-400/40 bg-sky-400/10 px-4 py-3 text-sm text-sky-100;
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/85;
   }
   .link {
-    @apply text-accent underline-offset-4 hover:underline;
+    @apply text-accent-2 underline underline-offset-4 hover:text-accent;
   }
 }

@@ -135,7 +135,7 @@ export default async function AccountPage() {
                     {r.weekly === null ? (
                       <div className="text-xs text-muted">pierwszy wpis</div>
                     ) : (
-                      <div className="text-sm tabular-nums text-accent">+{formatPln(r.weekly)}</div>
+                      <div className="text-sm tabular-nums text-emerald-400">+{formatPln(r.weekly)}</div>
                     )}
                   </div>
                 </li>

@@ -40,7 +40,7 @@ export default async function PendingPage({ searchParams }: { searchParams: Prom
                 <Avatar src={avatarUrl(u)} size={40} />
                 <div className="min-w-0 flex-1">
                   <div className="font-bold">
-                    Discord: <span className="text-accent">{u.discordNickname}</span>
+                    Discord: <span className="text-accent-2">{u.discordNickname}</span>
                   </div>
                   <div className="truncate text-sm text-muted">
                     {u.publicNickname} · {u.email} · {formatFull(u.createdAt)}
