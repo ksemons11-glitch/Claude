@@ -1,7 +1,7 @@
 # Stan projektu — Q4 Leaderboard (Next Level)
 
-Wspólne źródło prawdy dla obu sesji Claude i organizatorów. Stan na: **30.09.2026**, ostatni commit na gałęzi:
-`Use Sunday 23:59 as the only weekly deadline`.
+Wspólne źródło prawdy dla obu sesji Claude i organizatorów. Stan na: **30.09.2026 wieczorem** — zweryfikowany
+przez obie sesje (kod: sesja w chmurze; panele i Vercel: sesja na komputerze).
 
 ## Kto co robi
 
@@ -26,11 +26,13 @@ Zasada: ustawienia aplikacji (daty, kod, tryby, kopie) zmieniamy **w panelu admi
   `docs/BEZPIECZNE_WDRAZANIE.md`.
 
 ### Zmienne środowiskowe (Vercel)
-Wymagane: `DATABASE_URL`, `APP_URL=https://nextlevel-q4.pl`, `EVENT_ACCESS_CODE` (tylko przy pierwszym starcie),
-`ADMIN_EMAILS` (e-maile, które przy **rejestracji** dostają rolę admina), `SMTP_HOST/PORT/USER/PASS`, `MAIL_FROM`.
+Ustawione (Production): `DATABASE_URL`, `APP_URL=https://nextlevel-q4.pl`, `EVENT_ACCESS_CODE` (używany tylko przy
+pierwszym starcie — potem kod zmienia się w panelu), `ADMIN_EMAILS` (e-maile, które przy **rejestracji** dostają rolę
+admina: organizator + `agata.ecom@gmail.com`), `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`.
+Preview: `DATABASE_URL` → testowa baza `host308836_test` (użytkownik `host308836_lbtest`, host `%`). SMTP celowo tylko
+na Production (podglądy nie wysyłają maili).
 Mają wartości domyślne w kodzie (nie trzeba ustawiać): `TERMS_URL`, `PRIVACY_URL` (strony nextlevel-marketing.pl),
-`DATA_CONTROLLER` (NEXT LEVEL MARKETING sp. z o.o.), `SUPPORT_DISCORD` („Adrian - Młody”).
-Nieużywana, do usunięcia jeśli jest: `CONTACT_EMAIL`.
+`DATA_CONTROLLER` (NEXT LEVEL MARKETING sp. z o.o.), `SUPPORT_DISCORD` („Adrian - Młody”). `CONTACT_EMAIL` — usunięty.
 
 ## Harmonogram eventu
 
@@ -40,6 +42,10 @@ Nieużywana, do usunięcia jeśli jest: `CONTACT_EMAIL`.
 - **Odsłonięcie rankingu: 5.10 00:00** (Panel admina → Ustawienia → „Odsłonięcie rankingu”). Do tego czasu
   uczestnicy widzą tylko odliczanie i swój wynik; admini widzą podgląd tabeli.
 - **Kod dostępu:** `NEXTLEVEL-Q4` (zmiana: Ustawienia).
+
+**Zweryfikowane w panelu (30.09):** odsłonięcie 05.10.2026 00:00 · kod wymagany · rejestracja otwarta · ranking
+publiczny · 0 kont testowych · tryb „Normalna praca” · tydzień 1 = 01.10 00:00 – 11.10 23:59 · jest automatyczna kopia
+dzienna (ręcznej jeszcze nie ma).
 
 ## Funkcje
 
@@ -73,12 +79,20 @@ dane testowe: 50 kont jednym kliknięciem i usuwanie) · **Kopie i serwis** · e
 
 - [x] Bezpieczne wdrażanie: gałąź `produkcja`, testowa baza `host308836_test`, `DATABASE_URL` osobno dla Production/Preview,
   Branch Tracking = `produkcja`, Deployment Protection = Standard.
-- [ ] Preview: dodać `EVENT_ACCESS_CODE` i `ADMIN_EMAILS` (bez SMTP), potem pierwszy podgląd i publikacja
-  poprawki „niedziela 23:59 jako jedyny termin”.
-- [ ] Potwierdzić w panelu: odsłonięcie 5.10 00:00, kod `NEXTLEVEL-Q4`, 0 kont testowych, tryb „Normalna praca”.
+- [x] Panel potwierdzony (odsłonięcie, kod, rejestracja, 0 kont testowych, tryb).
+- [x] Agata w `ADMIN_EMAILS` (+ Redeploy) — zostanie adminem przy rejestracji tym adresem.
+- [x] `CONTACT_EMAIL` usunięty z Vercela.
+- [ ] Preview: dodać `EVENT_ACCESS_CODE` i `ADMIN_EMAILS` (bez SMTP) → Redeploy najnowszego podglądu → sprawdzić.
+- [ ] Opublikować („publikuj”) poprawkę „niedziela 23:59 jako jedyny termin” — dziś produkcja działa na wersji
+  sprzed niej (terminy są już niedzielne w danych, zostaje tylko zdublowany tekst na stronie).
+- [ ] Przed dropem na całą grupę: ręczna kopia + pobranie na dysk (Kopie i serwis).
 - [ ] Akapit o rankingu Q4 w polityce prywatności (cel, zakres danych, okres przechowywania).
-- [ ] Kolejni admini (np. Agata): e-mail do `ADMIN_EMAILS` **przed** jej rejestracją + Redeploy; jeśli już ma konto — do ustalenia.
-- [ ] Usunąć zmienną `CONTACT_EMAIL` z Vercela, jeśli istnieje.
+
+## Historia zmian poza kodem (dla porządku)
+
+- 30.09, przed ustaleniem podziału pracy, sesja na komputerze zmieniała dane produkcyjne **przez SQL**: usunięcie
+  kont i wpisów testowych (z dziennikiem), wyrównanie terminów tygodni do niedzieli, przesunięcia tygodnia 1
+  (ostatecznie przywrócony na 01.10). Stan końcowy zgodny z panelem. Od teraz zmiany danych wyłącznie przez panel admina.
 
 ## Dokumenty w repo
 `README.md` (technicznie) · `docs/STAN_PROJEKTU.md` (ten plik) · `docs/WDROZENIE_VERCEL.md` · `docs/BEZPIECZNE_WDRAZANIE.md` ·
