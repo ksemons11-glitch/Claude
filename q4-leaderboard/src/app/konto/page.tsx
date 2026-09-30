@@ -11,18 +11,21 @@ import { entryFor, previousCumulative } from '@/lib/revenue';
 import { formatDate, formatDateTime, formatFull } from '@/lib/time';
 import { formatPln } from '@/lib/validation';
 
-const STATUS_TEXT: Record<string, { title: string; body: string }> = {
+const STATUS_TEXT: Record<string, { title: string; body: string; contact: string }> = {
   pending: {
     title: 'Konto oczekuje na akceptację organizatora',
-    body: 'Sprawdzamy, czy jesteś uczestnikiem programu (po nicku z Discorda). Po akceptacji dostaniesz e-mail i będziesz mógł dodawać wyniki.',
+    body: 'Sprawdzamy, czy jesteś uczestnikiem programu (po nicku z Discorda). Po akceptacji będziesz mógł dodawać wyniki.',
+    contact: 'Jeśli akceptacja się przedłuża, napisz na Discordzie do',
   },
   rejected: {
     title: 'Konto nie zostało zaakceptowane',
-    body: 'Jeśli uważasz, że to pomyłka, skontaktuj się z organizatorem na Discordzie.',
+    body: 'Jeśli uważasz, że to pomyłka, daj nam znać.',
+    contact: 'Napisz na Discordzie do',
   },
   suspended: {
     title: 'Konto jest czasowo zablokowane',
-    body: 'Skontaktuj się z organizatorem, aby wyjaśnić sytuację.',
+    body: 'Chcesz wyjaśnić sytuację?',
+    contact: 'Napisz na Discordzie do',
   },
 };
 
@@ -40,7 +43,11 @@ export default async function AccountPage() {
             <div className="text-4xl" aria-hidden>{user.status === 'pending' ? '⏳' : '⚠️'}</div>
             <h1 className="mt-3 text-xl font-extrabold">{t.title}</h1>
             <p className="mt-2 text-muted">{t.body}</p>
-            {config.contactEmail && <p className="mt-2 text-sm text-muted">Kontakt: {config.contactEmail}</p>}
+            {config.supportDiscord && (
+              <p className="mt-4 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm">
+                {t.contact} <b className="text-accent-2">{config.supportDiscord}</b>.
+              </p>
+            )}
             <Link href="/konto/profil" className="btn-ghost mt-5 w-full">Edytuj profil</Link>
           </div>
         </main>

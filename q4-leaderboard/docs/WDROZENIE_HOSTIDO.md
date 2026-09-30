@@ -55,7 +55,6 @@ W sekcji **Environment variables** dodaj (opis wszystkich w `.env.example`):
 | `TERMS_URL` | link do regulaminu |
 | `PRIVACY_URL` | link do polityki prywatności |
 | `DATA_CONTROLLER` | nazwa i adres administratora danych |
-| `CONTACT_EMAIL` | e-mail kontaktowy |
 | `SMTP_HOST` | `smtp-relay.brevo.com` |
 | `SMTP_PORT` | `587` |
 | `SMTP_USER` | login SMTP z Brevo (Ustawienia → SMTP & API) |

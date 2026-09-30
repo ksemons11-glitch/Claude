@@ -35,7 +35,6 @@ DirectAdmin → **Zarządzanie MySQL**, hasło bez znaków `@ : / ? #`).
 | `APP_URL` | `https://nextlevel-q4.pl` |
 | `EVENT_ACCESS_CODE` | `NEXTLEVEL-Q4` |
 | `ADMIN_EMAILS` | `ksemons11@gmail.com` |
-| `CONTACT_EMAIL` | `ksemons11@gmail.com` |
 
    Później (Settings → Environment Variables, potem Redeploy): `TERMS_URL`, `PRIVACY_URL`,
    `DATA_CONTROLLER` i maile Brevo `SMTP_HOST=smtp-relay.brevo.com`, `SMTP_PORT=587`, `SMTP_USER`,

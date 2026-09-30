@@ -20,7 +20,8 @@ export const config = {
   termsUrl: env('TERMS_URL', '#'),
   privacyUrl: env('PRIVACY_URL', '#'),
   dataController: env('DATA_CONTROLLER', ''),
-  contactEmail: env('CONTACT_EMAIL', ''),
+  // Discord contact shown to people waiting for approval (never a private e-mail).
+  supportDiscord: env('SUPPORT_DISCORD', 'Adrian - Młody'),
   smtp: {
     host: env('SMTP_HOST'),
     port: Number(env('SMTP_PORT', '587')),
