@@ -33,7 +33,7 @@ export async function Header({ wide = false }: { wide?: boolean }) {
             </nav>
           </details>
         ) : (
-          <Link href="/logowanie" className="btn-sm shrink-0 whitespace-nowrap bg-accent text-bg">Zaloguj się</Link>
+          <Link href="/logowanie" className="btn-sm shrink-0 whitespace-nowrap bg-accent text-accent-fg">Zaloguj się</Link>
         )}
       </div>
     </header>

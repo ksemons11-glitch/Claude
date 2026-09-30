@@ -12,7 +12,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
        (SELECT COUNT(*) FROM users WHERE deletion_requested_at IS NOT NULL AND status <> 'deleted') AS deletions`,
   );
   const badge = (n: number) =>
-    Number(n) > 0 ? <span className="ml-1.5 rounded-full bg-accent px-1.5 text-xs font-bold text-bg">{Number(n)}</span> : null;
+    Number(n) > 0 ? <span className="ml-1.5 rounded-full bg-accent px-1.5 text-xs font-bold text-accent-fg">{Number(n)}</span> : null;
   const links = [
     { href: '/admin', label: 'Oczekujące', extra: badge(counts.pending) },
     { href: '/admin/uzytkownicy', label: 'Uczestnicy', extra: badge(counts.deletions) },

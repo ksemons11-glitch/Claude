@@ -31,12 +31,12 @@ export default async function PendingPage({ searchParams }: { searchParams: Prom
         <>
           <form id="bulk" action={approveUsersAction} className="card mt-4 flex flex-wrap items-center justify-between gap-3 p-3">
             <SelectAll form="bulk" />
-            <button className="btn-sm bg-accent text-bg">Akceptuj zaznaczone</button>
+            <button className="btn-sm bg-accent text-accent-fg">Akceptuj zaznaczone</button>
           </form>
           <ul className="mt-3 grid gap-2">
             {users.map((u) => (
               <li key={u.id} className="card flex flex-wrap items-center gap-3 p-3">
-                <input type="checkbox" name="ids" value={u.id} form="bulk" className="h-5 w-5 accent-[#7cf29c]" aria-label={`Zaznacz ${u.publicNickname}`} />
+                <input type="checkbox" name="ids" value={u.id} form="bulk" className="h-5 w-5 accent-accent" aria-label={`Zaznacz ${u.publicNickname}`} />
                 <Avatar src={avatarUrl(u)} size={40} />
                 <div className="min-w-0 flex-1">
                   <div className="font-bold">
@@ -49,7 +49,7 @@ export default async function PendingPage({ searchParams }: { searchParams: Prom
                 <div className="flex gap-2">
                   <form action={approveUsersAction}>
                     <input type="hidden" name="ids" value={u.id} />
-                    <button className="btn-sm bg-accent text-bg">Akceptuj</button>
+                    <button className="btn-sm bg-accent text-accent-fg">Akceptuj</button>
                   </form>
                   <form action={setUserStatusAction}>
                     <input type="hidden" name="id" value={u.id} />

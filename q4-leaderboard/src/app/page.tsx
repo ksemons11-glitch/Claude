@@ -99,7 +99,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
                     scroll={false}
                     aria-current={view === t.key ? 'page' : undefined}
                     className={`flex min-h-[40px] items-center justify-center rounded-lg px-2 text-center text-sm font-semibold ${
-                      view === t.key ? 'bg-accent text-bg' : 'text-muted hover:text-white'
+                      view === t.key ? 'bg-accent text-accent-fg' : 'text-muted hover:text-white'
                     }`}
                   >
                     {t.label}

@@ -58,7 +58,7 @@ export function RegisterForm({
 
       <div className="space-y-3 rounded-xl border border-line p-4">
         <label className="flex gap-3 text-sm">
-          <input type="checkbox" name="terms" required className="mt-0.5 h-5 w-5 shrink-0 accent-[#7cf29c]" />
+          <input type="checkbox" name="terms" required className="mt-0.5 h-5 w-5 shrink-0 accent-accent" />
           <span>
             Akceptuję{' '}
             <a href={termsUrl} target="_blank" rel="noopener noreferrer" className="link">regulamin eventu</a> oraz{' '}
@@ -66,7 +66,7 @@ export function RegisterForm({
           </span>
         </label>
         <label className="flex gap-3 text-sm">
-          <input type="checkbox" name="public_consent" required className="mt-0.5 h-5 w-5 shrink-0 accent-[#7cf29c]" />
+          <input type="checkbox" name="public_consent" required className="mt-0.5 h-5 w-5 shrink-0 accent-accent" />
           <span>Zgadzam się na publiczne wyświetlanie mojego pseudonimu, awatara i deklarowanego wyniku w rankingu.</span>
         </label>
       </div>

@@ -16,7 +16,7 @@ export function SettingsForm(props: {
   const [state, action] = useActionState(updateSettingsAction, undefined);
   const check = (name: string, label: string, def: boolean) => (
     <label className="flex items-center gap-3">
-      <input type="checkbox" name={name} defaultChecked={def} className="h-5 w-5 accent-[#7cf29c]" />
+      <input type="checkbox" name={name} defaultChecked={def} className="h-5 w-5 accent-accent" />
       {label}
     </label>
   );

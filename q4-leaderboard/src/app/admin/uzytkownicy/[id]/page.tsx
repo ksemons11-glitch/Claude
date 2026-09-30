@@ -59,7 +59,7 @@ export default async function UserDetail({ params }: { params: Promise<{ id: str
         </div>
         {me?.id !== user.id && user.status !== 'deleted' && (
           <div className="flex flex-wrap gap-2">
-            {statusButton('active', user.status === 'suspended' ? 'Odblokuj' : 'Aktywuj', 'bg-accent text-bg')}
+            {statusButton('active', user.status === 'suspended' ? 'Odblokuj' : 'Aktywuj', 'bg-accent text-accent-fg')}
             {user.status === 'active' && statusButton('suspended', 'Zablokuj', 'border border-gold/50 text-gold')}
             {user.status === 'pending' && statusButton('rejected', 'Odrzuć', 'border border-red-500/40 text-red-300')}
           </div>

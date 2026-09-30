@@ -1,18 +1,28 @@
 import type { Config } from 'tailwindcss';
 
+// Brand colours live as CSS variables in src/app/globals.css (":root" block) —
+// change them there to re-theme the whole app.
+const v = (name: string) => `rgb(var(--c-${name}) / <alpha-value>)`;
+
 export default {
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        bg: '#0b0f1a',
-        card: '#131a2a',
-        line: '#222c42',
-        muted: '#8b97b3',
-        accent: '#7cf29c',
-        gold: '#f5c542',
-        silver: '#c7d0dd',
-        bronze: '#d98b52',
+        bg: v('bg'),
+        card: v('card'),
+        line: v('line'),
+        muted: v('muted'),
+        fg: v('fg'),
+        accent: v('accent'),
+        'accent-fg': v('accent-fg'),
+        gold: v('gold'),
+        silver: v('silver'),
+        bronze: v('bronze'),
+      },
+      fontFamily: {
+        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'var(--font-body)', 'system-ui', 'sans-serif'],
       },
     },
   },

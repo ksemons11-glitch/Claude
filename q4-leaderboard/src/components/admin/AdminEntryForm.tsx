@@ -26,7 +26,7 @@ export function AdminEntryForm({
       {correctionId && <input type="hidden" name="correction_id" value={correctionId} />}
       <input name="value" inputMode="decimal" defaultValue={value ?? ''} placeholder="kwota (puste = usuń)" className="input min-h-[40px]" aria-label="Wynik narastający" />
       <input name="reason" required defaultValue={defaultReason} placeholder="Powód korekty (wymagany)" className="input min-h-[40px]" aria-label="Powód" />
-      <SubmitButton className="btn-sm min-h-[40px] bg-accent text-bg">Zapisz</SubmitButton>
+      <SubmitButton className="btn-sm min-h-[40px] bg-accent text-accent-fg">Zapisz</SubmitButton>
       {state && (
         <div className="sm:col-span-3">
           <FormMessage state={state} />
