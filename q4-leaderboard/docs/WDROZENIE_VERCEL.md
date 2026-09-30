@@ -36,8 +36,9 @@ DirectAdmin → **Zarządzanie MySQL**, hasło bez znaków `@ : / ? #`).
 | `EVENT_ACCESS_CODE` | `NEXTLEVEL-Q4` |
 | `ADMIN_EMAILS` | `ksemons11@gmail.com` |
 
-   Później (Settings → Environment Variables, potem Redeploy): `TERMS_URL`, `PRIVACY_URL`,
-   `DATA_CONTROLLER` i maile Brevo `SMTP_HOST=smtp-relay.brevo.com`, `SMTP_PORT=587`, `SMTP_USER`,
+   Regulamin, polityka prywatności i administrator danych mają już wpisane wartości Next Level (można je
+   nadpisać zmiennymi `TERMS_URL`, `PRIVACY_URL`, `DATA_CONTROLLER`). Później (Settings → Environment Variables,
+   potem Redeploy): maile Brevo `SMTP_HOST=smtp-relay.brevo.com`, `SMTP_PORT=587`, `SMTP_USER`,
    `SMTP_PASS`, `MAIL_FROM`.
 
 5. **Deploy**. Pierwsze wdrożenie może pójść z gałęzi domyślnej repozytorium — dlatego:

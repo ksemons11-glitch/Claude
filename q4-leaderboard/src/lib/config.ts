@@ -17,9 +17,9 @@ export const config = {
     .split(',')
     .map((e) => e.trim().toLowerCase())
     .filter(Boolean),
-  termsUrl: env('TERMS_URL', '#'),
-  privacyUrl: env('PRIVACY_URL', '#'),
-  dataController: env('DATA_CONTROLLER', ''),
+  termsUrl: env('TERMS_URL', 'https://nextlevel-marketing.pl/regulamin/'),
+  privacyUrl: env('PRIVACY_URL', 'https://nextlevel-marketing.pl/polityka-prywatnosci/'),
+  dataController: env('DATA_CONTROLLER', 'NEXT LEVEL MARKETING sp. z o.o., ul. Jana Uphagena 27/607, Gdańsk'),
   // Discord contact shown to people waiting for approval (never a private e-mail).
   supportDiscord: env('SUPPORT_DISCORD', 'Adrian - Młody'),
   smtp: {

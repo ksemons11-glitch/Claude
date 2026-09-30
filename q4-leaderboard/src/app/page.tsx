@@ -9,6 +9,7 @@ import { FullRanking } from '@/components/FullRanking';
 import { MyPositionCard } from '@/components/MyPositionCard';
 import { Avatar } from '@/components/Avatar';
 import { getCurrentUser } from '@/lib/auth';
+import { config } from '@/lib/config';
 import { isRankingHidden, loadLeaderboard, parseView, toPublicRow, type RankingView } from '@/lib/leaderboard';
 import { formatDate, formatDateTime } from '@/lib/time';
 import { formatPln } from '@/lib/validation';
@@ -214,8 +215,14 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
           </>
         )}
 
-        <footer className="mt-10 text-center text-xs text-muted">
-          Ranking opiera się na wynikach deklarowanych przez uczestników. Publicznie widoczne są wyłącznie pseudonimy, awatary i wyniki.
+        <footer className="mt-10 space-y-2 text-center text-xs text-muted">
+          <p>Ranking opiera się na wynikach deklarowanych przez uczestników. Publicznie widoczne są wyłącznie pseudonimy, awatary i wyniki.</p>
+          <p>
+            <a href={config.termsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">Regulamin</a>
+            {' · '}
+            <a href={config.privacyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">Polityka prywatności</a>
+            {config.dataController && <> · Administrator danych: {config.dataController}</>}
+          </p>
         </footer>
       </main>
       {user && <MyPositionCard user={user} lb={lb} hiddenUntil={hidden ? revealAt : null} />}
