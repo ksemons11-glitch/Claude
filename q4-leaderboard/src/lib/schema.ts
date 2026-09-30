@@ -35,6 +35,8 @@ export const SCHEMA: string[] = [
     registration_open TINYINT(1) NOT NULL DEFAULT 1,
     is_public_leaderboard TINYINT(1) NOT NULL DEFAULT 1,
     ranking_reveal_at DATETIME NULL,
+    maintenance_mode VARCHAR(16) NOT NULL DEFAULT 'off',
+    maintenance_message VARCHAR(255) NULL,
     starts_at DATETIME NOT NULL,
     ends_at DATETIME NOT NULL,
     created_at DATETIME NOT NULL,
@@ -119,6 +121,16 @@ export const SCHEMA: string[] = [
     CONSTRAINT fk_reset_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
   ) ${opts}`,
 
+  `CREATE TABLE IF NOT EXISTS backups (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    created_at DATETIME NOT NULL,
+    reason VARCHAR(120) NOT NULL,
+    created_by INT UNSIGNED NULL,
+    summary VARCHAR(255) NOT NULL DEFAULT '',
+    data MEDIUMBLOB NOT NULL,
+    KEY idx_backups_time (created_at)
+  ) ${opts}`,
+
   `CREATE TABLE IF NOT EXISTS rate_limits (
     bucket CHAR(64) NOT NULL,
     hit_at DATETIME(3) NOT NULL,
@@ -128,4 +140,8 @@ export const SCHEMA: string[] = [
 ];
 
 /** Columns added after the first release: [table, column, definition]. Applied if missing. */
-export const ADDED_COLUMNS: [string, string, string][] = [['events', 'ranking_reveal_at', 'DATETIME NULL']];
+export const ADDED_COLUMNS: [string, string, string][] = [
+  ['events', 'ranking_reveal_at', 'DATETIME NULL'],
+  ['events', 'maintenance_mode', "VARCHAR(16) NOT NULL DEFAULT 'off'"],
+  ['events', 'maintenance_message', 'VARCHAR(255) NULL'],
+];

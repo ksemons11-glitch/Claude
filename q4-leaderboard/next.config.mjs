@@ -10,7 +10,7 @@ const nextConfig = {
   output: 'standalone',
   poweredByHeader: false,
   experimental: {
-    serverActions: { bodySizeLimit: '1mb' },
+    serverActions: { bodySizeLimit: '4mb' }, // backup files are restored through a server action
   },
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }];

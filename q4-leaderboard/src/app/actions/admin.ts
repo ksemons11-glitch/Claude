@@ -11,6 +11,7 @@ import { sendMail } from '@/lib/mail';
 import { writeEntry } from '@/lib/revenue';
 import { invalidateLeaderboardCache } from '@/lib/leaderboard';
 import { removeDemoData, seedDemoData } from '@/lib/demo';
+import { backupAdminExists, createBackup, parseBackupFile, readBackup, restoreBackup } from '@/lib/backup';
 import { deleteAvatar } from '@/lib/uploads';
 import { fromLocalInput } from '@/lib/time';
 import { MAX_REVENUE, parseMoney } from '@/lib/validation';
@@ -230,4 +231,56 @@ export async function removeDemoAction(_prev: FormState, _fd: FormData): Promise
   const removed = await removeDemoData();
   refresh();
   return { success: `Usunięto ${removed} kont testowych wraz z ich wynikami.` };
+}
+
+export async function createBackupAction(_prev: FormState, _fd: FormData): Promise<FormState> {
+  const admin = await requireAdmin();
+  const { summary } = await createBackup('Ręczna kopia administratora', admin.id);
+  revalidatePath('/admin/kopie');
+  return { success: `Kopia zapisana (${summary}).` };
+}
+
+export async function restoreBackupAction(_prev: FormState, fd: FormData): Promise<FormState> {
+  const admin = await requireAdmin();
+  if (str(fd, 'confirm') !== 'PRZYWRÓĆ') return { error: 'Wpisz PRZYWRÓĆ, aby potwierdzić.' };
+  let backup;
+  const file = fd.get('file');
+  if (file instanceof File && file.size > 0) {
+    if (file.size > 4 * 1024 * 1024) return { error: 'Plik jest za duży (maks. 4 MB).' };
+    const parsed = parseBackupFile(await file.text());
+    if ('error' in parsed) return { error: parsed.error };
+    backup = parsed;
+  } else {
+    backup = await readBackup(Number(str(fd, 'id')));
+    if (!backup) return { error: 'Nie znaleziono kopii.' };
+  }
+  if (!(await backupAdminExists(backup, admin.id)) && str(fd, 'force') !== 'on') {
+    return { error: 'W tej kopii nie ma Twojego konta administratora — po przywróceniu zostaniesz wylogowany. Zaznacz „Rozumiem”, aby kontynuować.' };
+  }
+  let summary: string;
+  try {
+    summary = await restoreBackup(backup, admin.id);
+  } catch (err) {
+    console.error('[backup] restore failed', err);
+    return { error: 'Przywracanie nie powiodło się — dane pozostały bez zmian (operacja została wycofana w całości).' };
+  }
+  refresh();
+  return { success: `Przywrócono kopię z ${new Date(backup.createdAt).toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' })} (${summary}). Stan sprzed przywrócenia zapisano jako osobną kopię.` };
+}
+
+export async function setMaintenanceAction(_prev: FormState, fd: FormData): Promise<FormState> {
+  await requireAdmin();
+  const mode = str(fd, 'mode');
+  if (!['off', 'readonly', 'closed'].includes(mode)) return { error: 'Nieznany tryb.' };
+  const event = await getEvent();
+  await execute('UPDATE events SET maintenance_mode = ?, maintenance_message = ? WHERE id = ?', [
+    mode,
+    str(fd, 'message').trim().slice(0, 255) || null,
+    event.id,
+  ]);
+  refresh();
+  return {
+    success:
+      mode === 'off' ? 'Strona działa normalnie.' : mode === 'readonly' ? 'Włączono tryb „tylko odczyt”.' : 'Strona zamknięta dla uczestników (przerwa techniczna).',
+  };
 }

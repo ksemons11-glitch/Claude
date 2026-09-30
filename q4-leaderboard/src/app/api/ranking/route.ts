@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { getCurrentUser } from '@/lib/auth';
+import { siteClosedFor } from '@/lib/maintenance';
 import { isRankingHidden, loadLeaderboard, parseView, toPublicRow } from '@/lib/leaderboard';
 
 export const dynamic = 'force-dynamic';
@@ -10,6 +11,7 @@ export async function GET(req: NextRequest) {
   const user = await getCurrentUser();
   const isAdmin = user?.role === 'admin' && user.status === 'active';
   const lb = await loadLeaderboard(isAdmin);
+  if (siteClosedFor(lb.event, user)) return NextResponse.json({ error: 'maintenance' }, { status: 503 });
   if (!isAdmin && isRankingHidden(lb.event, lb.now)) {
     return NextResponse.json({ rows: [], total: 0 }, { headers: { 'Cache-Control': 'no-store' } });
   }

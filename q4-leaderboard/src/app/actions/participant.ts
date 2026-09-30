@@ -2,6 +2,9 @@
 
 import bcrypt from 'bcryptjs';
 import { revalidatePath } from 'next/cache';
+import { after } from 'next/server';
+import { ensureDailyBackup } from '@/lib/backup';
+import { writeBlockedMessage } from '@/lib/maintenance';
 import { execute, query } from '@/lib/db';
 import { AVATAR_PRESETS, getEvent, getPeriods } from '@/lib/data';
 import { getCurrentUser } from '@/lib/auth';
@@ -18,6 +21,8 @@ async function activeUser() {
   const user = await getCurrentUser();
   if (!user) return { error: 'Zaloguj się ponownie.' } as const;
   if (user.status !== 'active') return { error: 'Twoje konto nie jest aktywne.' } as const;
+  const blocked = writeBlockedMessage(await getEvent(), user);
+  if (blocked) return { error: blocked } as const;
   return { user } as const;
 }
 
@@ -66,6 +71,7 @@ export async function saveRevenueAction(_prev: FormState, fd: FormData): Promise
     reason: null,
   });
   revalidatePath('/', 'layout');
+  after(() => ensureDailyBackup().catch((err) => console.error('[backup] daily backup failed', err)));
 
   const parts = [`Zapisano: ${formatPln(value)} od początku Q4.`];
   if (previous === null && !isFirstWeek) {
@@ -104,6 +110,8 @@ export async function requestCorrectionAction(_prev: FormState, fd: FormData): P
 export async function updateProfileAction(_prev: FormState, fd: FormData): Promise<FormState> {
   const user = await getCurrentUser();
   if (!user || user.status === 'deleted') return { error: 'Zaloguj się ponownie.' };
+  const blocked = writeBlockedMessage(await getEvent(), user);
+  if (blocked) return { error: blocked };
 
   const nickname = str(fd, 'nickname').trim().replace(/\s+/g, ' ');
   const discord = str(fd, 'discord').trim();
@@ -160,6 +168,8 @@ export async function changePasswordAction(_prev: FormState, fd: FormData): Prom
 export async function requestDeletionAction(_prev: FormState, _fd: FormData): Promise<FormState> {
   const user = await getCurrentUser();
   if (!user) return { error: 'Zaloguj się ponownie.' };
+  const blocked = writeBlockedMessage(await getEvent(), user);
+  if (blocked) return { error: blocked };
   await execute('UPDATE users SET deletion_requested_at = ?, updated_at = ? WHERE id = ?', [new Date(), new Date(), user.id]);
   return { success: 'Prośba o usunięcie konta została przekazana organizatorowi.' };
 }

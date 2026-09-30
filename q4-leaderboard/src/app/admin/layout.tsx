@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { requireAdmin } from '@/lib/auth';
+import { after } from 'next/server';
 import { query } from '@/lib/db';
+import { getEvent } from '@/lib/data';
+import { ensureDailyBackup } from '@/lib/backup';
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   await requireAdmin();
+  after(() => ensureDailyBackup().catch((err) => console.error('[backup] daily backup failed', err)));
+  const event = await getEvent();
   const [counts] = await query<{ pending: number; corrections: number; deletions: number }>(
     `SELECT
        (SELECT COUNT(*) FROM users WHERE status = 'pending') AS pending,
@@ -20,6 +25,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     { href: '/admin/tygodnie', label: 'Tygodnie', extra: null },
     { href: '/admin/dziennik', label: 'Dziennik zmian', extra: null },
     { href: '/admin/ustawienia', label: 'Ustawienia', extra: null },
+    { href: '/admin/kopie', label: 'Kopie i serwis', extra: null },
   ];
   return (
     <>
@@ -37,6 +43,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <a href="/api/admin/export?type=entries" className="btn-sm whitespace-nowrap border border-line bg-card hover:bg-white/5">CSV: wyniki</a>
           </div>
         </nav>
+        {event.maintenanceMode !== 'off' && (
+          <p className="alert-error mb-5">
+            <b>{event.maintenanceMode === 'closed' ? 'Przerwa techniczna włączona' : 'Tryb „tylko odczyt” włączony'}</b> — uczestnicy{' '}
+            {event.maintenanceMode === 'closed' ? 'nie widzą strony' : 'nie mogą niczego zapisać'}. Wyłączysz go w zakładce{' '}
+            <Link href="/admin/kopie" className="underline">Kopie i serwis</Link>.
+          </p>
+        )}
         {children}
       </div>
     </>

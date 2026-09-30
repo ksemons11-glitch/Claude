@@ -9,6 +9,7 @@ import { createSession, destroyAllSessions, destroySession, randomToken, sha256 
 import { clientIp, hit } from '@/lib/rate-limit';
 import { sendMail } from '@/lib/mail';
 import { saveAvatarDataUrl } from '@/lib/uploads';
+import { writeBlockedMessage } from '@/lib/maintenance';
 import { normalizeEmail, validateDiscord, validateEmail, validateNickname, validatePassword } from '@/lib/validation';
 import type { FormState } from './types';
 
@@ -30,6 +31,8 @@ export async function registerAction(_prev: FormState, fd: FormData): Promise<Fo
 
   const event = await getEvent();
   if (!event.registrationOpen) return fail('Rejestracja jest obecnie zamknięta.');
+  const blocked = writeBlockedMessage(event, null);
+  if (blocked) return fail(blocked);
 
   if (event.accessCodeRequired && event.accessCodeHash) {
     const ok = await bcrypt.compare(normalizeCode(str(fd, 'access_code')), event.accessCodeHash);
