@@ -8,7 +8,7 @@ akceptacja kont przez administratora, dziennik zmian wyników, eksport CSV.
 (bcrypt + sesje w bazie) · SMTP (Brevo) przez `nodemailer`. Brak natywnych zależności — działa na hostingu
 współdzielonym z Node.js (Hostido — DirectAdmin + CloudLinux).
 
-Wdrożenie: [docs/WDROZENIE_VERCEL.md](docs/WDROZENIE_VERCEL.md) (Vercel + MySQL na Hostido). Hosting z panelem
+Stan projektu i podział pracy: [docs/STAN_PROJEKTU.md](docs/STAN_PROJEKTU.md). Wdrożenie: [docs/WDROZENIE_VERCEL.md](docs/WDROZENIE_VERCEL.md) (Vercel + MySQL na Hostido). Hosting z panelem
 „Setup Node.js App”: [docs/WDROZENIE_HOSTIDO.md](docs/WDROZENIE_HOSTIDO.md).
 
 ## Jak działa ranking
