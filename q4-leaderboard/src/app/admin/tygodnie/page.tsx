@@ -36,7 +36,6 @@ export default async function PeriodsPage() {
               <PeriodForm
                 id={p.id}
                 startsAt={toLocalInput(p.startsAt)}
-                entryDeadline={toLocalInput(p.entryDeadline)}
                 endsAt={toLocalInput(p.endsAt)}
               />
             </li>

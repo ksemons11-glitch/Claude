@@ -40,6 +40,9 @@ async function bootstrap(): Promise<void> {
     if (cols.length === 0) await p.query(`ALTER TABLE \`${table}\` ADD COLUMN \`${column}\` ${definition}`);
   }
 
+  // Entries are accepted until the week closes; keep the legacy deadline column in line with it.
+  await p.query('UPDATE reporting_periods SET entry_deadline = ends_at WHERE entry_deadline <> ends_at');
+
   const [rows] = await p.query<mysql.RowDataPacket[]>('SELECT id FROM events WHERE slug = ?', [config.eventSlug]);
   if (rows.length > 0) return;
 

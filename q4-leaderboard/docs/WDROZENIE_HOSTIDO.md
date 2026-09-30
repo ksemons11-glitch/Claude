@@ -75,7 +75,7 @@ Następnie:
 Wejdź na `https://nextlevel-q4.pl/rejestracja` i zarejestruj się adresem podanym w `ADMIN_EMAILS`
 (użyj kodu z `EVENT_ACCESS_CODE`). To konto od razu dostaje rolę administratora i trafia do panelu `/admin`.
 
-W panelu sprawdź **Tygodnie** (domyślnie: tydzień 1 = 1–11.10, kolejne pon–niedz, termin wpisów w sobotę 23:59,
+W panelu sprawdź **Tygodnie** (domyślnie: tydzień 1 = 1–11.10, kolejne pon–niedz, wpisy do końca tygodnia,
 zamknięcie w niedzielę 23:59, ostatni tydzień do 3.01) i **Ustawienia** (nazwa, komunikat, kod dostępu).
 
 ## 6. Test maili

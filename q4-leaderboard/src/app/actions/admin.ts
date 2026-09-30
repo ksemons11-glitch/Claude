@@ -144,12 +144,9 @@ export async function updatePeriodAction(_prev: FormState, fd: FormData): Promis
   const id = Number(str(fd, 'id'));
   const startsAt = fromLocalInput(str(fd, 'starts_at'));
   const endsAt = fromLocalInput(str(fd, 'ends_at'), 59);
-  const deadline = fromLocalInput(str(fd, 'entry_deadline'), 59);
-  if (!startsAt || !endsAt || !deadline) return { error: 'Uzupełnij wszystkie daty.' };
-  if (!(startsAt < endsAt) || deadline < startsAt || deadline > endsAt) {
-    return { error: 'Daty muszą spełniać: początek < termin wpisu ≤ zamknięcie.' };
-  }
-  await execute('UPDATE reporting_periods SET starts_at = ?, ends_at = ?, entry_deadline = ? WHERE id = ?', [startsAt, endsAt, deadline, id]);
+  if (!startsAt || !endsAt) return { error: 'Uzupełnij obie daty.' };
+  if (!(startsAt < endsAt)) return { error: 'Początek tygodnia musi być przed jego końcem.' };
+  await execute('UPDATE reporting_periods SET starts_at = ?, ends_at = ?, entry_deadline = ? WHERE id = ?', [startsAt, endsAt, endsAt, id]);
   refresh();
   return { success: 'Tydzień zapisany.' };
 }
@@ -174,7 +171,7 @@ export async function addPeriodAction(): Promise<void> {
       last.weekNumber + 1,
       new Date(last.endsAt.getTime() + 1000),
       new Date(last.endsAt.getTime() + week),
-      new Date(last.entryDeadline.getTime() + week),
+      new Date(last.endsAt.getTime() + week),
     ],
   );
   refresh();

@@ -94,7 +94,7 @@ export const getPeriods = cache(async (eventId: number): Promise<Period[]> => {
     weekNumber: Number(r.week_number),
     startsAt: r.starts_at as Date,
     endsAt: r.ends_at as Date,
-    entryDeadline: r.entry_deadline as Date,
+    entryDeadline: r.ends_at as Date, // the week's close is the only deadline
     isLocked: Boolean(r.is_locked),
   }));
 });

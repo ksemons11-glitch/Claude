@@ -48,10 +48,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
   let countdown: { target: Date; label: string } | null = null;
   if (lb.state.phase === 'before' && lb.periods[0]) countdown = { target: lb.periods[0].startsAt, label: 'Start rankingu za' };
   else if (lb.state.phase === 'running' && period) {
-    countdown =
-      lb.now < period.entryDeadline
-        ? { target: period.entryDeadline, label: `Termin wpisów — tydzień ${period.weekNumber}` }
-        : { target: period.endsAt, label: `Ostatnia szansa! Tydzień ${period.weekNumber} zamyka się za` };
+    countdown = { target: period.endsAt, label: `Wpisy za tydzień ${period.weekNumber} zamykają się za` };
   }
   if (hidden) countdown = { target: revealAt, label: 'Odsłonięcie rankingu za' };
   const daysToEnd = Math.max(0, Math.ceil((lb.event.endsAt.getTime() - lb.now.getTime()) / 86_400_000));
@@ -86,7 +83,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
           </div>
           {period && lb.state.phase === 'running' && (
             <p className="mt-3 text-xs text-muted">
-              Wpisuj wynik do {formatDateTime(period.entryDeadline)}. Edycja tygodnia zamyka się {formatDateTime(period.endsAt)}.
+              Wpisuj i aktualizuj wynik do {formatDateTime(period.endsAt)}.
             </p>
           )}
           {!user && (

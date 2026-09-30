@@ -108,8 +108,7 @@ export default async function AccountPage() {
           </h1>
           {period && lb.state.phase === 'running' && (
             <p className="mt-1 text-sm text-muted">
-              {formatDate(period.startsAt)}–{formatDate(period.endsAt)} · termin: <b className="text-white">{formatDateTime(period.entryDeadline)}</b>
-              {lb.now > period.entryDeadline && <span className="text-gold"> (ostatnia szansa — zamknięcie {formatDateTime(period.endsAt)})</span>}
+              {formatDate(period.startsAt)}–{formatDate(period.endsAt)} · wpisuj do: <b className="text-white">{formatDateTime(period.endsAt)}</b>
             </p>
           )}
           <div className="mt-5">

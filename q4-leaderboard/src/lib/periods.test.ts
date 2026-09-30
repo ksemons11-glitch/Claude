@@ -9,7 +9,7 @@ describe('generateDefaultPeriods (Q4 2026)', () => {
     expect(drafts).toHaveLength(13);
     expect(formatFull(drafts[0].startsAt)).toBe('01.10.2026, 00:00');
     expect(formatFull(drafts[0].endsAt)).toBe('11.10.2026, 23:59');
-    expect(formatFull(drafts[0].entryDeadline)).toBe('10.10.2026, 23:59');
+    expect(drafts[0].entryDeadline).toEqual(drafts[0].endsAt);
     expect(formatFull(drafts[1].startsAt)).toBe('12.10.2026, 00:00');
     expect(formatFull(drafts[12].startsAt)).toBe('28.12.2026, 00:00');
     expect(formatFull(drafts[12].endsAt)).toBe('03.01.2027, 23:59');
