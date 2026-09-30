@@ -1,6 +1,7 @@
 import 'server-only';
 import type { RowDataPacket } from 'mysql2/promise';
 import { query, transaction } from './db';
+import { invalidateLeaderboardCache } from './leaderboard';
 
 /** Latest cumulative value the user reported in weeks before `weekNumber` (null if none). */
 export async function previousCumulative(userId: number, eventId: number, weekNumber: number): Promise<number | null> {
@@ -34,7 +35,7 @@ export async function writeEntry(opts: {
   changedBy: number;
   reason: string | null;
 }): Promise<{ oldValue: number | null }> {
-  return transaction(async (conn) => {
+  const result = await transaction(async (conn) => {
     const [rows] = await conn.query<RowDataPacket[]>(
       'SELECT id, cumulative_revenue AS v FROM revenue_entries WHERE user_id = ? AND reporting_period_id = ? FOR UPDATE',
       [opts.userId, opts.periodId],
@@ -66,4 +67,6 @@ export async function writeEntry(opts: {
     );
     return { oldValue };
   });
+  invalidateLeaderboardCache();
+  return result;
 }

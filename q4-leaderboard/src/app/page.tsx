@@ -29,7 +29,8 @@ function BrandTitle({ name }: { name: string }) {
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ view?: string }> }) {
   const view = parseView((await searchParams).view);
-  const [lb, user] = await Promise.all([loadLeaderboard(), getCurrentUser()]);
+  const user = await getCurrentUser();
+  const lb = await loadLeaderboard(user?.role === 'admin' && user.status === 'active');
   const canSee = lb.event.isPublicLeaderboard || user?.status === 'active';
   const weekly = view !== 'q4';
   const meId = user?.status === 'active' ? user.id : null;
@@ -90,6 +91,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ v
             </div>
           )}
         </section>
+
+        {lb.preview && (
+          <p className="alert-info mt-4">
+            <b>Podgląd administratora.</b> Q4 jeszcze się nie zaczął, więc pokazujemy ranking tak, jakby trwał tydzień{' '}
+            {lb.currentPeriod?.weekNumber}. Uczestnicy i goście widzą na razie ekran startowy.
+          </p>
+        )}
 
         {!canSee ? (
           <p className="alert-info mt-6">Ranking jest widoczny tylko dla zalogowanych uczestników.</p>

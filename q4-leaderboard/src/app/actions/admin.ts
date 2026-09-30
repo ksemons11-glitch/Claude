@@ -9,6 +9,8 @@ import { getEvent, getPeriods } from '@/lib/data';
 import { destroyAllSessions, requireAdmin } from '@/lib/auth';
 import { sendMail } from '@/lib/mail';
 import { writeEntry } from '@/lib/revenue';
+import { invalidateLeaderboardCache } from '@/lib/leaderboard';
+import { removeDemoData, seedDemoData } from '@/lib/demo';
 import { deleteAvatar } from '@/lib/uploads';
 import { fromLocalInput } from '@/lib/time';
 import { MAX_REVENUE, parseMoney } from '@/lib/validation';
@@ -22,6 +24,7 @@ const ids = (fd: FormData) =>
     .filter((n) => Number.isInteger(n) && n > 0);
 
 function refresh() {
+  invalidateLeaderboardCache();
   revalidatePath('/', 'layout');
 }
 
@@ -206,4 +209,21 @@ export async function updateSettingsAction(_prev: FormState, fd: FormData): Prom
   );
   refresh();
   return { success: newCode ? 'Zapisano. Nowy kod dostępu jest aktywny.' : 'Ustawienia zapisane.' };
+}
+
+export async function seedDemoAction(_prev: FormState, _fd: FormData): Promise<FormState> {
+  await requireAdmin();
+  const event = await getEvent();
+  const created = await seedDemoData(event.id, 50);
+  refresh();
+  return created > 0
+    ? { success: `Dodano ${created} kont testowych z wynikami. Zobacz ranking na stronie głównej.` }
+    : { error: 'Konta testowe już istnieją — najpierw je usuń.' };
+}
+
+export async function removeDemoAction(_prev: FormState, _fd: FormData): Promise<FormState> {
+  await requireAdmin();
+  const removed = await removeDemoData();
+  refresh();
+  return { success: `Usunięto ${removed} kont testowych wraz z ich wynikami.` };
 }

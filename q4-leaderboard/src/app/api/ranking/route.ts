@@ -7,7 +7,8 @@ export const dynamic = 'force-dynamic';
 // Public paging/search endpoint. Returns only whitelisted public fields (see toPublicRow).
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams;
-  const [lb, user] = await Promise.all([loadLeaderboard(), getCurrentUser()]);
+  const user = await getCurrentUser();
+  const lb = await loadLeaderboard(user?.role === 'admin' && user.status === 'active');
   if (!lb.event.isPublicLeaderboard && user?.status !== 'active') {
     return NextResponse.json({ error: 'forbidden' }, { status: 403 });
   }

@@ -7,6 +7,7 @@ import { AVATAR_PRESETS, getEvent, getPeriods } from '@/lib/data';
 import { getCurrentUser } from '@/lib/auth';
 import { currentPeriodState, isPeriodOpen } from '@/lib/periods';
 import { previousCumulative, writeEntry } from '@/lib/revenue';
+import { invalidateLeaderboardCache } from '@/lib/leaderboard';
 import { deleteAvatar, saveAvatarDataUrl } from '@/lib/uploads';
 import { MAX_REVENUE, formatPln, parseMoney, validateDiscord, validateNickname, validatePassword } from '@/lib/validation';
 import type { FormState } from './types';
@@ -139,6 +140,7 @@ export async function updateProfileAction(_prev: FormState, fd: FormData): Promi
     throw err;
   }
   if (avatarFile !== user.avatarFile) await deleteAvatar(user.avatarFile);
+  invalidateLeaderboardCache();
   revalidatePath('/', 'layout');
   return { success: 'Profil zapisany.' };
 }
